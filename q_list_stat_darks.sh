@@ -317,73 +317,244 @@ q_arith COMA_NL.fits - FDARK1 SKY_NL_STD_A01.fits
 
 ##Observation: Position A
 q_list_stat COMA00088316.fits 1 - - : COMA_NL.fits
-q_arith COMA_NL.fits - FDARK1 SKY_NL_OBJ_A01.fits
 q_arith DS150_1_1 \* 3.0 FDARK1
+q_arith COMA_NL.fits - FDARK1 SKY_NL_OBJ_A01.fits
+
 q_list_stat COMA00088318.fits 1 - - : COMA_NL.fits
+q_arith DS150_1_1 \* 3.0 FDARK1
 q_arith COMA_NL.fits - FDARK1 SKY_NL_OBJ_A02.fits
+
 q_list_stat COMA00088320.fits 1 - - : COMA_NL.fits
+q_arith DS150_1_1 \* 3.0 FDARK1
 q_arith COMA_NL.fits - FDARK1 SKY_NL_OBJ_A03.fits
+
 q_list_stat COMA00088322.fits 1 - - : COMA_NL.fits
+q_arith DS150_1_1 \* 3.0 FDARK1
 q_arith COMA_NL.fits - FDARK1 SKY_NL_OBJ_A04.fits
+
 q_list_stat COMA00088324.fits 1 - - : COMA_NL.fits
+q_arith DS150_1_1 \* 3.0 FDARK1
 q_arith COMA_NL.fits - FDARK1 SKY_NL_OBJ_A05.fits
+
 q_list_stat COMA00088326.fits 1 - - : COMA_NL.fits
+q_arith DS150_1_1 \* 3.0 FDARK1
 q_arith COMA_NL.fits - FDARK1 SKY_NL_OBJ_A06.fits
+
 q_list_stat COMA00088328.fits 1 - - : COMA_NL.fits
+q_arith DS150_1_1 \* 3.0 FDARK1
 q_arith COMA_NL.fits - FDARK1 SKY_NL_OBJ_A07.fits
+
 q_list_stat COMA00088330.fits 1 - - : COMA_NL.fits
+q_arith DS150_1_1 \* 3.0 FDARK1
 q_arith COMA_NL.fits - FDARK1 SKY_NL_OBJ_A08.fits
+
 q_list_stat COMA00088332.fits 1 - - : COMA_NL.fits
+q_arith DS150_1_1 \* 3.0 FDARK1
 q_arith COMA_NL.fits - FDARK1 SKY_NL_OBJ_A09.fits
+
 q_list_stat COMA00088334.fits 1 - - : COMA_NL.fits
+q_arith DS150_1_1 \* 3.0 FDARK1
 q_arith COMA_NL.fits - FDARK1 SKY_NL_OBJ_A10.fits
+
 q_list_stat COMA00088336.fits 1 - - : COMA_NL.fits
+q_arith DS150_1_1 \* 3.0 FDARK1
 q_arith COMA_NL.fits - FDARK1 SKY_NL_OBJ_A11.fits
+
 q_list_stat COMA00088338.fits 1 - - : COMA_NL.fits
+q_arith DS150_1_1 \* 3.0 FDARK1
 q_arith COMA_NL.fits - FDARK1 SKY_NL_OBJ_A12.fits
+
 q_list_stat COMA00088340.fits 1 - - : COMA_NL.fits
+q_arith DS150_1_1 \* 3.0 FDARK1
 q_arith COMA_NL.fits - FDARK1 SKY_NL_OBJ_A13.fits
+
 q_list_stat COMA00088342.fits 1 - - : COMA_NL.fits
+q_arith DS150_1_1 \* 3.0 FDARK1
 q_arith COMA_NL.fits - FDARK1 SKY_NL_OBJ_A14.fits
+
 q_list_stat COMA00088344.fits 1 - - : COMA_NL.fits
+q_arith DS150_1_1 \* 3.0 FDARK1
 q_arith COMA_NL.fits - FDARK1 SKY_NL_OBJ_A15.fits
+
 q_list_stat COMA00088346.fits 1 - - : COMA_NL.fits
+q_arith DS150_1_1 \* 3.0 FDARK1
 q_arith COMA_NL.fits - FDARK1 SKY_NL_OBJ_A16.fits
 
 
 ##Observation: Position B
 q_list_stat COMA00088348.fits 1 - - : COMA_NL.fits
+q_arith DS150_1_1 \* 3.0 FDARK1
 q_arith COMA_NL.fits - FDARK1 SKY_NL_OBJ_B01.fits
+
 q_list_stat COMA00088350.fits 1 - - : COMA_NL.fits
+q_arith DS150_1_1 \* 3.0 FDARK1
 q_arith COMA_NL.fits - FDARK1 SKY_NL_OBJ_B02.fits
+
 q_list_stat COMA00088352.fits 1 - - : COMA_NL.fits
+q_arith DS150_1_1 \* 3.0 FDARK1
 q_arith COMA_NL.fits - FDARK1 SKY_NL_OBJ_B03.fits
+
 q_list_stat COMA00088354.fits 1 - - : COMA_NL.fits
+q_arith DS150_1_1 \* 3.0 FDARK1
 q_arith COMA_NL.fits - FDARK1 SKY_NL_OBJ_B04.fits
+
 q_list_stat COMA00088356.fits 1 - - : COMA_NL.fits
+q_arith DS150_1_1 \* 3.0 FDARK1
 q_arith COMA_NL.fits - FDARK1 SKY_NL_OBJ_B05.fits
+
 q_list_stat COMA00088358.fits 1 - - : COMA_NL.fits
+q_arith DS150_1_1 \* 3.0 FDARK1
 q_arith COMA_NL.fits - FDARK1 SKY_NL_OBJ_B06.fits
+
 q_list_stat COMA00088360.fits 1 - - : COMA_NL.fits
+q_arith DS150_1_1 \* 3.0 FDARK1
 q_arith COMA_NL.fits - FDARK1 SKY_NL_OBJ_B07.fits
+
 q_list_stat COMA00088362.fits 1 - - : COMA_NL.fits
+q_arith DS150_1_1 \* 3.0 FDARK1
 q_arith COMA_NL.fits - FDARK1 SKY_NL_OBJ_B08.fits
+
 q_list_stat COMA00088364.fits 1 - - : COMA_NL.fits
+q_arith DS150_1_1 \* 3.0 FDARK1
 q_arith COMA_NL.fits - FDARK1 SKY_NL_OBJ_B09.fits
+
 q_list_stat COMA00088366.fits 1 - - : COMA_NL.fits
+q_arith DS150_1_1 \* 3.0 FDARK1
 q_arith COMA_NL.fits - FDARK1 SKY_NL_OBJ_B10.fits
+
 q_list_stat COMA00088368.fits 1 - - : COMA_NL.fits
+q_arith DS150_1_1 \* 3.0 FDARK1
 q_arith COMA_NL.fits - FDARK1 SKY_NL_OBJ_B11.fits
+
 q_list_stat COMA00088370.fits 1 - - : COMA_NL.fits
+q_arith DS150_1_1 \* 3.0 FDARK1
 q_arith COMA_NL.fits - FDARK1 SKY_NL_OBJ_B12.fits
+
 q_list_stat COMA00088372.fits 1 - - : COMA_NL.fits
+q_arith DS150_1_1 \* 3.0 FDARK1
 q_arith COMA_NL.fits - FDARK1 SKY_NL_OBJ_B13.fits
+
 q_list_stat COMA00088374.fits 1 - - : COMA_NL.fits
+q_arith DS150_1_1 \* 3.0 FDARK1
 q_arith COMA_NL.fits - FDARK1 SKY_NL_OBJ_B14.fits
+
 q_list_stat COMA00088376.fits 1 - - : COMA_NL.fits
+q_arith DS150_1_1 \* 3.0 FDARK1
 q_arith COMA_NL.fits - FDARK1 SKY_NL_OBJ_B15.fits
+
 q_list_stat COMA00088378.fits 1 - - : COMA_NL.fits
+q_arith DS150_1_1 \* 3.0 FDARK1
 q_arith COMA_NL.fits - FDARK1 SKY_NL_OBJ_B16.fits
+
+
+
+### Next let's obtain the spatially constant axis
+# This part just scales the values by 100, so that the next 
+# step runs faster..or so I think
+q_arith COMQ_NL_STD_A01_NC.fits / 100.0 SCALE1
+#q_startrace does the actual axis-fitting (as its name implies)
+q_startrace SCALE1 1 1-320 56:80 1 | awk '(print $2,#10)' > SPATIAL_CONST_STD_A01.DAT
+
+##Now do the same commands for the "Objects" A and B (actally the same object, but different positons)
+
+q_arith COMQ_NL_OBJ_A01_NC.fits / 100.0 SCALE1
+q_startrace SCALE1 1 1-320 56:80 1 | awk '(print $2,#10)' > SPATIAL_CONST_OBJ_A01.DAT
+
+q_arith COMQ_NL_OBJ_A02_NC.fits / 100.0 SCALE1
+q_startrace SCALE1 1 1-320 56:80 1 | awk '(print $2,#10)' > SPATIAL_CONST_OBJ_A02.DAT
+
+q_arith COMQ_NL_OBJ_A03_NC.fits / 100.0 SCALE1
+q_startrace SCALE1 1 1-320 56:80 1 | awk '(print $2,#10)' > SPATIAL_CONST_OBJ_A03.DAT
+
+q_arith COMQ_NL_OBJ_A04_NC.fits / 100.0 SCALE1
+q_startrace SCALE1 1 1-320 56:80 1 | awk '(print $2,#10)' > SPATIAL_CONST_OBJ_A04.DAT
+
+q_arith COMQ_NL_OBJ_A05_NC.fits / 100.0 SCALE1
+q_startrace SCALE1 1 1-320 56:80 1 | awk '(print $2,#10)' > SPATIAL_CONST_OBJ_A05.DAT
+
+q_arith COMQ_NL_OBJ_A06_NC.fits / 100.0 SCALE1
+q_startrace SCALE1 1 1-320 56:80 1 | awk '(print $2,#10)' > SPATIAL_CONST_OBJ_A06.DAT
+
+q_arith COMQ_NL_OBJ_A07_NC.fits / 100.0 SCALE1
+q_startrace SCALE1 1 1-320 56:80 1 | awk '(print $2,#10)' > SPATIAL_CONST_OBJ_A07.DAT
+
+q_arith COMQ_NL_OBJ_A08_NC.fits / 100.0 SCALE1
+q_startrace SCALE1 1 1-320 56:80 1 | awk '(print $2,#10)' > SPATIAL_CONST_OBJ_A08.DAT
+
+q_arith COMQ_NL_OBJ_A09_NC.fits / 100.0 SCALE1
+q_startrace SCALE1 1 1-320 56:80 1 | awk '(print $2,#10)' > SPATIAL_CONST_OBJ_A09.DAT
+
+q_arith COMQ_NL_OBJ_A10_NC.fits / 100.0 SCALE1
+q_startrace SCALE1 1 1-320 56:80 1 | awk '(print $2,#10)' > SPATIAL_CONST_OBJ_A10.DAT
+
+q_arith COMQ_NL_OBJ_A11_NC.fits / 100.0 SCALE1
+q_startrace SCALE1 1 1-320 56:80 1 | awk '(print $2,#10)' > SPATIAL_CONST_OBJ_A11.DAT
+
+q_arith COMQ_NL_OBJ_A12_NC.fits / 100.0 SCALE1
+q_startrace SCALE1 1 1-320 56:80 1 | awk '(print $2,#10)' > SPATIAL_CONST_OBJ_A12.DAT
+
+q_arith COMQ_NL_OBJ_A13_NC.fits / 100.0 SCALE1
+q_startrace SCALE1 1 1-320 56:80 1 | awk '(print $2,#10)' > SPATIAL_CONST_OBJ_A13.DAT
+
+q_arith COMQ_NL_OBJ_A14_NC.fits / 100.0 SCALE1
+q_startrace SCALE1 1 1-320 56:80 1 | awk '(print $2,#10)' > SPATIAL_CONST_OBJ_A14.DAT
+
+q_arith COMQ_NL_OBJ_A15_NC.fits / 100.0 SCALE1
+q_startrace SCALE1 1 1-320 56:80 1 | awk '(print $2,#10)' > SPATIAL_CONST_OBJ_A15.DAT
+
+q_arith COMQ_NL_OBJ_A16_NC.fits / 100.0 SCALE1
+q_startrace SCALE1 1 1-320 56:80 1 | awk '(print $2,#10)' > SPATIAL_CONST_OBJ_A16.DAT
+
+
+########Object B:
+
+q_arith COMQ_NL_OBJ_B01_NC.fits / 100.0 SCALE1
+q_startrace SCALE1 1 1-320 56:80  1| awk '(print $2,#10)' > SPATIAL_CONST_OBJ_B01.DAT
+
+q_arith COMQ_NL_OBJ_B02_NC.fits / 100.0 SCALE1
+q_startrace SCALE1 1 1-320 56:80 1 | awk '(print $2,#10)' > SPATIAL_CONST_OBJ_B02.DAT
+
+q_arith COMQ_NL_OBJ_B03_NC.fits / 100.0 SCALE1
+q_startrace SCALE1 1 1-320 56:80 1 | awk '(print $2,#10)' > SPATIAL_CONST_OBJ_B03.DAT
+
+q_arith COMQ_NL_OBJ_B04_NC.fits / 100.0 SCALE1
+q_startrace SCALE1 1 1-320 56:80 1 | awk '(print $2,#10)' > SPATIAL_CONST_OBJ_B04.DAT
+
+q_arith COMQ_NL_OBJ_B05_NC.fits / 100.0 SCALE1
+q_startrace SCALE1 1 1-320 56:80 1 | awk '(print $2,#10)' > SPATIAL_CONST_OBJ_B05.DAT
+
+q_arith COMQ_NL_OBJ_B06_NC.fits / 100.0 SCALE1
+q_startrace SCALE1 1 1-320 56:80 1 | awk '(print $2,#10)' > SPATIAL_CONST_OBJ_B06.DAT
+
+q_arith COMQ_NL_OBJ_B07_NC.fits / 100.0 SCALE1
+q_startrace SCALE1 1 1-320 56:80 1 | awk '(print $2,#10)' > SPATIAL_CONST_OBJ_B07.DAT
+
+q_arith COMQ_NL_OBJ_B08_NC.fits / 100.0 SCALE1
+q_startrace SCALE1 1 1-320 56:80 1 | awk '(print $2,#10)' > SPATIAL_CONST_OBJ_B08.DAT
+
+q_arith COMQ_NL_OBJ_B09_NC.fits / 100.0 SCALE1
+q_startrace SCALE1 1 1-320 56:80 1 | awk '(print $2,#10)' > SPATIAL_CONST_OBJ_B09.DAT
+
+q_arith COMQ_NL_OBJ_B10_NC.fits / 100.0 SCALE1
+q_startrace SCALE1 1 1-320 56:80 1 | awk '(print $2,#10)' > SPATIAL_CONST_OBJ_B10.DAT
+
+q_arith COMQ_NL_OBJ_B11_NC.fits / 100.0 SCALE1
+q_startrace SCALE1 1 1-320 56:80 1 | awk '(print $2,#10)' > SPATIAL_CONST_OBJ_B11.DAT
+
+q_arith COMQ_NL_OBJ_B12_NC.fits / 100.0 SCALE1
+q_startrace SCALE1 1 1-320 56:80 1 | awk '(print $2,#10)' > SPATIAL_CONST_OBJ_B12.DAT
+
+q_arith COMQ_NL_OBJ_B13_NC.fits / 100.0 SCALE1
+q_startrace SCALE1 1 1-320 56:80 1 | awk '(print $2,#10)' > SPATIAL_CONST_OBJ_B13.DAT
+
+q_arith COMQ_NL_OBJ_B14_NC.fits / 100.0 SCALE1
+q_startrace SCALE1 1 1-320 56:80 1 | awk '(print $2,#10)' > SPATIAL_CONST_OBJ_B14.DAT
+
+q_arith COMQ_NL_OBJ_B15_NC.fits / 100.0 SCALE1
+q_startrace SCALE1 1 1-320 56:80 1 | awk '(print $2,#10)' > SPATIAL_CONST_OBJ_B15.DAT
+
+q_arith COMQ_NL_OBJ_B16_NC.fits / 100.0 SCALE1
+q_startrace SCALE1 1 1-320 56:80 1 | awk '(print $2,#10)' > SPATIAL_CONST_OBJ_B16.DAT
 
 
 ###Standard Star: Find the wavelength/pixel relationship!
