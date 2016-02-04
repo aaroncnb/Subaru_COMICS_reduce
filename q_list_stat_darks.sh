@@ -1,7 +1,7 @@
 q_fcombine m89031 m89033 ave=DI_50_1_1_ave
 ##Imaging
 
-##N11.7
+##Darks for N11.7
 q_list_stat COMA00089023.fits 1 - - : m89023
 q_list_stat COMA00089025.fits 1 - - : m89025
 q_list_stat COMA00089025.fits 1 - - : m89027
@@ -11,7 +11,7 @@ q_fcombine m89023 m89025 m89027 m89029 ave=DI30_1_1_ave
 
 q_arith DI30_1_1_ave / 16.0 DI30_1_1
 
-##N8.8
+##Darks for N8.8
 q_list_stat COMA00089031.fits 1 - - : m89031
 q_list_stat COMA00089033.fits 1 - - : m89033
 
@@ -19,7 +19,7 @@ q_fcombine m89031 m89033 ave=DI_50_1_1_ave
 
 q_arith DI50_1_1_ave / 9.0 DI50_1_1
 
-##Q18.8
+##Darks Q18.8
 q_list_stat COMA00089019.fits 1 - - : m89019
 q_list_stat COMA00089021.fits 1 - - : m89021
 
@@ -53,7 +53,7 @@ q_list_stat COMA00089042.fits 1 - - : m89042
 q_list_stat COMA00089044.fits 1 - - : m89044
 q_list_stat COMA00089046.fits 1 - - : m89046
 
-##Make the FLAT's averaged Dark, from the individual dark frames
+##Make the FLATs averaged Dark, from the individual dark frames
 
 q_fcombine m89040 m89042 m89044 m89046 ave=DS50_1_1
 
@@ -132,31 +132,31 @@ q_arith DATA.fits - NC_STD.REF COMQ_NL_STD_A01_NC.fits
 q_list_stat COMA00088316.fits 1 - - 1 DATA.fits
 q_list_stat COMA00088316.fits 2	- - 1 REF.fits
 q_subch REF.fits REF NC_OBJ.REF
-q_arith DATA.fits - NC_OBJ.REF COMQ_NL_STD_A01_NC.fits
+q_arith DATA.fits - NC_OBJ.REF COMQ_NL_OBJ_A01_NC.fits
 q_list_stat COMA00088318.fits 1	- - 1 DATA.fits
 q_list_stat COMA00088318.fits 2 - - 1 REF.fits
 q_subch	REF.fits REF NC_OBJ.REF
-q_arith	DATA.fits - NC_OBJ.REF COMQ_NL_STD_A02_NC.fits
+q_arith	DATA.fits - NC_OBJ.REF COMQ_NL_OBJ_A02_NC.fits
 q_list_stat COMA00088320.fits 1	- - 1 DATA.fits
 q_list_stat COMA00088320.fits 2 - - 1 REF.fits
 q_subch	REF.fits REF NC_OBJ.REF
-q_arith	DATA.fits - NC_OBJ.REF COMQ_NL_STD_A03_NC.fits
+q_arith	DATA.fits - NC_OBJ.REF COMQ_NL_OBJ_A03_NC.fits
 q_list_stat COMA00088322.fits 1	- - 1 DATA.fits
 q_list_stat COMA00088322.fits 2 - - 1 REF.fits
 q_subch	REF.fits REF NC_OBJ.REF
-q_arith	DATA.fits - NC_OBJ.REF COMQ_NL_STD_A04_NC.fits
+q_arith	DATA.fits - NC_OBJ.REF COMQ_NL_OBJ_A04_NC.fits
 q_list_stat COMA00088324.fits 1	- - 1 DATA.fits
 q_list_stat COMA00088324.fits 2 - - 1 REF.fits
 q_subch	REF.fits REF NC_OBJ.REF
-q_arith	DATA.fits - NC_OBJ.REF COMQ_NL_STD_A05_NC.fits
+q_arith	DATA.fits - NC_OBJ.REF COMQ_NL_OBJ_A05_NC.fits
 q_list_stat COMA00088326.fits 1 - - 1 DATA.fits
 q_list_stat COMA00088326.fits 2 - - 1 REF.fits
 q_subch REF.fits REF NC_OBJ.REF
-q_arith DATA.fits - NC_OBJ.REF COMQ_NL_STD_A06_NC.fits
+q_arith DATA.fits - NC_OBJ.REF COMQ_NL_OBJ_A06_NC.fits
 q_list_stat COMA00088328.fits 1 - - 1 DATA.fits
 q_list_stat COMA00088328.fits 2 - - 1 REF.fits
 q_subch REF.fits REF NC_OBJ.REF
-q_arith DATA.fits - NC_OBJ.REF COMQ_NL_STD_A07_NC.fits
+q_arith DATA.fits - NC_OBJ.REF COMQ_NL_OBJ_A07_NC.fits
 q_list_stat COMA00088330.fits 1 - - 1 DATA.fits
 q_list_stat COMA00088330.fits 2 - - 1 REF.fits
 q_subch REF.fits REF NC_OBJ.REF
@@ -164,35 +164,35 @@ q_arith DATA.fits - NC_OBJ.REF COMQ_NL_STD_A08_NC.fits
 q_list_stat COMA00088332.fits 1 - - 1 DATA.fits
 q_list_stat COMA00088332.fits 2 - - 1 REF.fits
 q_subch REF.fits REF NC_OBJ.REF
-q_arith DATA.fits - NC_OBJ.REF COMQ_NL_STD_A09_NC.fits
+q_arith DATA.fits - NC_OBJ.REF COMQ_NL_OBJ_A09_NC.fits
 q_list_stat COMA00088334.fits 1 - - 1 DATA.fits
 q_list_stat COMA00088334.fits 2 - - 1 REF.fits
 q_subch REF.fits REF NC_OBJ.REF
-q_arith DATA.fits - NC_OBJ.REF COMQ_NL_STD_A10_NC.fits
+q_arith DATA.fits - NC_OBJ.REF COMQ_NL_OBJ_A10_NC.fits
 q_list_stat COMA00088336.fits 1 - - 1 DATA.fits
 q_list_stat COMA00088336.fits 2 - - 1 REF.fits
 q_subch REF.fits REF NC_OBJ.REF
-q_arith DATA.fits - NC_OBJ.REF COMQ_NL_STD_A11_NC.fits
+q_arith DATA.fits - NC_OBJ.REF COMQ_NL_OBJ_A11_NC.fits
 q_list_stat COMA00088338.fits 1 - - 1 DATA.fits
 q_list_stat COMA00088338.fits 2 - - 1 REF.fits
 q_subch REF.fits REF NC_OBJ.REF
-q_arith DATA.fits - NC_OBJ.REF COMQ_NL_STD_A12_NC.fits
+q_arith DATA.fits - NC_OBJ.REF COMQ_NL_OBJ_A12_NC.fits
 q_list_stat COMA00088340.fits 1 - - 1 DATA.fits
 q_list_stat COMA00088340.fits 2 - - 1 REF.fits
 q_subch REF.fits REF NC_OBJ.REF
-q_arith DATA.fits - NC_OBJ.REF COMQ_NL_STD_A13_NC.fits
+q_arith DATA.fits - NC_OBJ.REF COMQ_NL_OBJ_A13_NC.fits
 q_list_stat COMA00088342.fits 1 - - 1 DATA.fits
 q_list_stat COMA00088342.fits 2 - - 1 REF.fits
 q_subch REF.fits REF NC_OBJ.REF
-q_arith DATA.fits - NC_OBJ.REF COMQ_NL_STD_A14_NC.fits
+q_arith DATA.fits - NC_OBJ.REF COMQ_NL_OBJ_A14_NC.fits
 q_list_stat COMA00088344.fits 1 - - 1 DATA.fits
 q_list_stat COMA00088344.fits 2 - - 1 REF.fits
 q_subch REF.fits REF NC_OBJ.REF
-q_arith DATA.fits - NC_OBJ.REF COMQ_NL_STD_A15_NC.fits
+q_arith DATA.fits - NC_OBJ.REF COMQ_NL_OBJ_A15_NC.fits
 q_list_stat COMA00088346.fits 1 - - 1 DATA.fits
 q_list_stat COMA00088346.fits 2 - - 1 REF.fits
 q_subch REF.fits REF NC_OBJ.REF
-q_arith DATA.fits - NC_OBJ.REF COMQ_NL_STD_A16_NC.fits
+q_arith DATA.fits - NC_OBJ.REF COMQ_NL_OBJ_A16_NC.fits
 
 
 
@@ -270,22 +270,22 @@ q_arith DATA.fits - NC_OBJ.REF COMQ_NL_OBJ_B16_NC.fits
 q_arith COMQ_NL_STD_A01_NC.fits / FLAT_NL_STD NL_STD_NC_FC_A01.fits
 
 ##Observation Flat Correction: Position A
-q_arith COMQ_NL_STD_A01_NC.fits / FLAT_NL_OBJ NL_STD_NC_FC_A01.fits
-q_arith COMQ_NL_STD_A02_NC.fits / FLAT_NL_OBJ NL_STD_NC_FC_A02.fits
-q_arith COMQ_NL_STD_A03_NC.fits / FLAT_NL_OBJ NL_STD_NC_FC_A03.fits
-q_arith COMQ_NL_STD_A04_NC.fits / FLAT_NL_OBJ NL_STD_NC_FC_A04.fits
-q_arith COMQ_NL_STD_A05_NC.fits / FLAT_NL_OBJ NL_STD_NC_FC_A05.fits
-q_arith COMQ_NL_STD_A06_NC.fits / FLAT_NL_OBJ NL_STD_NC_FC_A06.fits
-q_arith COMQ_NL_STD_A07_NC.fits / FLAT_NL_OBJ NL_STD_NC_FC_A07.fits
-q_arith COMQ_NL_STD_A08_NC.fits / FLAT_NL_OBJ NL_STD_NC_FC_A08.fits
-q_arith COMQ_NL_STD_A09_NC.fits / FLAT_NL_OBJ NL_STD_NC_FC_A09.fits
-q_arith COMQ_NL_STD_A10_NC.fits / FLAT_NL_OBJ NL_STD_NC_FC_A10.fits
-q_arith COMQ_NL_STD_A11_NC.fits / FLAT_NL_OBJ NL_STD_NC_FC_A11.fits
-q_arith COMQ_NL_STD_A12_NC.fits / FLAT_NL_OBJ NL_STD_NC_FC_A12.fits
-q_arith COMQ_NL_STD_A13_NC.fits / FLAT_NL_OBJ NL_STD_NC_FC_A13.fits
-q_arith COMQ_NL_STD_A14_NC.fits / FLAT_NL_OBJ NL_STD_NC_FC_A14.fits
-q_arith COMQ_NL_STD_A15_NC.fits / FLAT_NL_OBJ NL_STD_NC_FC_A15.fits
-q_arith COMQ_NL_STD_A16_NC.fits / FLAT_NL_OBJ NL_STD_NC_FC_A16.fits
+q_arith COMQ_NL_OBJ_A01_NC.fits / FLAT_NL_OBJ NL_OBJ_NC_FC_A01.fits
+q_arith COMQ_NL_OBJ_A02_NC.fits / FLAT_NL_OBJ NL_OBJ_NC_FC_A02.fits
+q_arith COMQ_NL_OBJ_A03_NC.fits / FLAT_NL_OBJ NL_OBJ_NC_FC_A03.fits
+q_arith COMQ_NL_OBJ_A04_NC.fits / FLAT_NL_OBJ NL_OBJ_NC_FC_A04.fits
+q_arith COMQ_NL_OBJ_A05_NC.fits / FLAT_NL_OBJ NL_OBJ_NC_FC_A05.fits
+q_arith COMQ_NL_OBJ_A06_NC.fits / FLAT_NL_OBJ NL_OBJ_NC_FC_A06.fits
+q_arith COMQ_NL_OBJ_A07_NC.fits / FLAT_NL_OBJ NL_OBJ_NC_FC_A07.fits
+q_arith COMQ_NL_OBJ_A08_NC.fits / FLAT_NL_OBJ NL_OBJ_NC_FC_A08.fits
+q_arith COMQ_NL_OBJ_A09_NC.fits / FLAT_NL_OBJ NL_OBJ_NC_FC_A09.fits
+q_arith COMQ_NL_OBJ_A10_NC.fits / FLAT_NL_OBJ NL_OBJ_NC_FC_A10.fits
+q_arith COMQ_NL_OBJ_A11_NC.fits / FLAT_NL_OBJ NL_OBJ_NC_FC_A11.fits
+q_arith COMQ_NL_OBJ_A12_NC.fits / FLAT_NL_OBJ NL_OBJ_NC_FC_A12.fits
+q_arith COMQ_NL_OBJ_A13_NC.fits / FLAT_NL_OBJ NL_OBJ_NC_FC_A13.fits
+q_arith COMQ_NL_OBJ_A14_NC.fits / FLAT_NL_OBJ NL_OBJ_NC_FC_A14.fits
+q_arith COMQ_NL_OBJ_A15_NC.fits / FLAT_NL_OBJ NL_OBJ_NC_FC_A15.fits
+q_arith COMQ_NL_OBJ_A16_NC.fits / FLAT_NL_OBJ NL_OBJ_NC_FC_A16.fits
 
 ##Observation Flat Correction: Positon B
 q_arith COMQ_NL_OBJ_B01_NC.fits / FLAT_NL_OBJ NL_OBJ_NC_FC_B01.fits
@@ -310,16 +310,15 @@ q_arith COMQ_NL_OBJ_B16_NC.fits / FLAT_NL_OBJ NL_OBJ_NC_FC_B16.fits
 ########Next we make the sky images
 
 ##Make FDARK for NL mode
-q_arith DS150_1_1 \* 3.0 FDARK1
-
-##Standard star
 q_list_stat COMA00088270.fits 1 - - : COMA_NL.fits
+q_arith DS150_1_1 \* 3.0 FDARK
 q_arith COMA_NL.fits - FDARK1 SKY_NL_STD_A01.fits
 
 
 ##Observation: Position A
 q_list_stat COMA00088316.fits 1 - - : COMA_NL.fits
 q_arith COMA_NL.fits - FDARK1 SKY_NL_OBJ_A01.fits
+q_arith DS150_1_1 \* 3.0 FDARK1
 q_list_stat COMA00088318.fits 1 - - : COMA_NL.fits
 q_arith COMA_NL.fits - FDARK1 SKY_NL_OBJ_A02.fits
 q_list_stat COMA00088320.fits 1 - - : COMA_NL.fits
