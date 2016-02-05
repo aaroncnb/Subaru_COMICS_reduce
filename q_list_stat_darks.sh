@@ -559,25 +559,30 @@ q_startrace SCALE1 1 1-320 56:80 1 | awk '(print $2,#10)' > SPATIAL_CONST_OBJ_B1
 
 ###Standard Star: Find the wavelength/pixel relationship!
 
+
+
 q_sky_nlow SKY_NL_STD_A01.fits 1 - default 1 2 > SKY_NL_STD_A01.res
-q_sky_nlow SKY_NL_STD_A02.fits 1 - default 1 2 > SKY_NL_STD_A02.res
-q_sky_nlow SKY_NL_STD_A03.fits 1 - default 1 2 > SKY_NL_STD_A03.res
-q_sky_nlow SKY_NL_STD_A04.fits 1 - default 1 2 > SKY_NL_STD_A04.res
-q_sky_nlow SKY_NL_STD_A05.fits 1 - default 1 2 > SKY_NL_STD_A05.res
-q_sky_nlow SKY_NL_STD_A06.fits 1 - default 1 2 > SKY_NL_STD_A06.res
-q_sky_nlow SKY_NL_STD_A07.fits 1 - default 1 2 > SKY_NL_STD_A07.res
-q_sky_nlow SKY_NL_STD_A08.fits 1 - default 1 2 > SKY_NL_STD_A08.res
-q_sky_nlow SKY_NL_STD_A09.fits 1 - default 1 2 > SKY_NL_STD_A09.res
-q_sky_nlow SKY_NL_STD_A10.fits 1 - default 1 2 > SKY_NL_STD_A10.res
-q_sky_nlow SKY_NL_STD_A11.fits 1 - default 1 2 > SKY_NL_STD_A11.res
-q_sky_nlow SKY_NL_STD_A12.fits 1 - default 1 2 > SKY_NL_STD_A12.res
-q_sky_nlow SKY_NL_STD_A13.fits 1 - default 1 2 > SKY_NL_STD_A13.res
-q_sky_nlow SKY_NL_STD_A14.fits 1 - default 1 2 > SKY_NL_STD_A14.res
-q_sky_nlow SKY_NL_STD_A15.fits 1 - default 1 2 > SKY_NL_STD_A15.res
-q_sky_nlow SKY_NL_STD_A16.fits 1 - default 1 2 > SKY_NL_STD_A16.res
 
-###Observation target: Find the wavelength/pixel relationship!
+###Observation target: Find the wavelength/pixel relationship for position A
+q_sky_nlow SKY_NL_OBJ_A02.fits 1 - default 1 2 > SKY_NL_OBJ_A01.res
+q_sky_nlow SKY_NL_OBJ_A02.fits 1 - default 1 2 > SKY_NL_OBJ_A02.res
+q_sky_nlow SKY_NL_OBJ_A03.fits 1 - default 1 2 > SKY_NL_OBJ_A03.res
+q_sky_nlow SKY_NL_OBJ_A04.fits 1 - default 1 2 > SKY_NL_OBJ_A04.res
+q_sky_nlow SKY_NL_OBJ_A05.fits 1 - default 1 2 > SKY_NL_OBJ_A05.res
+q_sky_nlow SKY_NL_OBJ_A06.fits 1 - default 1 2 > SKY_NL_OBJ_A06.res
+q_sky_nlow SKY_NL_OBJ_A07.fits 1 - default 1 2 > SKY_NL_OBJ_A07.res
+q_sky_nlow SKY_NL_OBJ_A08.fits 1 - default 1 2 > SKY_NL_OBJ_A08.res
+q_sky_nlow SKY_NL_OBJ_A09.fits 1 - default 1 2 > SKY_NL_OBJ_A09.res
+q_sky_nlow SKY_NL_OBJ_A10.fits 1 - default 1 2 > SKY_NL_OBJ_A10.res
+q_sky_nlow SKY_NL_OBJ_A11.fits 1 - default 1 2 > SKY_NL_OBJ_A11.res
+q_sky_nlow SKY_NL_OBJ_A12.fits 1 - default 1 2 > SKY_NL_OBJ_A12.res
+q_sky_nlow SKY_NL_OBJ_A13.fits 1 - default 1 2 > SKY_NL_OBJ_A13.res
+q_sky_nlow SKY_NL_OBJ_A14.fits 1 - default 1 2 > SKY_NL_OBJ_A14.res
+q_sky_nlow SKY_NL_OBJ_A15.fits 1 - default 1 2 > SKY_NL_OBJ_A15.res
+q_sky_nlow SKY_NL_OBJ_A16.fits 1 - default 1 2 > SKY_NL_OBJ_A16.res
 
+
+###Observation target: Find the wavelength/pixel relationship for position B
 q_sky_nlow SKY_NL_OBJ_B01.fits 1 - default 1 2 > SKY_NL_OBJ_B01.res
 q_sky_nlow SKY_NL_OBJ_B02.fits 1 - default 1 2 > SKY_NL_OBJ_B02.res
 q_sky_nlow SKY_NL_OBJ_B03.fits 1 - default 1 2 > SKY_NL_OBJ_B03.res
