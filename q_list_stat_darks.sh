@@ -453,7 +453,7 @@ q_arith COMA_NL.fits - FDARK1 SKY_NL_OBJ_B16.fits
 # step runs faster..or so I think
 q_arith COMQ_NL_STD_A01_NC.fits / 100.0 SCALE1
 #q_startrace does the actual axis-fitting (as its name implies)
-q_startrace SCALE1 1 1-320 56:80 1 | awk '{print $2,#10)' > SPATIAL_CONST_STD_A01.DAT
+q_startrace SCALE1 1 1-320 56:80 1 | awk '{print $2,$10}' > SPATIAL_CONST_STD_A01.DAT
 
 ##Now do the same commands for the "Objects" A and B (actally the same object, but different positons)
 
