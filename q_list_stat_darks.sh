@@ -172,7 +172,7 @@ q_arith DATA.fits - NC_OBJ.REF COMQ_NL_OBJ_A07_NC.fits
 q_list_stat COMQ00088330.fits 1 - - 1 DATA.fits
 q_list_stat COMQ00088330.fits 2 - - 1 REF.fits
 q_subch REF.fits REF NC_OBJ.REF
-q_arith DATA.fits - NC_OBJ.REF COMQ_NL_STD_A08_NC.fits
+q_arith DATA.fits - NC_OBJ.REF COMQ_NL_OBJ_A08_NC.fits
 q_list_stat COMQ00088332.fits 1 - - 1 DATA.fits
 q_list_stat COMQ00088332.fits 2 - - 1 REF.fits
 q_subch REF.fits REF NC_OBJ.REF
