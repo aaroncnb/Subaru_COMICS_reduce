@@ -452,8 +452,22 @@ q_arith COMA_NL.fits - FDARK1 SKY_NL_OBJ_B16.fits
 # This part just scales the values by 100, so that the next 
 # step runs faster..or so I think
 q_arith COMQ_NL_STD_A01_NC.fits / 100.0 SCALE1
-#q_startrace does the actual axis-fitting (as its name implies)
-q_startrace SCALE1 1 1-320 56:80 1 | awk '{print $2,$10}' > SPATIAL_CONST_STD_A01.DAT
+
+# The second step is to find the peak position (the (X,Y) pixel coordinates of the brightest point)
+#### so that means that we're not doing the line-fitting yet, just finding the peak.
+#### the following function, "q_startrace", will attempt to find the peak on its own BUT
+#### it needs a 'guess'. the 3rd parameter is your X-guess, the 4th is the Y-guess
+#### this process is a bit trivial for the standard star images- you can easily find the peak
+#### just by looking. But try it anyways for practice and consistency.
+#### in this case, I checked COMQ_NL_STD_A01_NC.fits and found the X range and Y range with the highest values
+#### if you make a good guess, the process doesn't take long.
+#### If you get odd results or it takes forever, try refinig your guess! And by all means, at least look at 
+#### the input image before trusting the output of q_startrace
+
+q_startrace SCALE1 1 180-220 20:40 1 | awk '{print $2,$10}' > SPATIAL_CONST_STD_A01.DAT
+
+### If the output in the .DAT file looks OK, i.e. there aren't any 'number' values in the 2nd column,
+### then the next section should proceed smoothly too. For now- do the same q_startrace procedure for all of the other iamges
 
 ##Now do the same commands for the "Objects" A and B (actally the same object, but different positons)
 
