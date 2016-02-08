@@ -452,123 +452,110 @@ q_arith COMA_NL.fits - FDARK1 SKY_NL_OBJ_B16.fits
 # This part just scales the values by 100, so that the next 
 # step runs faster..or so I think
 q_arith COMQ_NL_STD_A01_NC.fits / 100.0 SCALE1
-
-# The second step is to find the peak position (the (X,Y) pixel coordinates of the brightest point)
-#### so that means that we're not doing the line-fitting yet, just finding the peak.
-#### the following function, "q_startrace", will attempt to find the peak on its own BUT
-#### it needs a 'guess'. the 3rd parameter is your X-guess, the 4th is the Y-guess
-#### this process is a bit trivial for the standard star images- you can easily find the peak
-#### just by looking. But try it anyways for practice and consistency.
-#### in this case, I checked COMQ_NL_STD_A01_NC.fits and found the X range and Y range with the highest values
-#### if you make a good guess, the process doesn't take long.
-#### If you get odd results or it takes forever, try refinig your guess! And by all means, at least look at 
-#### the input image before trusting the output of q_startrace
-
-q_startrace SCALE1 1 180-220 20:40 1 | awk '{print $2,$10}' > SPATIAL_CONST_STD_A01.DAT
-
-### If the output in the .DAT file looks OK, i.e. there aren't any 'number' values in the 2nd column,
-### then the next section should proceed smoothly too. For now- do the same q_startrace procedure for all of the other iamges
+#q_startrace doesn't do the 2D function fitting...
+# it just finds the peak position
+q_startrace SCALE1 1 180-220 28:40 1 | awk '{print $2,$10}' > SPATIAL_CONST_STD_A01.DAT
 
 ##Now do the same commands for the "Objects" A and B (actally the same object, but different positons)
 
 q_arith COMQ_NL_OBJ_A01_NC.fits / 100.0 SCALE1
-q_startrace SCALE1 1 1-320 56:80 1 | awk '{print $2,$10}' > SPATIAL_CONST_OBJ_A01.DAT
+q_startrace SCALE1 1 180-220 20:44 1 | awk '{print $2,$10}' > SPATIAL_CONST_OBJ_A01.DAT
 
 q_arith COMQ_NL_OBJ_A02_NC.fits / 100.0 SCALE1
-q_startrace SCALE1 1 1-320 56:80 1 | awk '{print $2,$10}' > SPATIAL_CONST_OBJ_A02.DAT
+q_startrace SCALE1 1 180-220 20:44 1 | awk '{print $2,$10}' > SPATIAL_CONST_OBJ_A02.DAT
 
 q_arith COMQ_NL_OBJ_A03_NC.fits / 100.0 SCALE1
-q_startrace SCALE1 1 1-320 56:80 1 | awk '{print $2,$10}' > SPATIAL_CONST_OBJ_A03.DAT
+q_startrace SCALE1 1 180-220 20:44 1 | awk '{print $2,$10}' > SPATIAL_CONST_OBJ_A03.DAT
 
 q_arith COMQ_NL_OBJ_A04_NC.fits / 100.0 SCALE1
-q_startrace SCALE1 1 1-320 56:80 1 | awk '{print $2,$10}' > SPATIAL_CONST_OBJ_A04.DAT
+q_startrace SCALE1 1 180-220 20:44 1 | awk '{print $2,$10}' > SPATIAL_CONST_OBJ_A04.DAT
 
 q_arith COMQ_NL_OBJ_A05_NC.fits / 100.0 SCALE1
-q_startrace SCALE1 1 1-320 56:80 1 | awk '{print $2,$10}' > SPATIAL_CONST_OBJ_A05.DAT
+q_startrace SCALE1 1 180-220 20:44 1 | awk '{print $2,$10}' > SPATIAL_CONST_OBJ_A05.DAT
 
 q_arith COMQ_NL_OBJ_A06_NC.fits / 100.0 SCALE1
-q_startrace SCALE1 1 1-320 56:80 1 | awk '{print $2,$10}' > SPATIAL_CONST_OBJ_A06.DAT
+q_startrace SCALE1 1 180-220 20:44 1 | awk '{print $2,$10}' > SPATIAL_CONST_OBJ_A06.DAT
 
 q_arith COMQ_NL_OBJ_A07_NC.fits / 100.0 SCALE1
-q_startrace SCALE1 1 1-320 56:80 1 | awk '{print $2,$10}' > SPATIAL_CONST_OBJ_A07.DAT
+q_startrace SCALE1 1 180-220 20:44 1 | awk '{print $2,$10}' > SPATIAL_CONST_OBJ_A07.DAT
 
 q_arith COMQ_NL_OBJ_A08_NC.fits / 100.0 SCALE1
-q_startrace SCALE1 1 1-320 56:80 1 | awk '{print $2,$10}' > SPATIAL_CONST_OBJ_A08.DAT
+q_startrace SCALE1 1 180-220 20:44 1 | awk '{print $2,$10}' > SPATIAL_CONST_OBJ_A08.DAT
 
 q_arith COMQ_NL_OBJ_A09_NC.fits / 100.0 SCALE1
-q_startrace SCALE1 1 1-320 56:80 1 | awk '{print $2,$10}' > SPATIAL_CONST_OBJ_A09.DAT
+q_startrace SCALE1 1 180-220 20:44 1 | awk '{print $2,$10}' > SPATIAL_CONST_OBJ_A09.DAT
 
 q_arith COMQ_NL_OBJ_A10_NC.fits / 100.0 SCALE1
-q_startrace SCALE1 1 1-320 56:80 1 | awk '{print $2,$10}' > SPATIAL_CONST_OBJ_A10.DAT
+q_startrace SCALE1 1 180-220 20:44 1 | awk '{print $2,$10}' > SPATIAL_CONST_OBJ_A10.DAT
 
 q_arith COMQ_NL_OBJ_A11_NC.fits / 100.0 SCALE1
-q_startrace SCALE1 1 1-320 56:80 1 | awk '{print $2,$10}' > SPATIAL_CONST_OBJ_A11.DAT
+q_startrace SCALE1 1 180-220 20:44 1 | awk '{print $2,$10}' > SPATIAL_CONST_OBJ_A11.DAT
 
 q_arith COMQ_NL_OBJ_A12_NC.fits / 100.0 SCALE1
-q_startrace SCALE1 1 1-320 56:80 1 | awk '{print $2,$10}' > SPATIAL_CONST_OBJ_A12.DAT
+q_startrace SCALE1 1 180-220 20:44 1 | awk '{print $2,$10}' > SPATIAL_CONST_OBJ_A12.DAT
 
 q_arith COMQ_NL_OBJ_A13_NC.fits / 100.0 SCALE1
-q_startrace SCALE1 1 1-320 56:80 1 | awk '{print $2,$10}' > SPATIAL_CONST_OBJ_A13.DAT
+q_startrace SCALE1 1 180-220 20:44 1 | awk '{print $2,$10}' > SPATIAL_CONST_OBJ_A13.DAT
 
 q_arith COMQ_NL_OBJ_A14_NC.fits / 100.0 SCALE1
-q_startrace SCALE1 1 1-320 56:80 1 | awk '{print $2,$10}' > SPATIAL_CONST_OBJ_A14.DAT
+q_startrace SCALE1 1 180-220 20:44 1 | awk '{print $2,$10}' > SPATIAL_CONST_OBJ_A14.DAT
 
 q_arith COMQ_NL_OBJ_A15_NC.fits / 100.0 SCALE1
-q_startrace SCALE1 1 1-320 56:80 1 | awk '{print $2,$10}' > SPATIAL_CONST_OBJ_A15.DAT
+q_startrace SCALE1 1 180-220 20:44 1 | awk '{print $2,$10}' > SPATIAL_CONST_OBJ_A15.DAT
 
 q_arith COMQ_NL_OBJ_A16_NC.fits / 100.0 SCALE1
-q_startrace SCALE1 1 1-320 56:80 1 | awk '{print $2,$10}' > SPATIAL_CONST_OBJ_A16.DAT
+q_startrace SCALE1 1 180-220 20:44 1 | awk '{print $2,$10}' > SPATIAL_CONST_OBJ_A16.DAT
 
 
 ########Object B:
 
 q_arith COMQ_NL_OBJ_B01_NC.fits / 100.0 SCALE1
-q_startrace SCALE1 1 1-320 56:80  1| awk '{print $2,$10}' > SPATIAL_CONST_OBJ_B01.DAT
+q_startrace SCALE1 1 180-220 20:44  1| awk '{print $2,$10}' > SPATIAL_CONST_OBJ_B01.DAT
 
 q_arith COMQ_NL_OBJ_B02_NC.fits / 100.0 SCALE1
-q_startrace SCALE1 1 1-320 56:80 1 | awk '{print $2,$10}' > SPATIAL_CONST_OBJ_B02.DAT
+q_startrace SCALE1 1 180-220 20:44 1 | awk '{print $2,$10}' > SPATIAL_CONST_OBJ_B02.DAT
 
 q_arith COMQ_NL_OBJ_B03_NC.fits / 100.0 SCALE1
-q_startrace SCALE1 1 1-320 56:80 1 | awk '{print $2,$10}' > SPATIAL_CONST_OBJ_B03.DAT
+q_startrace SCALE1 1 180-220 20:44 1 | awk '{print $2,$10}' > SPATIAL_CONST_OBJ_B03.DAT
 
 q_arith COMQ_NL_OBJ_B04_NC.fits / 100.0 SCALE1
-q_startrace SCALE1 1 1-320 56:80 1 | awk '{print $2,$10}' > SPATIAL_CONST_OBJ_B04.DAT
+q_startrace SCALE1 1 180-220 20:44 1 | awk '{print $2,$10}' > SPATIAL_CONST_OBJ_B04.DAT
 
 q_arith COMQ_NL_OBJ_B05_NC.fits / 100.0 SCALE1
-q_startrace SCALE1 1 1-320 56:80 1 | awk '{print $2,$10}' > SPATIAL_CONST_OBJ_B05.DAT
+q_startrace SCALE1 1 180-220 20:44 1 | awk '{print $2,$10}' > SPATIAL_CONST_OBJ_B05.DAT
 
 q_arith COMQ_NL_OBJ_B06_NC.fits / 100.0 SCALE1
-q_startrace SCALE1 1 1-320 56:80 1 | awk '{print $2,$10}' > SPATIAL_CONST_OBJ_B06.DAT
+q_startrace SCALE1 1 180-220 20:44 1 | awk '{print $2,$10}' > SPATIAL_CONST_OBJ_B06.DAT
 
 q_arith COMQ_NL_OBJ_B07_NC.fits / 100.0 SCALE1
-q_startrace SCALE1 1 1-320 56:80 1 | awk '{print $2,$10}' > SPATIAL_CONST_OBJ_B07.DAT
+q_startrace SCALE1 1 180-220 20:44 1 | awk '{print $2,$10}' > SPATIAL_CONST_OBJ_B07.DAT
 
 q_arith COMQ_NL_OBJ_B08_NC.fits / 100.0 SCALE1
-q_startrace SCALE1 1 1-320 56:80 1 | awk '{print $2,$10}' > SPATIAL_CONST_OBJ_B08.DAT
+q_startrace SCALE1 1 180-220 20:44 1 | awk '{print $2,$10}' > SPATIAL_CONST_OBJ_B08.DAT
 
 q_arith COMQ_NL_OBJ_B09_NC.fits / 100.0 SCALE1
-q_startrace SCALE1 1 1-320 56:80 1 | awk '{print $2,$10}' > SPATIAL_CONST_OBJ_B09.DAT
+q_startrace SCALE1 1 180-220 20:44 1 | awk '{print $2,$10}' > SPATIAL_CONST_OBJ_B09.DAT
 
 q_arith COMQ_NL_OBJ_B10_NC.fits / 100.0 SCALE1
-q_startrace SCALE1 1 1-320 56:80 1 | awk '{print $2,$10}' > SPATIAL_CONST_OBJ_B10.DAT
+q_startrace SCALE1 1 180-220 20:44 1 | awk '{print $2,$10}' > SPATIAL_CONST_OBJ_B10.DAT
 
 q_arith COMQ_NL_OBJ_B11_NC.fits / 100.0 SCALE1
-q_startrace SCALE1 1 1-320 56:80 1 | awk '{print $2,$10}' > SPATIAL_CONST_OBJ_B11.DAT
+q_startrace SCALE1 1 180-220 20:44 1 | awk '{print $2,$10}' > SPATIAL_CONST_OBJ_B11.DAT
 
 q_arith COMQ_NL_OBJ_B12_NC.fits / 100.0 SCALE1
-q_startrace SCALE1 1 1-320 56:80 1 | awk '{print $2,$10}' > SPATIAL_CONST_OBJ_B12.DAT
+q_startrace SCALE1 1 180-220 20:44 1 | awk '{print $2,$10}' > SPATIAL_CONST_OBJ_B12.DAT
 
 q_arith COMQ_NL_OBJ_B13_NC.fits / 100.0 SCALE1
-q_startrace SCALE1 1 1-320 56:80 1 | awk '{print $2,$10}' > SPATIAL_CONST_OBJ_B13.DAT
+q_startrace SCALE1 1 180-220 20:44 1 | awk '{print $2,$10}' > SPATIAL_CONST_OBJ_B13.DAT
 
 q_arith COMQ_NL_OBJ_B14_NC.fits / 100.0 SCALE1
-q_startrace SCALE1 1 1-320 56:80 1 | awk '{print $2,$10}' > SPATIAL_CONST_OBJ_B14.DAT
+q_startrace SCALE1 1 180-220 20:44 1 | awk '{print $2,$10}' > SPATIAL_CONST_OBJ_B14.DAT
 
 q_arith COMQ_NL_OBJ_B15_NC.fits / 100.0 SCALE1
-q_startrace SCALE1 1 1-320 56:80 1 | awk '{print $2,$10}' > SPATIAL_CONST_OBJ_B15.DAT
+q_startrace SCALE1 1 180-220 20:44 1 | awk '{print $2,$10}' > SPATIAL_CONST_OBJ_B15.DAT
 
 q_arith COMQ_NL_OBJ_B16_NC.fits / 100.0 SCALE1
-q_startrace SCALE1 1 1-320 56:80 1 | awk '{print $2,$10}' > SPATIAL_CONST_OBJ_B16.DAT
+q_startrace SCALE1 1 180-220 20:44 1 | awk '{print $2,$10}' > SPATIAL_CONST_OBJ_B16.DAT
 
 
 ###Standard Star: Find the wavelength/pixel relationship!
@@ -613,6 +600,7 @@ q_sky_nlow SKY_NL_OBJ_B13.fits 1 - default 1 2 > SKY_NL_OBJ_B13.res
 q_sky_nlow SKY_NL_OBJ_B14.fits 1 - default 1 2 > SKY_NL_OBJ_B14.res
 q_sky_nlow SKY_NL_OBJ_B15.fits 1 - default 1 2 > SKY_NL_OBJ_B15.res
 q_sky_nlow SKY_NL_OBJ_B16.fits 1 - default 1 2 > SKY_NL_OBJ_B16.res
+
 
 
 
