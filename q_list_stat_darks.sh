@@ -89,6 +89,7 @@ q_arith FLAT_NL_TEST_STD / 5.368803e+03 FLAT_NL_STD
 ### One is for the standard star observation
 ### The other is for our target observation
 ### So we need to repeat the flat steps above for the target
+### See 5.1.4 in the COMICS Cookbook: 
 
 
 
@@ -122,6 +123,9 @@ q_arith FLAT_NL_TEST_OBJ / 5.421052e+03 FLAT_NL_OBJ
 
 
 ####Starting Standard Star Flat correction
+#This is not enough to make COMQ from COMA!
+# "q_bsep" is needed!!
+# otherwise, we'll need to start with the 'ready-made' COMQ .FITS files
 q_list_stat COMA00088270.fits 1 - - 1 DATA.fits
 q_list_stat COMA00088270.fits 2 - - 1 REF.fits
 q_subch REF.fits REF NC_STD.REF
