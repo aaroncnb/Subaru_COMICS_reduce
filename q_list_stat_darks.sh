@@ -126,143 +126,151 @@ q_arith FLAT_NL_TEST_OBJ / 5.421052e+03 FLAT_NL_OBJ
 #This is not enough to make COMQ from COMA!
 # "q_bsep" is needed!!
 # otherwise, we'll need to start with the 'ready-made' COMQ .FITS files
-q_list_stat COMA00088270.fits 1 - - 1 DATA.fits
-q_list_stat COMA00088270.fits 2 - - 1 REF.fits
+#q_list_stat COMA00088270.fits 1 - - 1 DATA.fits
+#q_list_stat COMA00088270.fits 2 - - 1 REF.fits
+#q_subch REF.fits REF NC_STD.REF
+#q_arith DATA.fits - NC_STD.REF COMQ_NL_STD_A01_NC.fits
+
+### Now, we'll do the anove process but replacing COMA with COMQ...
+
+q_list_stat COMQ00088270.fits 1 - - 1 DATA.fits
+q_list_stat COMQ00088270.fits 2 - - 1 REF.fits
 q_subch REF.fits REF NC_STD.REF
 q_arith DATA.fits - NC_STD.REF COMQ_NL_STD_A01_NC.fits
 
 
+
 ###Starting position A
-q_list_stat COMA00088316.fits 1 - - 1 DATA.fits
-q_list_stat COMA00088316.fits 2	- - 1 REF.fits
+q_list_stat COMQ00088316.fits 1 - - 1 DATA.fits
+q_list_stat COMQ00088316.fits 2	- - 1 REF.fits
 q_subch REF.fits REF NC_OBJ.REF
 q_arith DATA.fits - NC_OBJ.REF COMQ_NL_OBJ_A01_NC.fits
-q_list_stat COMA00088318.fits 1	- - 1 DATA.fits
-q_list_stat COMA00088318.fits 2 - - 1 REF.fits
+q_list_stat COMQ00088318.fits 1	- - 1 DATA.fits
+q_list_stat COMQ00088318.fits 2 - - 1 REF.fits
 q_subch	REF.fits REF NC_OBJ.REF
 q_arith	DATA.fits - NC_OBJ.REF COMQ_NL_OBJ_A02_NC.fits
-q_list_stat COMA00088320.fits 1	- - 1 DATA.fits
-q_list_stat COMA00088320.fits 2 - - 1 REF.fits
+q_list_stat COMQ00088320.fits 1	- - 1 DATA.fits
+q_list_stat COMQ00088320.fits 2 - - 1 REF.fits
 q_subch	REF.fits REF NC_OBJ.REF
 q_arith	DATA.fits - NC_OBJ.REF COMQ_NL_OBJ_A03_NC.fits
-q_list_stat COMA00088322.fits 1	- - 1 DATA.fits
-q_list_stat COMA00088322.fits 2 - - 1 REF.fits
+q_list_stat COMQ00088322.fits 1	- - 1 DATA.fits
+q_list_stat COMQ00088322.fits 2 - - 1 REF.fits
 q_subch	REF.fits REF NC_OBJ.REF
 q_arith	DATA.fits - NC_OBJ.REF COMQ_NL_OBJ_A04_NC.fits
-q_list_stat COMA00088324.fits 1	- - 1 DATA.fits
-q_list_stat COMA00088324.fits 2 - - 1 REF.fits
+q_list_stat COMQ00088324.fits 1	- - 1 DATA.fits
+q_list_stat COMQ00088324.fits 2 - - 1 REF.fits
 q_subch	REF.fits REF NC_OBJ.REF
 q_arith	DATA.fits - NC_OBJ.REF COMQ_NL_OBJ_A05_NC.fits
-q_list_stat COMA00088326.fits 1 - - 1 DATA.fits
-q_list_stat COMA00088326.fits 2 - - 1 REF.fits
+q_list_stat COMQ00088326.fits 1 - - 1 DATA.fits
+q_list_stat COMQ00088326.fits 2 - - 1 REF.fits
 q_subch REF.fits REF NC_OBJ.REF
 q_arith DATA.fits - NC_OBJ.REF COMQ_NL_OBJ_A06_NC.fits
-q_list_stat COMA00088328.fits 1 - - 1 DATA.fits
-q_list_stat COMA00088328.fits 2 - - 1 REF.fits
+q_list_stat COMQ00088328.fits 1 - - 1 DATA.fits
+q_list_stat COMQ00088328.fits 2 - - 1 REF.fits
 q_subch REF.fits REF NC_OBJ.REF
 q_arith DATA.fits - NC_OBJ.REF COMQ_NL_OBJ_A07_NC.fits
-q_list_stat COMA00088330.fits 1 - - 1 DATA.fits
-q_list_stat COMA00088330.fits 2 - - 1 REF.fits
+q_list_stat COMQ00088330.fits 1 - - 1 DATA.fits
+q_list_stat COMQ00088330.fits 2 - - 1 REF.fits
 q_subch REF.fits REF NC_OBJ.REF
 q_arith DATA.fits - NC_OBJ.REF COMQ_NL_STD_A08_NC.fits
-q_list_stat COMA00088332.fits 1 - - 1 DATA.fits
-q_list_stat COMA00088332.fits 2 - - 1 REF.fits
+q_list_stat COMQ00088332.fits 1 - - 1 DATA.fits
+q_list_stat COMQ00088332.fits 2 - - 1 REF.fits
 q_subch REF.fits REF NC_OBJ.REF
 q_arith DATA.fits - NC_OBJ.REF COMQ_NL_OBJ_A09_NC.fits
-q_list_stat COMA00088334.fits 1 - - 1 DATA.fits
-q_list_stat COMA00088334.fits 2 - - 1 REF.fits
+q_list_stat COMQ00088334.fits 1 - - 1 DATA.fits
+q_list_stat COMQ00088334.fits 2 - - 1 REF.fits
 q_subch REF.fits REF NC_OBJ.REF
 q_arith DATA.fits - NC_OBJ.REF COMQ_NL_OBJ_A10_NC.fits
-q_list_stat COMA00088336.fits 1 - - 1 DATA.fits
-q_list_stat COMA00088336.fits 2 - - 1 REF.fits
+q_list_stat COMQ00088336.fits 1 - - 1 DATA.fits
+q_list_stat COMQ00088336.fits 2 - - 1 REF.fits
 q_subch REF.fits REF NC_OBJ.REF
 q_arith DATA.fits - NC_OBJ.REF COMQ_NL_OBJ_A11_NC.fits
-q_list_stat COMA00088338.fits 1 - - 1 DATA.fits
-q_list_stat COMA00088338.fits 2 - - 1 REF.fits
+q_list_stat COMQ00088338.fits 1 - - 1 DATA.fits
+q_list_stat COMQ00088338.fits 2 - - 1 REF.fits
 q_subch REF.fits REF NC_OBJ.REF
 q_arith DATA.fits - NC_OBJ.REF COMQ_NL_OBJ_A12_NC.fits
-q_list_stat COMA00088340.fits 1 - - 1 DATA.fits
-q_list_stat COMA00088340.fits 2 - - 1 REF.fits
+q_list_stat COMQ00088340.fits 1 - - 1 DATA.fits
+q_list_stat COMQ00088340.fits 2 - - 1 REF.fits
 q_subch REF.fits REF NC_OBJ.REF
 q_arith DATA.fits - NC_OBJ.REF COMQ_NL_OBJ_A13_NC.fits
-q_list_stat COMA00088342.fits 1 - - 1 DATA.fits
-q_list_stat COMA00088342.fits 2 - - 1 REF.fits
+q_list_stat COMQ00088342.fits 1 - - 1 DATA.fits
+q_list_stat COMQ00088342.fits 2 - - 1 REF.fits
 q_subch REF.fits REF NC_OBJ.REF
 q_arith DATA.fits - NC_OBJ.REF COMQ_NL_OBJ_A14_NC.fits
-q_list_stat COMA00088344.fits 1 - - 1 DATA.fits
-q_list_stat COMA00088344.fits 2 - - 1 REF.fits
+q_list_stat COMQ00088344.fits 1 - - 1 DATA.fits
+q_list_stat COMQ00088344.fits 2 - - 1 REF.fits
 q_subch REF.fits REF NC_OBJ.REF
 q_arith DATA.fits - NC_OBJ.REF COMQ_NL_OBJ_A15_NC.fits
-q_list_stat COMA00088346.fits 1 - - 1 DATA.fits
-q_list_stat COMA00088346.fits 2 - - 1 REF.fits
+q_list_stat COMQ00088346.fits 1 - - 1 DATA.fits
+q_list_stat COMQ00088346.fits 2 - - 1 REF.fits
 q_subch REF.fits REF NC_OBJ.REF
 q_arith DATA.fits - NC_OBJ.REF COMQ_NL_OBJ_A16_NC.fits
 
 
 
 ########Make COMQs for Position 2 ("B")
-q_list_stat COMA00088348.fits 1 - - 1 DATA.fits
-q_list_stat COMA00088348.fits 2 - - 1 REF.fits
+q_list_stat COMQ00088348.fits 1 - - 1 DATA.fits
+q_list_stat COMQ00088348.fits 2 - - 1 REF.fits
 q_subch REF.fits REF NC_OBJ.REF
 q_arith DATA.fits - NC_OBJ.REF COMQ_NL_OBJ_B01_NC.fits
-q_list_stat COMA00088350.fits 1 - - 1 DATA.fits
-q_list_stat COMA00088350.fits 2 - - 1 REF.fits
+q_list_stat COMQ00088350.fits 1 - - 1 DATA.fits
+q_list_stat COMQ00088350.fits 2 - - 1 REF.fits
 q_subch REF.fits REF NC_OBJ.REF
 q_arith DATA.fits - NC_OBJ.REF COMQ_NL_OBJ_B02_NC.fits
-q_list_stat COMA00088352.fits 1 - - 1 DATA.fits
-q_list_stat COMA00088352.fits 2 - - 1 REF.fits
+q_list_stat COMQ00088352.fits 1 - - 1 DATA.fits
+q_list_stat COMQ00088352.fits 2 - - 1 REF.fits
 q_subch REF.fits REF NC_OBJ.REF
 q_arith DATA.fits - NC_OBJ.REF COMQ_NL_OBJ_B03_NC.fits
-q_list_stat COMA00088354.fits 1 - - 1 DATA.fits
-q_list_stat COMA00088354.fits 2 - - 1 REF.fits
+q_list_stat COMQ00088354.fits 1 - - 1 DATA.fits
+q_list_stat COMQ00088354.fits 2 - - 1 REF.fits
 q_subch REF.fits REF NC_OBJ.REF
 q_arith DATA.fits - NC_OBJ.REF COMQ_NL_OBJ_B04_NC.fits
-q_list_stat COMA00088356.fits 1 - - 1 DATA.fits
-q_list_stat COMA00088356.fits 2 - - 1 REF.fits
+q_list_stat COMQ00088356.fits 1 - - 1 DATA.fits
+q_list_stat COMQ00088356.fits 2 - - 1 REF.fits
 q_subch REF.fits REF NC_OBJ.REF
 q_arith DATA.fits - NC_OBJ.REF COMQ_NL_OBJ_B05_NC.fits
-q_list_stat COMA00088358.fits 1 - - 1 DATA.fits
-q_list_stat COMA00088358.fits 2 - - 1 REF.fits
+q_list_stat COMQ00088358.fits 1 - - 1 DATA.fits
+q_list_stat COMQ00088358.fits 2 - - 1 REF.fits
 q_subch REF.fits REF NC_OBJ.REF
 q_arith DATA.fits - NC_OBJ.REF COMQ_NL_OBJ_B06_NC.fits
-q_list_stat COMA00088360.fits 1 - - 1 DATA.fits
-q_list_stat COMA00088360.fits 2 - - 1 REF.fits
+q_list_stat COMQ00088360.fits 1 - - 1 DATA.fits
+q_list_stat COMQ00088360.fits 2 - - 1 REF.fits
 q_subch REF.fits REF NC_OBJ.REF
 q_arith DATA.fits - NC_OBJ.REF COMQ_NL_OBJ_B07_NC.fits
-q_list_stat COMA00088362.fits 1 - - 1 DATA.fits
-q_list_stat COMA00088362.fits 2 - - 1 REF.fits
+q_list_stat COMQ00088362.fits 1 - - 1 DATA.fits
+q_list_stat COMQ00088362.fits 2 - - 1 REF.fits
 q_subch REF.fits REF NC_OBJ.REF
 q_arith DATA.fits - NC_OBJ.REF COMQ_NL_OBJ_B08_NC.fits
-q_list_stat COMA00088364.fits 1 - - 1 DATA.fits
-q_list_stat COMA00088364.fits 2 - - 1 REF.fits
+q_list_stat COMQ00088364.fits 1 - - 1 DATA.fits
+q_list_stat COMQ00088364.fits 2 - - 1 REF.fits
 q_subch REF.fits REF NC_OBJ.REF
 q_arith DATA.fits - NC_OBJ.REF COMQ_NL_OBJ_B09_NC.fits
-q_list_stat COMA00088366.fits 1 - - 1 DATA.fits
-q_list_stat COMA00088366.fits 2 - - 1 REF.fits
+q_list_stat COMQ00088366.fits 1 - - 1 DATA.fits
+q_list_stat COMQ00088366.fits 2 - - 1 REF.fits
 q_subch REF.fits REF NC_OBJ.REF
 q_arith DATA.fits - NC_OBJ.REF COMQ_NL_OBJ_B10_NC.fits
-q_list_stat COMA00088368.fits 1 - - 1 DATA.fits
-q_list_stat COMA00088368.fits 2 - - 1 REF.fits
+q_list_stat COMQ00088368.fits 1 - - 1 DATA.fits
+q_list_stat COMQ00088368.fits 2 - - 1 REF.fits
 q_subch REF.fits REF NC_OBJ.REF
 q_arith DATA.fits - NC_OBJ.REF COMQ_NL_OBJ_B11_NC.fits
-q_list_stat COMA00088370.fits 1 - - 1 DATA.fits
-q_list_stat COMA00088370.fits 2 - - 1 REF.fits
+q_list_stat COMQ00088370.fits 1 - - 1 DATA.fits
+q_list_stat COMQ00088370.fits 2 - - 1 REF.fits
 q_subch REF.fits REF NC_OBJ.REF
 q_arith DATA.fits - NC_OBJ.REF COMQ_NL_OBJ_B12_NC.fits
-q_list_stat COMA00088372.fits 1 - - 1 DATA.fits
-q_list_stat COMA00088372.fits 2 - - 1 REF.fits
+q_list_stat COMQ00088372.fits 1 - - 1 DATA.fits
+q_list_stat COMQ00088372.fits 2 - - 1 REF.fits
 q_subch REF.fits REF NC_OBJ.REF
 q_arith DATA.fits - NC_OBJ.REF COMQ_NL_OBJ_B13_NC.fits
-q_list_stat COMA00088374.fits 1 - - 1 DATA.fits
-q_list_stat COMA00088374.fits 2 - - 1 REF.fits
+q_list_stat COMQ00088374.fits 1 - - 1 DATA.fits
+q_list_stat COMQ00088374.fits 2 - - 1 REF.fits
 q_subch REF.fits REF NC_OBJ.REF
 q_arith DATA.fits - NC_OBJ.REF COMQ_NL_OBJ_B14_NC.fits
-q_list_stat COMA00088376.fits 1 - - 1 DATA.fits
-q_list_stat COMA00088376.fits 2 - - 1 REF.fits
+q_list_stat COMQ00088376.fits 1 - - 1 DATA.fits
+q_list_stat COMQ00088376.fits 2 - - 1 REF.fits
 q_subch REF.fits REF NC_OBJ.REF
 q_arith DATA.fits - NC_OBJ.REF COMQ_NL_OBJ_B15_NC.fits
-q_list_stat COMA00088378.fits 1 - - 1 DATA.fits
-q_list_stat COMA00088378.fits 2 - - 1 REF.fits
+q_list_stat COMQ00088378.fits 1 - - 1 DATA.fits
+q_list_stat COMQ00088378.fits 2 - - 1 REF.fits
 q_subch REF.fits REF NC_OBJ.REF
 q_arith DATA.fits - NC_OBJ.REF COMQ_NL_OBJ_B16_NC.fits
 
