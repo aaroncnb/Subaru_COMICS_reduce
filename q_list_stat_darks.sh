@@ -468,52 +468,93 @@ q_arith COMQ_NL_STD_A01_NC.fits / 100.0 SCALE1
 # it just finds the peak position
 q_startrace SCALE1 1 1-320 170:194 1 | awk '{print $2,$10}' > SPATIAL_CONST_STD_A01.DAT
 
-
+###################################################################################
+######################RUN SPATIAL_FIT_2DFUNC.f#####################################
+#################################################################################
 
 ###Standard Star: Find the wavelength/pixel relationship!
 ### This process is basically independent from the Spatially-Constant Axis Fitting step :) 
 
+#First step is to run 'q_sky_nlow'
+
+# I was running it in the following way:
+#q_sky_nlow SKY_NL_STD_A01.fits 1 - default 1 2 > SKY_NL_STD_A01.res
+# but this turns out to be different from Sakon-san's notes. We'll follow his example instead:
+
+##Standard Star:
+#Scale by 100 for housekeeping purposes
+q_arith SKY_NL_STD_A01.fits / 100.0 TEST1
+q_sky_nlow TEST1 1- default 1 2 | awk '{print $3,$6,$8}' > SKYFIT_NL_STD_A01.TXT
+
+#Position A:
+q_arith SKY_NL_OBJ_A01.fits / 100.0 TEST1
+q_sky_nlow TEST1 1- default 1 2 | awk '{print $3,$6,$8}' > SKYFIT_NL_OBJ_A01.TXT
+q_arith SKY_NL_OBJ_A02.fits / 100.0 TEST1
+q_sky_nlow TEST1 1- default 1 2 | awk '{print $3,$6,$8}' > SKYFIT_NL_OBJ_A02.TXT
+q_arith SKY_NL_OBJ_A03.fits / 100.0 TEST1
+q_sky_nlow TEST1 1- default 1 2 | awk '{print $3,$6,$8}' > SKYFIT_NL_OBJ_A03.TXT
+q_arith SKY_NL_OBJ_A04.fits / 100.0 TEST1
+q_sky_nlow TEST1 1- default 1 2 | awk '{print $3,$6,$8}' > SKYFIT_NL_OBJ_A04.TXT
+q_arith SKY_NL_OBJ_A05.fits / 100.0 TEST1
+q_sky_nlow TEST1 1- default 1 2 | awk '{print $3,$6,$8}' > SKYFIT_NL_OBJ_A05.TXT
+q_arith SKY_NL_OBJ_A06.fits / 100.0 TEST1
+q_sky_nlow TEST1 1- default 1 2 | awk '{print $3,$6,$8}' > SKYFIT_NL_OBJ_A06.TXT
+q_arith SKY_NL_OBJ_A07.fits / 100.0 TEST1
+q_sky_nlow TEST1 1- default 1 2 | awk '{print $3,$6,$8}' > SKYFIT_NL_OBJ_A07.TXT
+q_arith SKY_NL_OBJ_A08.fits / 100.0 TEST1
+q_sky_nlow TEST1 1- default 1 2 | awk '{print $3,$6,$8}' > SKYFIT_NL_OBJ_A08.TXT
+q_arith SKY_NL_OBJ_A09.fits / 100.0 TEST1
+q_sky_nlow TEST1 1- default 1 2 | awk '{print $3,$6,$8}' > SKYFIT_NL_OBJ_A09.TXT
+q_arith SKY_NL_OBJ_A10.fits / 100.0 TEST1
+q_sky_nlow TEST1 1- default 1 2 | awk '{print $3,$6,$8}' > SKYFIT_NL_OBJ_A10.TXT
+q_arith SKY_NL_OBJ_A11.fits / 100.0 TEST1
+q_sky_nlow TEST1 1- default 1 2 | awk '{print $3,$6,$8}' > SKYFIT_NL_OBJ_A11.TXT
+q_arith SKY_NL_OBJ_A12.fits / 100.0 TEST1
+q_sky_nlow TEST1 1- default 1 2 | awk '{print $3,$6,$8}' > SKYFIT_NL_OBJ_A12.TXT
+q_arith SKY_NL_OBJ_A13.fits / 100.0 TEST1
+q_sky_nlow TEST1 1- default 1 2 | awk '{print $3,$6,$8}' > SKYFIT_NL_OBJ_A13.TXT
+q_arith SKY_NL_OBJ_A14.fits / 100.0 TEST1
+q_sky_nlow TEST1 1- default 1 2 | awk '{print $3,$6,$8}' > SKYFIT_NL_OBJ_A14.TXT
+q_arith SKY_NL_OBJ_A15.fits / 100.0 TEST1
+q_sky_nlow TEST1 1- default 1 2 | awk '{print $3,$6,$8}' > SKYFIT_NL_OBJ_A15.TXT
+q_arith SKY_NL_OBJ_A16.fits / 100.0 TEST1
+q_sky_nlow TEST1 1- default 1 2 | awk '{print $3,$6,$8}' > SKYFIT_NL_OBJ_A16.TXT
+
+#Position B:
+q_arith SKY_NL_OBJ_B01.fits / 100.0 TEST1
+q_sky_nlow TEST1 1- default 1 2 | awk '{print $3,$6,$8}' > SKYFIT_NL_OBJ_B01.TXT
+q_arith SKY_NL_OBJ_B02.fits / 100.0 TEST1
+q_sky_nlow TEST1 1- default 1 2 | awk '{print $3,$6,$8}' > SKYFIT_NL_OBJ_B02.TXT
+q_arith SKY_NL_OBJ_B03.fits / 100.0 TEST1
+q_sky_nlow TEST1 1- default 1 2 | awk '{print $3,$6,$8}' > SKYFIT_NL_OBJ_B03.TXT
+q_arith SKY_NL_OBJ_B04.fits / 100.0 TEST1
+q_sky_nlow TEST1 1- default 1 2 | awk '{print $3,$6,$8}' > SKYFIT_NL_OBJ_B04.TXT
+q_arith SKY_NL_OBJ_B05.fits / 100.0 TEST1
+q_sky_nlow TEST1 1- default 1 2 | awk '{print $3,$6,$8}' > SKYFIT_NL_OBJ_B05.TXT
+q_arith SKY_NL_OBJ_B06.fits / 100.0 TEST1
+q_sky_nlow TEST1 1- default 1 2 | awk '{print $3,$6,$8}' > SKYFIT_NL_OBJ_B06.TXT
+q_arith SKY_NL_OBJ_B07.fits / 100.0 TEST1
+q_sky_nlow TEST1 1- default 1 2 | awk '{print $3,$6,$8}' > SKYFIT_NL_OBJ_B07.TXT
+q_arith SKY_NL_OBJ_B08.fits / 100.0 TEST1
+q_sky_nlow TEST1 1- default 1 2 | awk '{print $3,$6,$8}' > SKYFIT_NL_OBJ_B08.TXT
+q_arith SKY_NL_OBJ_B09.fits / 100.0 TEST1
+q_sky_nlow TEST1 1- default 1 2 | awk '{print $3,$6,$8}' > SKYFIT_NL_OBJ_B09.TXT
+q_arith SKY_NL_OBJ_B10.fits / 100.0 TEST1
+q_sky_nlow TEST1 1- default 1 2 | awk '{print $3,$6,$8}' > SKYFIT_NL_OBJ_B10.TXT
+q_arith SKY_NL_OBJ_B11.fits / 100.0 TEST1
+q_sky_nlow TEST1 1- default 1 2 | awk '{print $3,$6,$8}' > SKYFIT_NL_OBJ_B11.TXT
+q_arith SKY_NL_OBJ_B12.fits / 100.0 TEST1
+q_sky_nlow TEST1 1- default 1 2 | awk '{print $3,$6,$8}' > SKYFIT_NL_OBJ_B12.TXT
+q_arith SKY_NL_OBJ_B13.fits / 100.0 TEST1
+q_sky_nlow TEST1 1- default 1 2 | awk '{print $3,$6,$8}' > SKYFIT_NL_OBJ_B13.TXT
+q_arith SKY_NL_OBJ_B14.fits / 100.0 TEST1
+q_sky_nlow TEST1 1- default 1 2 | awk '{print $3,$6,$8}' > SKYFIT_NL_OBJ_B14.TXT
+q_arith SKY_NL_OBJ_B15.fits / 100.0 TEST1
+q_sky_nlow TEST1 1- default 1 2 | awk '{print $3,$6,$8}' > SKYFIT_NL_OBJ_B15.TXT
+q_arith SKY_NL_OBJ_B16.fits / 100.0 TEST1
+q_sky_nlow TEST1 1- default 1 2 | awk '{print $3,$6,$8}' > SKYFIT_NL_OBJ_B16.TXT
 
 
-
-q_sky_nlow SKY_NL_STD_A01.fits 1 - default 1 2 > SKY_NL_STD_A01.res
-
-###Observation target: Find the wavelength/pixel relationship for position A
-q_sky_nlow SKY_NL_OBJ_A02.fits 1 - default 1 2 > SKY_NL_OBJ_A01.res
-q_sky_nlow SKY_NL_OBJ_A02.fits 1 - default 1 2 > SKY_NL_OBJ_A02.res
-q_sky_nlow SKY_NL_OBJ_A03.fits 1 - default 1 2 > SKY_NL_OBJ_A03.res
-q_sky_nlow SKY_NL_OBJ_A04.fits 1 - default 1 2 > SKY_NL_OBJ_A04.res
-q_sky_nlow SKY_NL_OBJ_A05.fits 1 - default 1 2 > SKY_NL_OBJ_A05.res
-q_sky_nlow SKY_NL_OBJ_A06.fits 1 - default 1 2 > SKY_NL_OBJ_A06.res
-q_sky_nlow SKY_NL_OBJ_A07.fits 1 - default 1 2 > SKY_NL_OBJ_A07.res
-q_sky_nlow SKY_NL_OBJ_A08.fits 1 - default 1 2 > SKY_NL_OBJ_A08.res
-q_sky_nlow SKY_NL_OBJ_A09.fits 1 - default 1 2 > SKY_NL_OBJ_A09.res
-q_sky_nlow SKY_NL_OBJ_A10.fits 1 - default 1 2 > SKY_NL_OBJ_A10.res
-q_sky_nlow SKY_NL_OBJ_A11.fits 1 - default 1 2 > SKY_NL_OBJ_A11.res
-q_sky_nlow SKY_NL_OBJ_A12.fits 1 - default 1 2 > SKY_NL_OBJ_A12.res
-q_sky_nlow SKY_NL_OBJ_A13.fits 1 - default 1 2 > SKY_NL_OBJ_A13.res
-q_sky_nlow SKY_NL_OBJ_A14.fits 1 - default 1 2 > SKY_NL_OBJ_A14.res
-q_sky_nlow SKY_NL_OBJ_A15.fits 1 - default 1 2 > SKY_NL_OBJ_A15.res
-q_sky_nlow SKY_NL_OBJ_A16.fits 1 - default 1 2 > SKY_NL_OBJ_A16.res
-
-
-###Observation target: Find the wavelength/pixel relationship for position B
-q_sky_nlow SKY_NL_OBJ_B01.fits 1 - default 1 2 > SKY_NL_OBJ_B01.res
-q_sky_nlow SKY_NL_OBJ_B02.fits 1 - default 1 2 > SKY_NL_OBJ_B02.res
-q_sky_nlow SKY_NL_OBJ_B03.fits 1 - default 1 2 > SKY_NL_OBJ_B03.res
-q_sky_nlow SKY_NL_OBJ_B04.fits 1 - default 1 2 > SKY_NL_OBJ_B04.res
-q_sky_nlow SKY_NL_OBJ_B05.fits 1 - default 1 2 > SKY_NL_OBJ_B05.res
-q_sky_nlow SKY_NL_OBJ_B06.fits 1 - default 1 2 > SKY_NL_OBJ_B06.res
-q_sky_nlow SKY_NL_OBJ_B07.fits 1 - default 1 2 > SKY_NL_OBJ_B07.res
-q_sky_nlow SKY_NL_OBJ_B08.fits 1 - default 1 2 > SKY_NL_OBJ_B08.res
-q_sky_nlow SKY_NL_OBJ_B09.fits 1 - default 1 2 > SKY_NL_OBJ_B09.res
-q_sky_nlow SKY_NL_OBJ_B10.fits 1 - default 1 2 > SKY_NL_OBJ_B10.res
-q_sky_nlow SKY_NL_OBJ_B11.fits 1 - default 1 2 > SKY_NL_OBJ_B11.res
-q_sky_nlow SKY_NL_OBJ_B12.fits 1 - default 1 2 > SKY_NL_OBJ_B12.res
-q_sky_nlow SKY_NL_OBJ_B13.fits 1 - default 1 2 > SKY_NL_OBJ_B13.res
-q_sky_nlow SKY_NL_OBJ_B14.fits 1 - default 1 2 > SKY_NL_OBJ_B14.res
-q_sky_nlow SKY_NL_OBJ_B15.fits 1 - default 1 2 > SKY_NL_OBJ_B15.res
-q_sky_nlow SKY_NL_OBJ_B16.fits 1 - default 1 2 > SKY_NL_OBJ_B16.res
 
 
 
