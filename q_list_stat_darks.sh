@@ -280,6 +280,8 @@ q_arith DATA.fits - NC_OBJ.REF COMQ_NL_OBJ_B16_NC.fits
 ##Standard Star Flat Correction
 q_arith COMQ_NL_STD_A01_NC.fits / FLAT_NL_STD NL_STD_NC_FC_A01.fits
 
+#Wondering if we need a 'q_chgaxis' here?
+
 ##Observation Flat Correction: Position A
 q_arith COMQ_NL_OBJ_A01_NC.fits / FLAT_NL_OBJ NL_OBJ_NC_FC_A01.fits
 q_arith COMQ_NL_OBJ_A02_NC.fits / FLAT_NL_OBJ NL_OBJ_NC_FC_A02.fits
