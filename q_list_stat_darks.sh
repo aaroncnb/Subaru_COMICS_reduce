@@ -93,7 +93,7 @@ q_arith FLAT_NL_TEST_STD / 5.368803e+03 FLAT_NL_STD
 
 
 ##88380 is the target's FLAT file
-q_list_stat COMA00088380.fits 1 - - : DOMEFLAT_NL_OBJ
+q_list_stat COMQ00088380.fits 1 - - : DOMEFLAT_NL_OBJ
 
 q_arith DOMEFLAT_NL_OBJ - FDARK1 FLAT_NL_TEST_OBJ
 
@@ -278,12 +278,14 @@ q_arith DATA.fits - NC_OBJ.REF COMQ_NL_OBJ_B16_NC.fits
 ############ we can finally divide the COMQs by the flats
 
 ##Standard Star Flat Correction
-q_arith COMQ_NL_STD_A01_NC.fits / FLAT_NL_STD NL_STD_NC_FC_A01.fits
-
+q_arith COMQ_NL_STD_A01_NC.fits / FLAT_NL_STD NL_4
+q_chgaxis 3 NL_4 NL_STD_NC_FC_A01.fits
 #Wondering if we need a 'q_chgaxis' here?
 
 ##Observation Flat Correction: Position A
 q_arith COMQ_NL_OBJ_A01_NC.fits / FLAT_NL_OBJ NL_OBJ_NC_FC_A01.fits
+
+
 q_arith COMQ_NL_OBJ_A02_NC.fits / FLAT_NL_OBJ NL_OBJ_NC_FC_A02.fits
 q_arith COMQ_NL_OBJ_A03_NC.fits / FLAT_NL_OBJ NL_OBJ_NC_FC_A03.fits
 q_arith COMQ_NL_OBJ_A04_NC.fits / FLAT_NL_OBJ NL_OBJ_NC_FC_A04.fits
