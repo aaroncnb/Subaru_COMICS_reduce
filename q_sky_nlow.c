@@ -149,7 +149,7 @@ WAVE_FIT_PAR fitpar ;
      }
      fprintf(stdout,"%s  y= %s : a= %8.5e  b= %8.5e  corr= %8.5e\n",ifile,argv[4],fitpar.a,fitpar.b,fitpar.cr) ;
   } else {  /* ¥Ç¥Õ¥©¥ë¥È€Îy€Ç¥Õ¥£¥Ã¥È */
-     for(j=30;j<=220;j+=10) {
+     for(j=40;j<=220;j+=10) { /* Setting j=40, since data are missing at pixels where Y > 40*/
         sprintf(buf,"%d",j) ;
         region_input(buf,&(spd.y0),&(spd.y1),&(spd.yr));
         /* q_list_stat €ÎžÆœÐ€·Ÿò·ï€Î¥Á¥§¥Ã¥¯ */
