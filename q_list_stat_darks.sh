@@ -62,7 +62,7 @@ q_arith DS50_1_1_ave / 98.0 DS50_1_1
 
 #Now that we have the flat's dark, subtract it from the flat, itself
 
-q_list_stat COMA00088272.fits 1 - - : DOMEFLAT_NL_STD
+q_list_stat COMQ00088272.fits 1 - - : DOMEFLAT_NL_STD
 
 ##First you have to scale the dark up to the same Nexp as the flat
 
