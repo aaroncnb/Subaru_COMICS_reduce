@@ -356,7 +356,7 @@ q_chgaxis 3 NL_4 NL_OBJ_NC_FC_B16.fits
 
 ##Make FDARK for NL mode
 q_list_stat COMA00088270.fits 1 - - : COMA_NL.fits
-q_arith DS150_1_1 \* 3.0 FDARK
+q_arith DS150_1_1 \* 3.0 FDARK1
 q_arith COMA_NL.fits - FDARK1 SKY_NL_STD_A01.fits
 
 
