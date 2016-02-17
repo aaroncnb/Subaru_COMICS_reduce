@@ -68,10 +68,11 @@ q_arith DS50_1_1_ave / 98.0 DS50_1_1
 
 # We have to refer to the 2nd frame in the COMA flat file- this contains the "actual" flat information
 # the first frame should contain only the read-out noise + possibly some second order light
-q_list_stat COMA00088272.fits 1 - - : DOMEFLAT_NL_STD_READ
-q_list_stat COMA00088272.fits 2 - - : DOMEFLAT_NL_STD_DATA
+q_list_stat COMA00088272.fits 1 - - : DOMEFLAT_NL_STD_READ #This isolates the "read-out noise" pattern- 
+#some pattern from the scattered light should also be visible in this image!
 
 
+q_list_stat COMA00088272.fits 2 - - : DOMEFLAT_NL_STD_DATA  #This isolates the "actual" FLAT data
 
 
 ##First you have to scale the dark up to the same Nexp as the flat
@@ -80,11 +81,12 @@ q_arith DS50_1_1 \* 9.0 FDARK1
 
 ##Now you can actually subtract it
 
-q_arith DOMEFLAT_NL_STD - FDARK1 FLAT_NL_TEST_STD
+q_arith DOMEFLAT_NL_STD_DATA - FDARK1 FLAT_NL_TEST_STD
 
 ##Now we're gonna get the average value of the flat, so that we can
 ##normalize it
-
+echo "Don't forget to put these numbers into the next command!"
+echo "This is the average value for the NL Standard Star Obs.'s FLAT"
 q_list_stat FLAT_NL_TEST_STD 1 1:320 32:240 1 | awk '{print $5}'
 
 ##Taking the value output by q_list_stat, we do the actual noramlization
@@ -102,11 +104,16 @@ q_arith FLAT_NL_TEST_STD / 5.368803e+03 FLAT_NL_STD
 
 
 
-##88380 is the target's FLAT file
-q_list_stat COMQ00088380.fits 1 - - : DOMEFLAT_NL_OBJ
+##88380 is the target's FLAT file: Repeating the steps above!
 
-q_arith DOMEFLAT_NL_OBJ - FDARK1 FLAT_NL_TEST_OBJ
+#Readout noise!
+q_list_stat COMA00088380.fits 1 - - : DOMEFLAT_NL_OBJ_READ
+#Flat!
+q_list_stat COMA00088380.fits 2 - - : DOMEFLAT_NL_OBJ_DATA
 
+
+q_arith DOMEFLAT_NL_OBJ_DATA - FDARK1 FLAT_NL_TEST_OBJ
+echo "This is the average value for the NL Target Obs.'s FLAT"
 q_list_stat FLAT_NL_TEST_OBJ 1 1:320 32:240 1 | awk '{print $5}'
 
 ## In the Object-Flat case, the average is 5.421052e+03
