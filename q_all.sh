@@ -62,7 +62,14 @@ q_arith DS50_1_1_ave / 98.0 DS50_1_1
 
 #Now that we have the flat's dark, subtract it from the flat, itself
 
-q_list_stat COMQ00088272.fits 1 - - : DOMEFLAT_NL_STD
+
+# We have to refer to the 2nd frame in the COMQ flat file- this contains the "actual" flat information
+# the first frame should contain only the read-out noise + possibly some second order light
+q_list_stat COMQ00088272.fits 1 - - : DOMEFLAT_NL_STD_READ
+q_list_stat COMA00088272.fits 2 - - : DOMEFLAT_NL_STD_DATA
+
+
+
 
 ##First you have to scale the dark up to the same Nexp as the flat
 
@@ -132,8 +139,8 @@ q_arith FLAT_NL_TEST_OBJ / 5.421052e+03 FLAT_NL_OBJ
 
 ### Now, we'll do the anove process but replacing COMA with COMQ...
 
-q_list_stat COMQ00088270.fits 1 - - 1 DATA.fits
-q_list_stat COMQ00088270.fits 2 - - 1 REF.fits
+q_list_stat COMQ00088270.fits 2 - - 1 DATA.fits
+q_list_stat COMQ00088270.fits 1 - - 1 REF.fits
 q_subch REF.fits REF NC_STD.REF
 q_arith DATA.fits - NC_STD.REF COMQ_NL_STD_A01_NC.fits
 
@@ -353,6 +360,9 @@ q_chgaxis 3 NL_4 NL_OBJ_NC_FC_B16.fits
 
 
 ########Next we make the sky images
+
+# 
+
 
 ##Make FDARK for NL mode
 q_list_stat COMA00088270.fits 1 - - : COMA_NL.fits
