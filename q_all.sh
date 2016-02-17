@@ -19,8 +19,11 @@ q_fcombine m89031 m89033 ave=DI50_1_1_ave
 q_arith DI50_1_1_ave / 9.0 DI50_1_1
 
 ##Darks Q18.8
-q_list_stat COMA00089019.fits 1 - - : m89019
-q_list_stat COMA00089021.fits 1 - - : m89021
+####It turns out that the Q18.8 band data was either not taken or not stored...somehow
+#### We don't know if it is an archival issue or something that happened on the night of observation
+### Anyhow, life goes on! We'll skip the Q18.8 band processing!
+#q_list_stat COMA00089019.fits 1 - - : m89019
+#q_list_stat COMA00089021.fits 1 - - : m89021
 
 q_fcombine m89019 m89021 ave=DI30_120_1_ave
 
