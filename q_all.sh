@@ -66,9 +66,9 @@ q_arith DS50_1_1_ave / 98.0 DS50_1_1
 #Now that we have the flat's dark, subtract it from the flat, itself
 
 
-# We have to refer to the 2nd frame in the COMQ flat file- this contains the "actual" flat information
+# We have to refer to the 2nd frame in the COMA flat file- this contains the "actual" flat information
 # the first frame should contain only the read-out noise + possibly some second order light
-q_list_stat COMQ00088272.fits 1 - - : DOMEFLAT_NL_STD_READ
+q_list_stat COMA00088272.fits 1 - - : DOMEFLAT_NL_STD_READ
 q_list_stat COMA00088272.fits 2 - - : DOMEFLAT_NL_STD_DATA
 
 
