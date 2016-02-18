@@ -375,6 +375,7 @@ q_arith DS150_1_1 \* 3.0 FDARK1
 #Q_BSEP seprates ON from OFF - in terms of image chopping...
 # We use the OFF (beam B) data to make the SKY image for beam A (ON)
 
+echo "Making SKY images for the Standard Star"
 q_bsep COMA00088270.fits COMA_A COMA_B
 q_list_stat COMA_B 2 - - : COMA_SKY_FOR_A
 q_arith COMA_SKY_FOR_A - FDARK1 COMA_SKY_FOR_A_UFC
@@ -382,6 +383,8 @@ q_arith COMA_SKY_FOR_A_UFC / FLAT_NL_STD SKY_NL_STD.fits
 
 
 ##Observation: Position A
+echo "Making SKY images for Target A"
+
 q_bsep COMA00088316.fits COMA_A COMA_B
 q_list_stat COMA_B 2 - - : COMA_SKY_FOR_A
 q_arith COMA_SKY_FOR_A - FDARK1 COMA_SKY_FOR_A_UFC
@@ -390,7 +393,6 @@ q_arith COMA_SKY_FOR_A_UFC / FLAT_NL_OBJ SKY_NL_OBJ_A01.fits
 q_bsep COMA00088318.fits COMA_A COMA_B
 q_list_stat COMA_B 2 - - : COMA_SKY_FOR_A
 q_arith COMA_SKY_FOR_A - FDARK1 COMA_SKY_FOR_A_UFC
-q_arith COMA_SKY_FOR_A_UFC / FLAT_NL_OBJ COMA_SKY_FOR_A_UFC
 q_arith COMA_SKY_FOR_A_UFC / FLAT_NL_OBJ SKY_NL_OBJ_A02.fits
 
 q_bsep COMA00088320.fits COMA_A COMA_B
@@ -465,6 +467,7 @@ q_arith COMA_SKY_FOR_A_UFC / FLAT_NL_OBJ SKY_NL_OBJ_A16.fits
 
 
 ##Observation: Position B
+echo "Making SKY images for Target B"
 q_bsep COMA00088348.fits COMA_A COMA_B
 q_list_stat COMA_B 2 - - : COMA_SKY_FOR_A
 q_arith COMA_SKY_FOR_A - FDARK1 COMA_SKY_FOR_A_UFC
@@ -569,10 +572,12 @@ q_startrace SCALE1 1 1-320 170:194 1 | awk '{print $2,$10}' > SPATIAL_CONST_STD_
 
 ##Standard Star:
 #Scale by 100 for housekeeping purposes
-q_arith SKY_NL_STD_A01.fits / 100.0 TEST1
-q_sky_nlow TEST1 1 - default 1 2 | awk '{print $3,$6,$8}' > SKYFIT_NL_STD_A01.TXT
+echo "Running Q_SKY_NLOW for the Standard Star"
+q_arith SKY_NL_STD.fits / 100.0 TEST1
+q_sky_nlow TEST1 1 - default 1 2 | awk '{print $3,$6,$8}' > SKYFIT_NL_STD.TXT
 
 #Position A:
+echo "Running Q_SKY_NLOW for Target A"
 q_arith SKY_NL_OBJ_A01.fits / 100.0 TEST1
 q_sky_nlow TEST1 1 - default 1 2 | awk '{print $3,$6,$8}' > SKYFIT_NL_OBJ_A01.TXT
 q_arith SKY_NL_OBJ_A02.fits / 100.0 TEST1
@@ -607,6 +612,7 @@ q_arith SKY_NL_OBJ_A16.fits / 100.0 TEST1
 q_sky_nlow TEST1 1 - default 1 2 | awk '{print $3,$6,$8}' > SKYFIT_NL_OBJ_A16.TXT
 
 #Position B:
+echo "Running Q_SKY_NLOW for Target B"
 q_arith SKY_NL_OBJ_B01.fits / 100.0 TEST1
 q_sky_nlow TEST1 1 - default 1 2 | awk '{print $3,$6,$8}' > SKYFIT_NL_OBJ_B01.TXT
 q_arith SKY_NL_OBJ_B02.fits / 100.0 TEST1
