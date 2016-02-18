@@ -371,108 +371,145 @@ q_chgaxis 3 NL_4 NL_OBJ_NC_FC_B16.fits
 q_arith DS150_1_1 \* 3.0 FDARK1
 #This same "FDARK1" file will be used for the remaining NL SKY-making commands
 
-q_list_stat COMA00088270.fits 2 - - : COMA_NL.fits
-q_arith COMA_NL.fits - FDARK1 SKY_NL_STD_A01.fits
+
+#Q_BSEP seprates ON from OFF - in terms of image chopping...
+# We use the OFF (beam B) data to make the SKY image for beam A (ON)
+
+q_bsep COMA00088270.fits COMA_A COMA_B
+q_list_stat COMA_B 2 - - : COMA_SKY_FOR_A
+q_arith COMA_SKY_FOR_A.fits - FDARK1 SKY_NL_STD_A01.fits
 
 
 ##Observation: Position A
-q_list_stat COMA00088316.fits 2 - - : COMA_NL.fits
-q_arith COMA_NL.fits - FDARK1 SKY_NL_OBJ_A01.fits
+q_bsep COMA00088316.fits COMA_A COMA_B
+q_list_stat COMA_B 2 - - : COMA_SKY_FOR_A
+q_arith COMA_SKY_FOR_A.fits - FDARK1 SKY_NL_OBJ_A01.fits
 
-q_list_stat COMA00088318.fits 2 - - : COMA_NL.fits
-q_arith COMA_NL.fits - FDARK1 SKY_NL_OBJ_A02.fits
+q_bsep COMA00088318.fits COMA_A COMA_B
+q_list_stat COMA_B 2 - - : COMA_SKY_FOR_A
+q_arith COMA_SKY_FOR_A.fits - FDARK1 SKY_NL_OBJ_A02.fits
 
-q_list_stat COMA00088320.fits 2 - - : COMA_NL.fits
-q_arith COMA_NL.fits - FDARK1 SKY_NL_OBJ_A03.fits
+q_bsep COMA00088320.fits COMA_A COMA_B
+q_list_stat COMA_B 2 - - : COMA_SKY_FOR_A
+q_arith COMA_SKY_FOR_A.fits - FDARK1 SKY_NL_OBJ_A03.fits
 
-q_list_stat COMA00088322.fits 2 - - : COMA_NL.fits
-q_arith COMA_NL.fits - FDARK1 SKY_NL_OBJ_A04.fits
+q_bsep COMA00088322.fits COMA_A COMA_B
+q_list_stat COMA_B 2 - - : COMA_SKY_FOR_A
+q_arith COMA_SKY_FOR_A.fits - FDARK1 SKY_NL_OBJ_A04.fits
 
-q_list_stat COMA00088324.fits 2 - - : COMA_NL.fits
-q_arith COMA_NL.fits - FDARK1 SKY_NL_OBJ_A05.fits
+q_bsep COMA00088324.fits COMA_A COMA_B
+q_list_stat COMA_B 2 - - : COMA_SKY_FOR_A
+q_arith COMA_SKY_FOR_A.fits - FDARK1 SKY_NL_OBJ_A05.fits
 
-q_list_stat COMA00088326.fits 2 - - : COMA_NL.fits
-q_arith COMA_NL.fits - FDARK1 SKY_NL_OBJ_A06.fits
+q_bsep COMA00088326.fits COMA_A COMA_B
+q_list_stat COMA_B 2 - - : COMA_SKY_FOR_A
+q_arith COMA_SKY_FOR_A.fits - FDARK1 SKY_NL_OBJ_A06.fits
 
-q_list_stat COMA00088328.fits 2 - - : COMA_NL.fits
-q_arith COMA_NL.fits - FDARK1 SKY_NL_OBJ_A07.fits
+q_bsep COMA00088328.fits COMA_A COMA_B
+q_list_stat COMA_B 2 - - : COMA_SKY_FOR_A
+q_arith COMA_SKY_FOR_A.fits - FDARK1 SKY_NL_OBJ_A07.fits
 
-q_list_stat COMA00088330.fits 2 - - : COMA_NL.fits
-q_arith COMA_NL.fits - FDARK1 SKY_NL_OBJ_A08.fits
+q_bsep COMA00088330.fits COMA_A COMA_B
+q_list_stat COMA_B 2 - - : COMA_SKY_FOR_A
+q_arith COMA_SKY_FOR_A.fits - FDARK1 SKY_NL_OBJ_A08.fits
 
-q_list_stat COMA00088332.fits 2 - - : COMA_NL.fits
-q_arith COMA_NL.fits - FDARK1 SKY_NL_OBJ_A09.fits
+q_bsep COMA00088332.fits COMA_A COMA_B
+q_list_stat COMA_B 2 - - : COMA_SKY_FOR_A
+q_arith COMA_SKY_FOR_A.fits - FDARK1 SKY_NL_OBJ_A09.fits
 
-q_list_stat COMA00088334.fits 2 - - : COMA_NL.fits
-q_arith COMA_NL.fits - FDARK1 SKY_NL_OBJ_A10.fits
+q_bsep COMA00088334.fits COMA_A COMA_B
+q_list_stat COMA_B 2 - - : COMA_SKY_FOR_A
+q_arith COMA_SKY_FOR_A.fits - FDARK1 SKY_NL_OBJ_A10.fits
 
-q_list_stat COMA00088336.fits 2 - - : COMA_NL.fits
-q_arith COMA_NL.fits - FDARK1 SKY_NL_OBJ_A11.fits
+q_bsep COMA00088336.fits COMA_A COMA_B
+q_list_stat COMA_B 2 - - : COMA_SKY_FOR_A
+q_arith COMA_SKY_FOR_A.fits - FDARK1 SKY_NL_OBJ_A11.fits
 
-q_list_stat COMA00088338.fits 2 - - : COMA_NL.fits
-q_arith COMA_NL.fits - FDARK1 SKY_NL_OBJ_A12.fits
+q_bsep COMA00088338.fits COMA_A COMA_B
+q_list_stat COMA_B 2 - - : COMA_SKY_FOR_A
+q_arith COMA_SKY_FOR_A.fits - FDARK1 SKY_NL_OBJ_A12.fits
 
-q_list_stat COMA00088340.fits 2 - - : COMA_NL.fits
-q_arith COMA_NL.fits - FDARK1 SKY_NL_OBJ_A13.fits
+q_bsep COMA00088340.fits COMA_A COMA_B
+q_list_stat COMA_B 2 - - : COMA_SKY_FOR_A
+q_arith COMA_SKY_FOR_A.fits - FDARK1 SKY_NL_OBJ_A13.fits
 
-q_list_stat COMA00088342.fits 2 - - : COMA_NL.fits
-q_arith COMA_NL.fits - FDARK1 SKY_NL_OBJ_A14.fits
+q_bsep COMA00088342.fits COMA_A COMA_B
+q_list_stat COMA_B 2 - - : COMA_SKY_FOR_A
+q_arith COMA_SKY_FOR_A.fits - FDARK1 SKY_NL_OBJ_A14.fits
 
-q_list_stat COMA00088344.fits 2 - - : COMA_NL.fits
-q_arith COMA_NL.fits - FDARK1 SKY_NL_OBJ_A15.fits
+q_bsep COMA00088344.fits COMA_A COMA_B
+q_list_stat COMA_B 2 - - : COMA_SKY_FOR_A
+q_arith COMA_SKY_FOR_A.fits - FDARK1 SKY_NL_OBJ_A15.fits
 
-q_list_stat COMA00088346.fits 2 - - : COMA_NL.fits
-q_arith COMA_NL.fits - FDARK1 SKY_NL_OBJ_A16.fits
+q_bsep COMA00088346.fits COMA_A COMA_B
+q_list_stat COMA_B 2 - - : COMA_SKY_FOR_A
+q_arith COMA_SKY_FOR_A.fits - FDARK1 SKY_NL_OBJ_A16.fits
 
 
 ##Observation: Position B
-q_list_stat COMA00088348.fits 2 - - : COMA_NL.fits
-q_arith COMA_NL.fits - FDARK1 SKY_NL_OBJ_B01.fits
+q_bsep COMA00088348.fits COMA_A COMA_B
+q_list_stat COMA_B 2 - - : COMA_SKY_FOR_A
+q_arith COMA_SKY_FOR_A.fits - FDARK1 SKY_NL_OBJ_B01.fits
 
-q_list_stat COMA00088350.fits 2 - - : COMA_NL.fits
-q_arith COMA_NL.fits - FDARK1 SKY_NL_OBJ_B02.fits
+q_bsep COMA00088350.fits COMA_A COMA_B
+q_list_stat COMA_B 2 - - : COMA_SKY_FOR_A
+q_arith COMA_SKY_FOR_A.fits - FDARK1 SKY_NL_OBJ_B02.fits
 
-q_list_stat COMA00088352.fits 2 - - : COMA_NL.fits
-q_arith COMA_NL.fits - FDARK1 SKY_NL_OBJ_B03.fits
+q_bsep COMA00088352.fits COMA_A COMA_B
+q_list_stat COMA_B 2 - - : COMA_SKY_FOR_A
+q_arith COMA_SKY_FOR_A.fits - FDARK1 SKY_NL_OBJ_B03.fits
 
-q_list_stat COMA00088354.fits 2 - - : COMA_NL.fits
-q_arith COMA_NL.fits - FDARK1 SKY_NL_OBJ_B04.fits
+q_bsep COMA00088354.fits COMA_A COMA_B
+q_list_stat COMA_B 2 - - : COMA_SKY_FOR_A
+q_arith COMA_SKY_FOR_A.fits - FDARK1 SKY_NL_OBJ_B04.fits
 
-q_list_stat COMA00088356.fits 2 - - : COMA_NL.fits
-q_arith COMA_NL.fits - FDARK1 SKY_NL_OBJ_B05.fits
+q_bsep COMA00088356.fits COMA_A COMA_B
+q_list_stat COMA_B 2 - - : COMA_SKY_FOR_A
+q_arith COMA_SKY_FOR_A.fits - FDARK1 SKY_NL_OBJ_B05.fits
 
-q_list_stat COMA00088358.fits 2 - - : COMA_NL.fits
-q_arith COMA_NL.fits - FDARK1 SKY_NL_OBJ_B06.fits
+q_bsep COMA00088358.fits COMA_A COMA_B
+q_list_stat COMA_B 2 - - : COMA_SKY_FOR_A
+q_arith COMA_SKY_FOR_A.fits - FDARK1 SKY_NL_OBJ_B06.fits
 
-q_list_stat COMA00088360.fits 2 - - : COMA_NL.fits
-q_arith COMA_NL.fits - FDARK1 SKY_NL_OBJ_B07.fits
+q_bsep COMA00088360.fits COMA_A COMA_B
+q_list_stat COMA_B 2 - - : COMA_SKY_FOR_A
+q_arith COMA_SKY_FOR_A.fits - FDARK1 SKY_NL_OBJ_B07.fits
 
-q_list_stat COMA00088362.fits 2 - - : COMA_NL.fits
-q_arith COMA_NL.fits - FDARK1 SKY_NL_OBJ_B08.fits
+q_bsep COMA00088362.fits COMA_A COMA_B
+q_list_stat COMA_B 2 - - : COMA_SKY_FOR_A
+q_arith COMA_SKY_FOR_A.fits - FDARK1 SKY_NL_OBJ_B08.fits
 
-q_list_stat COMA00088364.fits 2 - - : COMA_NL.fits
-q_arith COMA_NL.fits - FDARK1 SKY_NL_OBJ_B09.fits
+q_bsep COMA00088364.fits COMA_A COMA_B
+q_list_stat COMA_B 2 - - : COMA_SKY_FOR_A
+q_arith COMA_SKY_FOR_A.fits - FDARK1 SKY_NL_OBJ_B09.fits
 
-q_list_stat COMA00088366.fits 2 - - : COMA_NL.fits
-q_arith COMA_NL.fits - FDARK1 SKY_NL_OBJ_B10.fits
+q_bsep COMA00088366.fits COMA_A COMA_B
+q_list_stat COMA_B 2 - - : COMA_SKY_FOR_A
+q_arith COMA_SKY_FOR_A.fits - FDARK1 SKY_NL_OBJ_B10.fits
 
-q_list_stat COMA00088368.fits 2 - - : COMA_NL.fits
-q_arith COMA_NL.fits - FDARK1 SKY_NL_OBJ_B11.fits
+q_bsep COMA00088368.fits COMA_A COMA_B
+q_list_stat COMA_B 2 - - : COMA_SKY_FOR_A
+q_arith COMA_SKY_FOR_A.fits - FDARK1 SKY_NL_OBJ_B11.fits
 
-q_list_stat COMA00088370.fits 2 - - : COMA_NL.fits
-q_arith COMA_NL.fits - FDARK1 SKY_NL_OBJ_B12.fits
+q_bsep COMA00088370.fits COMA_A COMA_B
+q_list_stat COMA_B 2 - - : COMA_SKY_FOR_A
+q_arith COMA_SKY_FOR_A.fits - FDARK1 SKY_NL_OBJ_B12.fits
 
-q_list_stat COMA00088372.fits 2 - - : COMA_NL.fits
-q_arith COMA_NL.fits - FDARK1 SKY_NL_OBJ_B13.fits
+q_bsep COMA00088372.fits COMA_A COMA_B
+q_list_stat COMA_B 2 - - : COMA_SKY_FOR_A
+q_arith COMA_SKY_FOR_A.fits - FDARK1 SKY_NL_OBJ_B13.fits
 
-q_list_stat COMA00088374.fits 2 - - : COMA_NL.fits
-q_arith COMA_NL.fits - FDARK1 SKY_NL_OBJ_B14.fits
+q_bsep COMA00088374.fits COMA_A COMA_B
+q_list_stat COMA_B 2 - - : COMA_SKY_FOR_A
+q_arith COMA_SKY_FOR_A.fits - FDARK1 SKY_NL_OBJ_B14.fits
 
-q_list_stat COMA00088376.fits 2 - - : COMA_NL.fits
-q_arith COMA_NL.fits - FDARK1 SKY_NL_OBJ_B15.fits
+q_bsep COMA00088376.fits COMA_A COMA_B
+q_list_stat COMA_B 2 - - : COMA_SKY_FOR_A
+q_arith COMA_SKY_FOR_A.fits - FDARK1 SKY_NL_OBJ_B15.fits
 
-q_list_stat COMA00088378.fits 2 - - : COMA_NL.fits
-q_arith COMA_NL.fits - FDARK1 SKY_NL_OBJ_B16.fits
+q_bsep COMA00088378.fits COMA_A COMA_B
+q_list_stat COMA_B 2 - - : COMA_SKY_FOR_A
+q_arith COMA_SKY_FOR_A.fits - FDARK1 SKY_NL_OBJ_B16.fits
 
 
 ### Next let's obtain the spatially constant axis
