@@ -1,0 +1,31 @@
+###
+                                   I R A F  
+                    Image Reduction and Analysis Facility
+PACKAGE = immatch
+   TASK = geomap
+
+input   =                       The input coordinate files
+database=                       The output database file
+xmin    =                   1.  Minimum x reference coordinate value
+xmax    =                 320.  Maximum x reference coordinate value
+ymin    =                   1.  Minimum y reference coordinate value
+ymax    =                 240.  Maximum y reference coordinate value
+(transfo=                     ) The output transform records names
+(results=                     ) The optional results summary files
+(fitgeom=              general) Fitting geometry
+(functio=           polynomial) Surface type
+(xxorder=                    3) Order of x fit in x
+(xyorder=                    3) Order of x fit in y
+(xxterms=                 half) X fit cross terms type
+(yxorder=                    3) Order of y fit in x
+(yyorder=                    3) Order of y fit in y
+(yxterms=                 half) Y fit cross terms type
+(maxiter=                    0) Maximum number of rejection iterations
+(reject =                INDEF) Rejection limit in sigma units
+(calctyp=               double) Computation type
+(verbose=                  yes) Print messages about progress of task ?
+(interac=                   no) Fit transformation interactively ?
+(graphic=             stdgraph) Default graphics device
+(cursor =                     ) Graphics cursor
+(mode   =                   ql)
+
