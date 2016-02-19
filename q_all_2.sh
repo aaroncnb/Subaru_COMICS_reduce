@@ -44,3 +44,28 @@ g77 -o test FC_STD.f
 # Run the code
 
 ./test
+
+ #
+echo "Finished flux calibration comparison (FC_STD.f)"
+echo "FILTER FL RESULT"
+cat STD_NL_FILTER_FL.TXT
+echo "FILTER FL RESULT"
+cat STD_NL_FILTER_FN.TXT
+
+q_mkimg STD_NL_FILTER_FL.TXT STD_NL_FILTER_FL.fits 320 240
+#q_mkimg STD_NL_FILTER_320x80_FL.TXT STD_NL_FILTER_320x80_FL.fits 320 80
+
+q_mkimg STD_NL_FILTER_FN.TXT STD_NL_FILTER_FN.fits 320 240
+#q_mkimg STD_NL_FILTER_320x80_FN.TXT STD_NL_FILTER_320x80_FN.fits 320 80
+
+
+
+
+
+q_arith NL_SLIT1.fits x STD_NL_FILTER_FL.fits NL_SLIT1_Wcm-1.fits
+q_arith NL_SLIT2.fits x STD_NL_FILTER_FL.fits NL_SLIT2_Wcm-1.fits
+
+q_arith NL_SLIT1.fits x STD_NL_FILTER_FN.fits NL_SLIT1_JY.fits
+q_arith NL_SLIT2.fits x STD_NL_FILTER_FN.fits NL_SLIT2_JY.fits
+
+ds9 -scale mode zscale NL_SLIT1_Wcm-1.fits NL_SLIT2_Wcm-1.fits NL_SLIT1_JY.fits NL_SLIT2_JY.fits &
