@@ -84,4 +84,7 @@ geotran NL_OBJ_NC_FC_B13.fits NL_OBJ_B13N.fits TRANSPARB13 GEOTRAN_OBJ029.DAT
 geotran NL_OBJ_NC_FC_B14.fits NL_OBJ_B14N.fits TRANSPARB14 GEOTRAN_OBJ030.DAT
 geotran NL_OBJ_NC_FC_B15.fits NL_OBJ_B15N.fits TRANSPARB15 GEOTRAN_OBJ031.DAT
 geotran NL_OBJ_NC_FC_B16.fits NL_OBJ_B16N.fits TRANSPARB16 GEOTRAN_OBJ032.DAT
+##################################END#############################
+##################That's all the IRAF stuff for now!!!!###########
+##############Please proceed to q_all_2.sh!!!!!!!!################
 
