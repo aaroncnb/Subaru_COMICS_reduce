@@ -7,7 +7,8 @@
       REAL*8 FLCAL(320),FNCAL(320),FLC(320)
 
       OPEN(1,FILE="STD_NL.ADU",STATUS="OLD")
-      OPEN(2,FILE="HD197989.tem",STATUS="OLD")
+C    Change this file name according to the target being observed...
+      OPEN(2,FILE="IRAS18434.tem",STATUS="OLD")
       
       OPEN(11,FILE="STD_NL_FILTER_FL.TXT",STATUS="NEW")
       OPEN(12,FILE="STD_NL_FILTER_FN.TXT",STATUS="NEW")
