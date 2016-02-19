@@ -542,6 +542,7 @@ q_startrace SCALE1 1 1-320 170:194 1 | awk '{print $2,$10}' > SPATIAL_CONST_STD_
 echo "Running Q_SKY_NLOW for the Standard Star"
 q_arith SKY_NL_STD.fits / 100.0 TEST1
 q_sky_nlow TEST1 1 - default 1 2 | awk '{print $3,$6,$8}' > SKYFIT_NL_STD.TXT
+echo "Finished Q_SKY_NLOW for STD- results:"
 cat SKYFIT_NL_STD.TXT
 
 
@@ -551,71 +552,166 @@ cat SKYFIT_NL_STD.TXT
 echo "Running Q_SKY_NLOW for Target A"
 q_arith SKY_NL_OBJ_A01.fits / 100.0 TEST1
 q_sky_nlow TEST1 1 - default 1 2 | awk '{print $3,$6,$8}' > SKYFIT_NL_OBJ_A01.TXT
+echo "Finished Q_SKY_NLOW for OBJ A01- results:"
+cat SKYFIT_NL_OBJ_A01.TXT
+
 q_arith SKY_NL_OBJ_A02.fits / 100.0 TEST1
 q_sky_nlow TEST1 1 - default 1 2 | awk '{print $3,$6,$8}' > SKYFIT_NL_OBJ_A02.TXT
+echo "Finished Q_SKY_NLOW for OBJ A02- results:"
+cat SKYFIT_NL_OBJ_A02.TXT
+
 q_arith SKY_NL_OBJ_A03.fits / 100.0 TEST1
 q_sky_nlow TEST1 1 - default 1 2 | awk '{print $3,$6,$8}' > SKYFIT_NL_OBJ_A03.TXT
+echo "Finished Q_SKY_NLOW for OBJ A03- results:"
+cat SKYFIT_NL_OBJ_A03.TXT
+
 q_arith SKY_NL_OBJ_A04.fits / 100.0 TEST1
 q_sky_nlow TEST1 1 - default 1 2 | awk '{print $3,$6,$8}' > SKYFIT_NL_OBJ_A04.TXT
+echo "Finished Q_SKY_NLOW for OBJ A04- results:"
+cat SKYFIT_NL_OBJ_A04.TXT
+
 q_arith SKY_NL_OBJ_A05.fits / 100.0 TEST1
 q_sky_nlow TEST1 1 - default 1 2 | awk '{print $3,$6,$8}' > SKYFIT_NL_OBJ_A05.TXT
+echo "Finished Q_SKY_NLOW for OBJ A05- results:"
+cat SKYFIT_NL_OBJ_A05.TXT
+
 q_arith SKY_NL_OBJ_A06.fits / 100.0 TEST1
 q_sky_nlow TEST1 1 - default 1 2 | awk '{print $3,$6,$8}' > SKYFIT_NL_OBJ_A06.TXT
+echo "Finished Q_SKY_NLOW for OBJ A06- results:"
+cat SKYFIT_NL_OBJ_A06.TXT
+
 q_arith SKY_NL_OBJ_A07.fits / 100.0 TEST1
 q_sky_nlow TEST1 1 - default 1 2 | awk '{print $3,$6,$8}' > SKYFIT_NL_OBJ_A07.TXT
+echo "Finished Q_SKY_NLOW for OBJ A07- results:"
+cat SKYFIT_NL_OBJ_A07.TXT
+
 q_arith SKY_NL_OBJ_A08.fits / 100.0 TEST1
 q_sky_nlow TEST1 1 - default 1 2 | awk '{print $3,$6,$8}' > SKYFIT_NL_OBJ_A08.TXT
+echo "Finished Q_SKY_NLOW for OBJ A08- results:"
+cat SKYFIT_NL_OBJ_A08.TXT
+
 q_arith SKY_NL_OBJ_A09.fits / 100.0 TEST1
 q_sky_nlow TEST1 1 - default 1 2 | awk '{print $3,$6,$8}' > SKYFIT_NL_OBJ_A09.TXT
+echo "Finished Q_SKY_NLOW for OBJ A09- results:"
+cat SKYFIT_NL_OBJ_A09.TXT
+
 q_arith SKY_NL_OBJ_A10.fits / 100.0 TEST1
 q_sky_nlow TEST1 1 - default 1 2 | awk '{print $3,$6,$8}' > SKYFIT_NL_OBJ_A10.TXT
+echo "Finished Q_SKY_NLOW for OBJ A10- results:"
+cat SKYFIT_NL_OBJ_A10.TXT
+
 q_arith SKY_NL_OBJ_A11.fits / 100.0 TEST1
 q_sky_nlow TEST1 1 - default 1 2 | awk '{print $3,$6,$8}' > SKYFIT_NL_OBJ_A11.TXT
+echo "Finished Q_SKY_NLOW for OBJ A11- results:"
+cat SKYFIT_NL_OBJ_A11.TXT
+
 q_arith SKY_NL_OBJ_A12.fits / 100.0 TEST1
 q_sky_nlow TEST1 1 - default 1 2 | awk '{print $3,$6,$8}' > SKYFIT_NL_OBJ_A12.TXT
+echo "Finished Q_SKY_NLOW for OBJ A12- results:"
+cat SKYFIT_NL_OBJ_A12.TXT
+
 q_arith SKY_NL_OBJ_A13.fits / 100.0 TEST1
 q_sky_nlow TEST1 1 - default 1 2 | awk '{print $3,$6,$8}' > SKYFIT_NL_OBJ_A13.TXT
+echo "Finished Q_SKY_NLOW for OBJ A13- results:"
+cat SKYFIT_NL_OBJ_A13.TXT
+
 q_arith SKY_NL_OBJ_A14.fits / 100.0 TEST1
 q_sky_nlow TEST1 1 - default 1 2 | awk '{print $3,$6,$8}' > SKYFIT_NL_OBJ_A14.TXT
+echo "Finished Q_SKY_NLOW for OBJ A14- results:"
+cat SKYFIT_NL_OBJ_A14.TXT
+
 q_arith SKY_NL_OBJ_A15.fits / 100.0 TEST1
 q_sky_nlow TEST1 1 - default 1 2 | awk '{print $3,$6,$8}' > SKYFIT_NL_OBJ_A15.TXT
+echo "Finished Q_SKY_NLOW for OBJ A15- results:"
+cat SKYFIT_NL_OBJ_A15.TXT
+
 q_arith SKY_NL_OBJ_A16.fits / 100.0 TEST1
 q_sky_nlow TEST1 1 - default 1 2 | awk '{print $3,$6,$8}' > SKYFIT_NL_OBJ_A16.TXT
+echo "Finished Q_SKY_NLOW for OBJ A16- results:"
+cat SKYFIT_NL_OBJ_A16.TXT
+
 
 #Position B:
 echo "Running Q_SKY_NLOW for Target B"
 q_arith SKY_NL_OBJ_B01.fits / 100.0 TEST1
 q_sky_nlow TEST1 1 - default 1 2 | awk '{print $3,$6,$8}' > SKYFIT_NL_OBJ_B01.TXT
+echo "Finished Q_SKY_NLOW for OBJ A01- results:"
+cat SKYFIT_NL_OBJ_B01.TXT
+
 q_arith SKY_NL_OBJ_B02.fits / 100.0 TEST1
 q_sky_nlow TEST1 1 - default 1 2 | awk '{print $3,$6,$8}' > SKYFIT_NL_OBJ_B02.TXT
+echo "Finished Q_SKY_NLOW for OBJ A02- results:"
+cat SKYFIT_NL_OBJ_B02.TXT
+
 q_arith SKY_NL_OBJ_B03.fits / 100.0 TEST1
 q_sky_nlow TEST1 1 - default 1 2 | awk '{print $3,$6,$8}' > SKYFIT_NL_OBJ_B03.TXT
+echo "Finished Q_SKY_NLOW for OBJ A03- results:"
+cat SKYFIT_NL_OBJ_B03.TXT
+
 q_arith SKY_NL_OBJ_B04.fits / 100.0 TEST1
 q_sky_nlow TEST1 1 - default 1 2 | awk '{print $3,$6,$8}' > SKYFIT_NL_OBJ_B04.TXT
+echo "Finished Q_SKY_NLOW for OBJ A04- results:"
+cat SKYFIT_NL_OBJ_B04.TXT
+
 q_arith SKY_NL_OBJ_B05.fits / 100.0 TEST1
 q_sky_nlow TEST1 1 - default 1 2 | awk '{print $3,$6,$8}' > SKYFIT_NL_OBJ_B05.TXT
+echo "Finished Q_SKY_NLOW for OBJ A05- results:"
+cat SKYFIT_NL_OBJ_B05.TXT
+
 q_arith SKY_NL_OBJ_B06.fits / 100.0 TEST1
 q_sky_nlow TEST1 1 - default 1 2 | awk '{print $3,$6,$8}' > SKYFIT_NL_OBJ_B06.TXT
+echo "Finished Q_SKY_NLOW for OBJ A06- results:"
+cat SKYFIT_NL_OBJ_B06.TXT
+
 q_arith SKY_NL_OBJ_B07.fits / 100.0 TEST1
 q_sky_nlow TEST1 1 - default 1 2 | awk '{print $3,$6,$8}' > SKYFIT_NL_OBJ_B07.TXT
+echo "Finished Q_SKY_NLOW for OBJ A07- results:"
+cat SKYFIT_NL_OBJ_B07.TXT
+
 q_arith SKY_NL_OBJ_B08.fits / 100.0 TEST1
 q_sky_nlow TEST1 1 - default 1 2 | awk '{print $3,$6,$8}' > SKYFIT_NL_OBJ_B08.TXT
+echo "Finished Q_SKY_NLOW for OBJ A08- results:"
+cat SKYFIT_NL_OBJ_B08.TXT
+
 q_arith SKY_NL_OBJ_B09.fits / 100.0 TEST1
 q_sky_nlow TEST1 1 - default 1 2 | awk '{print $3,$6,$8}' > SKYFIT_NL_OBJ_B09.TXT
+echo "Finished Q_SKY_NLOW for OBJ A09- results:"
+cat SKYFIT_NL_OBJ_B09.TXT
+
 q_arith SKY_NL_OBJ_B10.fits / 100.0 TEST1
 q_sky_nlow TEST1 1 - default 1 2 | awk '{print $3,$6,$8}' > SKYFIT_NL_OBJ_B10.TXT
+echo "Finished Q_SKY_NLOW for OBJ A10- results:"
+cat SKYFIT_NL_OBJ_B10.TXT
+
 q_arith SKY_NL_OBJ_B11.fits / 100.0 TEST1
 q_sky_nlow TEST1 1 - default 1 2 | awk '{print $3,$6,$8}' > SKYFIT_NL_OBJ_B11.TXT
+echo "Finished Q_SKY_NLOW for OBJ A11- results:"
+cat SKYFIT_NL_OBJ_B11.TXT
+
 q_arith SKY_NL_OBJ_B12.fits / 100.0 TEST1
 q_sky_nlow TEST1 1 - default 1 2 | awk '{print $3,$6,$8}' > SKYFIT_NL_OBJ_B12.TXT
+echo "Finished Q_SKY_NLOW for OBJ A12- results:"
+cat SKYFIT_NL_OBJ_B12.TXT
+
 q_arith SKY_NL_OBJ_B13.fits / 100.0 TEST1
 q_sky_nlow TEST1 1 - default 1 2 | awk '{print $3,$6,$8}' > SKYFIT_NL_OBJ_B13.TXT
+echo "Finished Q_SKY_NLOW for OBJ A13- results:"
+cat SKYFIT_NL_OBJ_B13.TXT
+
 q_arith SKY_NL_OBJ_B14.fits / 100.0 TEST1
 q_sky_nlow TEST1 1 - default 1 2 | awk '{print $3,$6,$8}' > SKYFIT_NL_OBJ_B14.TXT
+echo "Finished Q_SKY_NLOW for OBJ A14- results:"
+cat SKYFIT_NL_OBJ_B14.TXT
+
 q_arith SKY_NL_OBJ_B15.fits / 100.0 TEST1
 q_sky_nlow TEST1 1 - default 1 2 | awk '{print $3,$6,$8}' > SKYFIT_NL_OBJ_B15.TXT
+echo "Finished Q_SKY_NLOW for OBJ A15- results:"
+cat SKYFIT_NL_OBJ_B15.TXT
+
 q_arith SKY_NL_OBJ_B16.fits / 100.0 TEST1
 q_sky_nlow TEST1 1 - default 1 2 | awk '{print $3,$6,$8}' > SKYFIT_NL_OBJ_B16.TXT
+echo "Finished Q_SKY_NLOW for OBJ A16- results:"
+cat SKYFIT_NL_OBJ_B16.TXT
 
 
 
