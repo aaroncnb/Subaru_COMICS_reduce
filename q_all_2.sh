@@ -69,3 +69,28 @@ q_arith NL_SLIT1.fits x STD_NL_FILTER_FN.fits NL_SLIT1_JY.fits
 q_arith NL_SLIT2.fits x STD_NL_FILTER_FN.fits NL_SLIT2_JY.fits
 
 ds9 -scale mode zscale NL_SLIT1_Wcm-1.fits NL_SLIT2_Wcm-1.fits NL_SLIT1_JY.fits NL_SLIT2_JY.fits &
+
+
+q_list_stat NL_SLIT2_Wcm-2um-1.fits 1 - 32:46 1 | awk '{print $2*0.0198899992+7.25,$5}' > SKY_Wcm-2cm-1.SPC
+
+
+
+q_list_stat NL_SLIT2_Wcm-2um-1.fits 1 - 32:46 1 | awk '{print $2*0.0198899992+7.25,$5}' > SKY_Wcm-2um-1.SPC
+q_list_stat NL_SLIT2_JY.fits 1 - 32:46 1 | awk '{print $2*0.0198899992+7.25,$5}' > SKY_JY.SPC
+
+
+
+q_list_stat NL_SLIT2_Wcm-2um-1.fits 1 - 84:91 1 | awk '{print $2*0.0198899992+7.25,$5}' > S2_R1_Wcm-2um-1.SPC
+paste S2_R1_Wcm-2um-1.SPC SKY_Wcm-2um-1.SPC | awk '{print $1,($2-$4)*8}' > S2_R1_Wcm-2um-1_SS.SPC
+q_list_stat NL_SLIT2_Wcm-2um-1.fits 1 - 95:104 1 | awk '{print $2*0.0198899992+7.25,$5}' > S2_R2_Wcm-2um-1.SPC
+paste S2_R2_Wcm-2um-1.SPC SKY_Wcm-2um-1.SPC | awk '{print $1,($2-$4)*10}' > S2_R2_Wcm-2um-1_SS.SPC
+q_list_stat NL_SLIT2_Wcm-2um-1.fits 1 - 116:130 1 | awk '{print $2*0.0198899992+7.25,$5}' > S2_R3_Wcm-2um-1.SPC
+paste S2_R3_Wcm-2um-1.SPC SKY_Wcm-2um-1.SPC | awk '{print $1,($2-$4)*10}' > S2_R3_Wcm-2um-1_SS.SPC
+
+
+q_list_stat NL_SLIT2_JY.fits 1 - 84:91 1 | awk '{print $2*0.0198899992+7.25,$5}' > S2_R1_JY.SPC
+paste S2_R1_JY.SPC SKY_JY.SPC | awk '{print $1,($2-$4)*8}' > S2_R1_JY_SS.SPC
+q_list_stat NL_SLIT2_JY.fits 1 - 95:104 1 | awk '{print $2*0.0198899992+7.25,$5}' > S2_R2_JY.SPC
+paste S2_R2_JY.SPC SKY_JY.SPC | awk '{print $1,($2-$4)*10}' > S2_R2_JY_SS.SPC
+q_list_stat NL_SLIT2_JY.fits 1 - 116:130 1 | awk '{print $2*0.0198899992+7.25,$5}' > S2_R3_JY.SPC
+paste S2_R3_JY.SPC SKY_JY.SPC | awk '{print $1,($2-$4)*10}' > S2_R3_JY_SS.SPC
