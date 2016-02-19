@@ -3,7 +3,7 @@
       IMPLICIT REAL*8(A-G,O-Z)
       IMPLICIT INTEGER*4(H-N)
       
-      REAL*8 SADU(320),WL(320),WLT(692),FL(692)
+      REAL*8 SADU(320),WL(320),WLT(652),FL(652)
       REAL*8 FLCAL(320),FNCAL(320),FLC(320)
 
       OPEN(1,FILE="STD_NL.ADU",STATUS="OLD")
@@ -17,14 +17,14 @@ C    HD161096 is Beta Ophichus. The tem file is from the Cohen 1999 catalog
       AWL=0.0198899992
       BWL=7.25
 
-      DO K=1,692
+      DO K=1,652
          READ(2,*)WLT(K),FL(K),EL,E1,E2
       END DO   
 
       DO I=1,320
          READ(1,*)IX,SADU(I)
          WL(I)=IX*AWL+BWL
-         DO K=1,691
+         DO K=1,651
       IF((WLT(K).LE.WL(I)).AND.(WL(I).LE.WLT(K+1)))THEN
          FLC(I)=FL(K)+
      +   (FL(K+1)-FL(K))/(WLT(K+1)-WLT(K))*(WL(I)-WLT(K))
