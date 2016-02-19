@@ -385,135 +385,103 @@ q_arith COMA_SKY_FOR_A_UFC / FLAT_NL_STD SKY_NL_STD.fits
 echo "Making SKY images for Target A"
 
 q_list_stat COMA00088316.fits 2 - - : COMA_SKY_FOR_A
-q_arith COMA_SKY_FOR_A - FDARK1 COMA_SKY_FOR_A_UFC
-q_arith COMA_SKY_FOR_A_UFC / FLAT_NL_OBJ SKY_NL_OBJ_A01.fits
+q_arith COMA_SKY_FOR_A - FDARK1  SKY_NL_OBJ_A01.fits
 
 q_list_stat COMA00088318.fits 2 - - : COMA_SKY_FOR_A
-q_arith COMA_SKY_FOR_A - FDARK1 COMA_SKY_FOR_A_UFC
-q_arith COMA_SKY_FOR_A_UFC / FLAT_NL_OBJ SKY_NL_OBJ_A02.fits
+q_arith COMA_SKY_FOR_A - FDARK1  SKY_NL_OBJ_A02.fits
 
 q_list_stat COMA00088320.fits 2 - - : COMA_SKY_FOR_A
-q_arith COMA_SKY_FOR_A - FDARK1 COMA_SKY_FOR_A_UFC
-q_arith COMA_SKY_FOR_A_UFC / FLAT_NL_OBJ SKY_NL_OBJ_A03.fits
+q_arith COMA_SKY_FOR_A - FDARK1  SKY_NL_OBJ_A03.fits
 
 q_list_stat COMA00088322.fits 2 - - : COMA_SKY_FOR_A
-q_arith COMA_SKY_FOR_A - FDARK1 COMA_SKY_FOR_A_UFC
-q_arith COMA_SKY_FOR_A_UFC / FLAT_NL_OBJ SKY_NL_OBJ_A04.fits
+q_arith COMA_SKY_FOR_A - FDARK1  SKY_NL_OBJ_A04.fits
 
 q_list_stat COMA00088324.fits 2 - - : COMA_SKY_FOR_A
-q_arith COMA_SKY_FOR_A - FDARK1 COMA_SKY_FOR_A_UFC
-q_arith COMA_SKY_FOR_A_UFC / FLAT_NL_OBJ SKY_NL_OBJ_A05.fits
+q_arith COMA_SKY_FOR_A - FDARK1  SKY_NL_OBJ_A05.fits
 
 q_list_stat COMA00088326.fits 2 - - : COMA_SKY_FOR_A
-q_arith COMA_SKY_FOR_A - FDARK1 COMA_SKY_FOR_A_UFC
-q_arith COMA_SKY_FOR_A_UFC / FLAT_NL_OBJ SKY_NL_OBJ_A06.fits
+q_arith COMA_SKY_FOR_A - FDARK1  SKY_NL_OBJ_A06.fits
 
 q_list_stat COMA00088328.fits 2 - - : COMA_SKY_FOR_A
-q_arith COMA_SKY_FOR_A - FDARK1 COMA_SKY_FOR_A_UFC
-q_arith COMA_SKY_FOR_A_UFC / FLAT_NL_OBJ SKY_NL_OBJ_A07.fits
+q_arith COMA_SKY_FOR_A - FDARK1  SKY_NL_OBJ_A07.fits
 
 q_list_stat COMA00088330.fits 2 - - : COMA_SKY_FOR_A
-q_arith COMA_SKY_FOR_A - FDARK1 COMA_SKY_FOR_A_UFC
-q_arith COMA_SKY_FOR_A_UFC / FLAT_NL_OBJ SKY_NL_OBJ_A08.fits
+q_arith COMA_SKY_FOR_A - FDARK1  SKY_NL_OBJ_A08.fits
 
 q_list_stat COMA00088332.fits 2 - - : COMA_SKY_FOR_A
-q_arith COMA_SKY_FOR_A - FDARK1 COMA_SKY_FOR_A_UFC
-q_arith COMA_SKY_FOR_A_UFC / FLAT_NL_OBJ SKY_NL_OBJ_A09.fits
+q_arith COMA_SKY_FOR_A - FDARK1  SKY_NL_OBJ_A09.fits
 
 q_list_stat COMA00088334.fits 2 - - : COMA_SKY_FOR_A
-q_arith COMA_SKY_FOR_A - FDARK1 COMA_SKY_FOR_A_UFC
-q_arith COMA_SKY_FOR_A_UFC / FLAT_NL_OBJ SKY_NL_OBJ_A10.fits
+q_arith COMA_SKY_FOR_A - FDARK1  SKY_NL_OBJ_A10.fits
 
 q_list_stat COMA00088336.fits 2 - - : COMA_SKY_FOR_A
-q_arith COMA_SKY_FOR_A - FDARK1 COMA_SKY_FOR_A_UFC
-q_arith COMA_SKY_FOR_A_UFC / FLAT_NL_OBJ SKY_NL_OBJ_A11.fits
+q_arith COMA_SKY_FOR_A - FDARK1  SKY_NL_OBJ_A11.fits
 
 q_list_stat COMA00088338.fits 2 - - : COMA_SKY_FOR_A
-q_arith COMA_SKY_FOR_A - FDARK1 COMA_SKY_FOR_A_UFC
-q_arith COMA_SKY_FOR_A_UFC / FLAT_NL_OBJ SKY_NL_OBJ_A12.fits
+q_arith COMA_SKY_FOR_A - FDARK1  SKY_NL_OBJ_A12.fits
 
 q_list_stat COMA00088340.fits 2 - - : COMA_SKY_FOR_A
-q_arith COMA_SKY_FOR_A - FDARK1 COMA_SKY_FOR_A_UFC
-q_arith COMA_SKY_FOR_A_UFC / FLAT_NL_OBJ SKY_NL_OBJ_A13.fits
+q_arith COMA_SKY_FOR_A - FDARK1  SKY_NL_OBJ_A13.fits
 
 q_list_stat COMA00088342.fits 2 - - : COMA_SKY_FOR_A
-q_arith COMA_SKY_FOR_A - FDARK1 COMA_SKY_FOR_A_UFC
-q_arith COMA_SKY_FOR_A_UFC / FLAT_NL_OBJ SKY_NL_OBJ_A14.fits
+q_arith COMA_SKY_FOR_A - FDARK1  SKY_NL_OBJ_A14.fits
 
 q_list_stat COMA00088344.fits 2 - - : COMA_SKY_FOR_A
-q_arith COMA_SKY_FOR_A - FDARK1 COMA_SKY_FOR_A_UFC
-q_arith COMA_SKY_FOR_A_UFC / FLAT_NL_OBJ SKY_NL_OBJ_A15.fits
+q_arith COMA_SKY_FOR_A - FDARK1  SKY_NL_OBJ_A15.fits
 
 q_list_stat COMA00088346.fits 2 - - : COMA_SKY_FOR_A
-q_arith COMA_SKY_FOR_A - FDARK1 COMA_SKY_FOR_A_UFC
-q_arith COMA_SKY_FOR_A_UFC / FLAT_NL_OBJ SKY_NL_OBJ_A16.fits
+q_arith COMA_SKY_FOR_A - FDARK1  SKY_NL_OBJ_A16.fits
 
 
 ##Observation: Position B
 echo "Making SKY images for Target B"
 q_list_stat COMA00088348.fits 2 - - : COMA_SKY_FOR_A
-q_arith COMA_SKY_FOR_A - FDARK1 COMA_SKY_FOR_A_UFC
-q_arith COMA_SKY_FOR_A_UFC / FLAT_NL_OBJ SKY_NL_OBJ_B01.fits
+q_arith COMA_SKY_FOR_A - FDARK1  SKY_NL_OBJ_B01.fits
 
 q_list_stat COMA00088350.fits 2 - - : COMA_SKY_FOR_A
-q_arith COMA_SKY_FOR_A - FDARK1 COMA_SKY_FOR_A_UFC
-q_arith COMA_SKY_FOR_A_UFC / FLAT_NL_OBJ SKY_NL_OBJ_B02.fits
+q_arith COMA_SKY_FOR_A - FDARK1  SKY_NL_OBJ_B02.fits
 
 q_list_stat COMA00088352.fits 2 - - : COMA_SKY_FOR_A
-q_arith COMA_SKY_FOR_A - FDARK1 COMA_SKY_FOR_A_UFC
-q_arith COMA_SKY_FOR_A_UFC / FLAT_NL_OBJ SKY_NL_OBJ_B03.fits
+q_arith COMA_SKY_FOR_A - FDARK1  SKY_NL_OBJ_B03.fits
 
 q_list_stat COMA00088354.fits 2 - - : COMA_SKY_FOR_A
-q_arith COMA_SKY_FOR_A - FDARK1 COMA_SKY_FOR_A_UFC
-q_arith COMA_SKY_FOR_A_UFC / FLAT_NL_OBJ SKY_NL_OBJ_B04.fits
+q_arith COMA_SKY_FOR_A - FDARK1  SKY_NL_OBJ_B04.fits
 
 q_list_stat COMA00088356.fits 2 - - : COMA_SKY_FOR_A
-q_arith COMA_SKY_FOR_A - FDARK1 COMA_SKY_FOR_A_UFC
-q_arith COMA_SKY_FOR_A_UFC / FLAT_NL_OBJ SKY_NL_OBJ_B05.fits
+q_arith COMA_SKY_FOR_A - FDARK1  SKY_NL_OBJ_B05.fits
 
 q_list_stat COMA00088358.fits 2 - - : COMA_SKY_FOR_A
-q_arith COMA_SKY_FOR_A - FDARK1 COMA_SKY_FOR_A_UFC
-q_arith COMA_SKY_FOR_A_UFC / FLAT_NL_OBJ SKY_NL_OBJ_B06.fits
+q_arith COMA_SKY_FOR_A - FDARK1  SKY_NL_OBJ_B06.fits
 
 q_list_stat COMA00088360.fits 2 - - : COMA_SKY_FOR_A
-q_arith COMA_SKY_FOR_A - FDARK1 COMA_SKY_FOR_A_UFC
-q_arith COMA_SKY_FOR_A_UFC / FLAT_NL_OBJ SKY_NL_OBJ_B07.fits
+q_arith COMA_SKY_FOR_A - FDARK1  SKY_NL_OBJ_B07.fits
 
 q_list_stat COMA00088362.fits 2 - - : COMA_SKY_FOR_A
-q_arith COMA_SKY_FOR_A - FDARK1 COMA_SKY_FOR_A_UFC
-q_arith COMA_SKY_FOR_A_UFC / FLAT_NL_OBJ SKY_NL_OBJ_B08.fits
+q_arith COMA_SKY_FOR_A - FDARK1  SKY_NL_OBJ_B08.fits
 
 q_list_stat COMA00088364.fits 2 - - : COMA_SKY_FOR_A
-q_arith COMA_SKY_FOR_A - FDARK1 COMA_SKY_FOR_A_UFC
-q_arith COMA_SKY_FOR_A_UFC / FLAT_NL_OBJ SKY_NL_OBJ_B09.fits
+q_arith COMA_SKY_FOR_A - FDARK1  SKY_NL_OBJ_B09.fits
 
 q_list_stat COMA00088366.fits 2 - - : COMA_SKY_FOR_A
-q_arith COMA_SKY_FOR_A - FDARK1 COMA_SKY_FOR_A_UFC
-q_arith COMA_SKY_FOR_A_UFC / FLAT_NL_OBJ SKY_NL_OBJ_B10.fits
+q_arith COMA_SKY_FOR_A - FDARK1  SKY_NL_OBJ_B10.fits
 
 q_list_stat COMA00088368.fits 2 - - : COMA_SKY_FOR_A
-q_arith COMA_SKY_FOR_A - FDARK1 COMA_SKY_FOR_A_UFC
-q_arith COMA_SKY_FOR_A_UFC / FLAT_NL_OBJ SKY_NL_OBJ_B11.fits
+q_arith COMA_SKY_FOR_A - FDARK1  SKY_NL_OBJ_B11.fits
 
 q_list_stat COMA00088370.fits 2 - - : COMA_SKY_FOR_A
-q_arith COMA_SKY_FOR_A - FDARK1 COMA_SKY_FOR_A_UFC
-q_arith COMA_SKY_FOR_A_UFC / FLAT_NL_OBJ SKY_NL_OBJ_B12.fits
+q_arith COMA_SKY_FOR_A - FDARK1  SKY_NL_OBJ_B12.fits
 
 q_list_stat COMA00088372.fits 2 - - : COMA_SKY_FOR_A
-q_arith COMA_SKY_FOR_A - FDARK1 COMA_SKY_FOR_A_UFC
-q_arith COMA_SKY_FOR_A_UFC / FLAT_NL_OBJ SKY_NL_OBJ_B13.fits
+q_arith COMA_SKY_FOR_A - FDARK1  SKY_NL_OBJ_B13.fits
 
 q_list_stat COMA00088374.fits 2 - - : COMA_SKY_FOR_A
-q_arith COMA_SKY_FOR_A - FDARK1 COMA_SKY_FOR_A_UFC
-q_arith COMA_SKY_FOR_A_UFC / FLAT_NL_OBJ SKY_NL_OBJ_B14.fits
+q_arith COMA_SKY_FOR_A - FDARK1  SKY_NL_OBJ_B14.fits
 
 q_list_stat COMA00088376.fits 2 - - : COMA_SKY_FOR_A
-q_arith COMA_SKY_FOR_A - FDARK1 COMA_SKY_FOR_A_UFC
-q_arith COMA_SKY_FOR_A_UFC / FLAT_NL_OBJ SKY_NL_OBJ_B15.fits
+q_arith COMA_SKY_FOR_A - FDARK1  SKY_NL_OBJ_B15.fits
 
 q_list_stat COMA00088378.fits 2 - - : COMA_SKY_FOR_A
-q_arith COMA_SKY_FOR_A - FDARK1 COMA_SKY_FOR_A_UFC
-q_arith COMA_SKY_FOR_A_UFC / FLAT_NL_OBJ SKY_NL_OBJ_B16.fits
+q_arith COMA_SKY_FOR_A - FDARK1  SKY_NL_OBJ_B16.fits
 
 
 ### Next let's obtain the spatially constant axis
@@ -635,82 +603,82 @@ cat SKYFIT_NL_OBJ_A16.TXT
 echo "Running Q_SKY_NLOW for Target B"
 q_arith SKY_NL_OBJ_B01.fits / 100.0 TEST1
 q_sky_nlow TEST1 1 - default 1 2 | awk '{print $3,$6,$8}' > SKYFIT_NL_OBJ_B01.TXT
-echo "Finished Q_SKY_NLOW for OBJ A01- results:"
+echo "Finished Q_SKY_NLOW for OBJ B01- results:"
 cat SKYFIT_NL_OBJ_B01.TXT
 
 q_arith SKY_NL_OBJ_B02.fits / 100.0 TEST1
 q_sky_nlow TEST1 1 - default 1 2 | awk '{print $3,$6,$8}' > SKYFIT_NL_OBJ_B02.TXT
-echo "Finished Q_SKY_NLOW for OBJ A02- results:"
+echo "Finished Q_SKY_NLOW for OBJ B02- results:"
 cat SKYFIT_NL_OBJ_B02.TXT
 
 q_arith SKY_NL_OBJ_B03.fits / 100.0 TEST1
 q_sky_nlow TEST1 1 - default 1 2 | awk '{print $3,$6,$8}' > SKYFIT_NL_OBJ_B03.TXT
-echo "Finished Q_SKY_NLOW for OBJ A03- results:"
+echo "Finished Q_SKY_NLOW for OBJ B03- results:"
 cat SKYFIT_NL_OBJ_B03.TXT
 
 q_arith SKY_NL_OBJ_B04.fits / 100.0 TEST1
 q_sky_nlow TEST1 1 - default 1 2 | awk '{print $3,$6,$8}' > SKYFIT_NL_OBJ_B04.TXT
-echo "Finished Q_SKY_NLOW for OBJ A04- results:"
+echo "Finished Q_SKY_NLOW for OBJ B04- results:"
 cat SKYFIT_NL_OBJ_B04.TXT
 
 q_arith SKY_NL_OBJ_B05.fits / 100.0 TEST1
 q_sky_nlow TEST1 1 - default 1 2 | awk '{print $3,$6,$8}' > SKYFIT_NL_OBJ_B05.TXT
-echo "Finished Q_SKY_NLOW for OBJ A05- results:"
+echo "Finished Q_SKY_NLOW for OBJ B05- results:"
 cat SKYFIT_NL_OBJ_B05.TXT
 
 q_arith SKY_NL_OBJ_B06.fits / 100.0 TEST1
 q_sky_nlow TEST1 1 - default 1 2 | awk '{print $3,$6,$8}' > SKYFIT_NL_OBJ_B06.TXT
-echo "Finished Q_SKY_NLOW for OBJ A06- results:"
+echo "Finished Q_SKY_NLOW for OBJ B06- results:"
 cat SKYFIT_NL_OBJ_B06.TXT
 
 q_arith SKY_NL_OBJ_B07.fits / 100.0 TEST1
 q_sky_nlow TEST1 1 - default 1 2 | awk '{print $3,$6,$8}' > SKYFIT_NL_OBJ_B07.TXT
-echo "Finished Q_SKY_NLOW for OBJ A07- results:"
+echo "Finished Q_SKY_NLOW for OBJ B07- results:"
 cat SKYFIT_NL_OBJ_B07.TXT
 
 q_arith SKY_NL_OBJ_B08.fits / 100.0 TEST1
 q_sky_nlow TEST1 1 - default 1 2 | awk '{print $3,$6,$8}' > SKYFIT_NL_OBJ_B08.TXT
-echo "Finished Q_SKY_NLOW for OBJ A08- results:"
+echo "Finished Q_SKY_NLOW for OBJ B08- results:"
 cat SKYFIT_NL_OBJ_B08.TXT
 
 q_arith SKY_NL_OBJ_B09.fits / 100.0 TEST1
 q_sky_nlow TEST1 1 - default 1 2 | awk '{print $3,$6,$8}' > SKYFIT_NL_OBJ_B09.TXT
-echo "Finished Q_SKY_NLOW for OBJ A09- results:"
+echo "Finished Q_SKY_NLOW for OBJ B09- results:"
 cat SKYFIT_NL_OBJ_B09.TXT
 
 q_arith SKY_NL_OBJ_B10.fits / 100.0 TEST1
 q_sky_nlow TEST1 1 - default 1 2 | awk '{print $3,$6,$8}' > SKYFIT_NL_OBJ_B10.TXT
-echo "Finished Q_SKY_NLOW for OBJ A10- results:"
+echo "Finished Q_SKY_NLOW for OBJ B10- results:"
 cat SKYFIT_NL_OBJ_B10.TXT
 
 q_arith SKY_NL_OBJ_B11.fits / 100.0 TEST1
 q_sky_nlow TEST1 1 - default 1 2 | awk '{print $3,$6,$8}' > SKYFIT_NL_OBJ_B11.TXT
-echo "Finished Q_SKY_NLOW for OBJ A11- results:"
+echo "Finished Q_SKY_NLOW for OBJ B11- results:"
 cat SKYFIT_NL_OBJ_B11.TXT
 
 q_arith SKY_NL_OBJ_B12.fits / 100.0 TEST1
 q_sky_nlow TEST1 1 - default 1 2 | awk '{print $3,$6,$8}' > SKYFIT_NL_OBJ_B12.TXT
-echo "Finished Q_SKY_NLOW for OBJ A12- results:"
+echo "Finished Q_SKY_NLOW for OBJ B12- results:"
 cat SKYFIT_NL_OBJ_B12.TXT
 
 q_arith SKY_NL_OBJ_B13.fits / 100.0 TEST1
 q_sky_nlow TEST1 1 - default 1 2 | awk '{print $3,$6,$8}' > SKYFIT_NL_OBJ_B13.TXT
-echo "Finished Q_SKY_NLOW for OBJ A13- results:"
+echo "Finished Q_SKY_NLOW for OBJ B13- results:"
 cat SKYFIT_NL_OBJ_B13.TXT
 
 q_arith SKY_NL_OBJ_B14.fits / 100.0 TEST1
 q_sky_nlow TEST1 1 - default 1 2 | awk '{print $3,$6,$8}' > SKYFIT_NL_OBJ_B14.TXT
-echo "Finished Q_SKY_NLOW for OBJ A14- results:"
+echo "Finished Q_SKY_NLOW for OBJ B14- results:"
 cat SKYFIT_NL_OBJ_B14.TXT
 
 q_arith SKY_NL_OBJ_B15.fits / 100.0 TEST1
 q_sky_nlow TEST1 1 - default 1 2 | awk '{print $3,$6,$8}' > SKYFIT_NL_OBJ_B15.TXT
-echo "Finished Q_SKY_NLOW for OBJ A15- results:"
+echo "Finished Q_SKY_NLOW for OBJ B15- results:"
 cat SKYFIT_NL_OBJ_B15.TXT
 
 q_arith SKY_NL_OBJ_B16.fits / 100.0 TEST1
 q_sky_nlow TEST1 1 - default 1 2 | awk '{print $3,$6,$8}' > SKYFIT_NL_OBJ_B16.TXT
-echo "Finished Q_SKY_NLOW for OBJ A16- results:"
+echo "Finished Q_SKY_NLOW for OBJ B16- results:"
 cat SKYFIT_NL_OBJ_B16.TXT
 
 
