@@ -8,7 +8,8 @@
 
       OPEN(1,FILE="STD_NL.ADU",STATUS="OLD")
 C    Change this file name according to the target being observed...
-      OPEN(2,FILE="IRAS18434.tem",STATUS="OLD")
+C    HD161096 is Beta Ophichus. The tem file is from the Cohen 1999 catalog
+      OPEN(2,FILE="HD161096.tem",STATUS="OLD")
       
       OPEN(11,FILE="STD_NL_FILTER_FL.TXT",STATUS="NEW")
       OPEN(12,FILE="STD_NL_FILTER_FN.TXT",STATUS="NEW")
