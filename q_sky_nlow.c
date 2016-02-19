@@ -19,7 +19,8 @@
 #define  ABIN      0.000005
 #define  BBIN      0.001
 #define  DEFA      0.0199
-#define  DEFB      7.650
+/* Remember to update these! DEFB is that starting wavelength*/
+#define  DEFB      7.000
 
 /*=======================================================================*/
 /*   ¹œÂ€ÂÎ€ÎÀëžÀ                                                             */
