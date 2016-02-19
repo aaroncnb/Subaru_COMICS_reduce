@@ -39,7 +39,7 @@ cat STD_NL.ADU
 #####Now we run the FOTRAN code 'FC_STD.f', by Sakon-san#####
 # Compile the code - to make sure we're using the latest version
 
-g77 -o FC_STD.f
+g77 -o test FC_STD.f
 
 # Run the code
 
