@@ -289,77 +289,44 @@ q_arith DATA.fits - NC_OBJ.REF COMQ_NL_OBJ_B16_NC.fits
 ############ we can finally divide the COMQs by the flats
 
 ##Standard Star Flat Correction
-q_arith COMQ_NL_STD_A01_NC.fits / FLAT_NL_STD NL_4
-q_chgaxis 3 NL_4 NL_STD_NC_FC_A01.fits
+q_arith COMQ_NL_STD_A01_NC.fits / FLAT_NL_STD NL_STD_NC_FC_A01.fits
 #Wondering if we need a 'q_chgaxis' here?
 
 ##Observation Flat Correction: Position A
-q_arith COMQ_NL_OBJ_A01_NC.fits / FLAT_NL_OBJ NL_4
-q_chgaxis 3 NL_4 NL_OBJ_NC_FC_A01.fits
-q_arith COMQ_NL_OBJ_A02_NC.fits / FLAT_NL_OBJ NL_4
-q_chgaxis 3 NL_4 NL_OBJ_NC_FC_A02.fits
-q_arith COMQ_NL_OBJ_A03_NC.fits / FLAT_NL_OBJ NL_4
-q_chgaxis 3 NL_4 NL_OBJ_NC_FC_A03.fits
-q_arith COMQ_NL_OBJ_A04_NC.fits / FLAT_NL_OBJ NL_4
-q_chgaxis 3 NL_4 NL_OBJ_NC_FC_A04.fits
-q_arith COMQ_NL_OBJ_A05_NC.fits / FLAT_NL_OBJ NL_4
-q_chgaxis 3 NL_4 NL_OBJ_NC_FC_A05.fits
-q_arith COMQ_NL_OBJ_A06_NC.fits / FLAT_NL_OBJ NL_4
-q_chgaxis 3 NL_4 NL_OBJ_NC_FC_A06.fits
-q_arith COMQ_NL_OBJ_A07_NC.fits / FLAT_NL_OBJ NL_4
-q_chgaxis 3 NL_4 NL_OBJ_NC_FC_A07.fits
-q_arith COMQ_NL_OBJ_A08_NC.fits / FLAT_NL_OBJ NL_4
-q_chgaxis 3 NL_4 NL_OBJ_NC_FC_A08.fits
-q_arith COMQ_NL_OBJ_A09_NC.fits / FLAT_NL_OBJ NL_4
-q_chgaxis 3 NL_4 NL_OBJ_NC_FC_A09.fits
-q_arith COMQ_NL_OBJ_A10_NC.fits / FLAT_NL_OBJ NL_4
-q_chgaxis 3 NL_4 NL_OBJ_NC_FC_A10.fits
-q_arith COMQ_NL_OBJ_A11_NC.fits / FLAT_NL_OBJ NL_4
-q_chgaxis 3 NL_4 NL_OBJ_NC_FC_A11.fits
-q_arith COMQ_NL_OBJ_A12_NC.fits / FLAT_NL_OBJ NL_4
-q_chgaxis 3 NL_4 NL_OBJ_NC_FC_A12.fits
-q_arith COMQ_NL_OBJ_A13_NC.fits / FLAT_NL_OBJ NL_4
-q_chgaxis 3 NL_4 NL_OBJ_NC_FC_A13.fits
-q_arith COMQ_NL_OBJ_A14_NC.fits / FLAT_NL_OBJ NL_4
-q_chgaxis 3 NL_4 NL_OBJ_NC_FC_A14.fits
-q_arith COMQ_NL_OBJ_A15_NC.fits / FLAT_NL_OBJ NL_4
-q_chgaxis 3 NL_4 NL_OBJ_NC_FC_A15.fits
-q_arith COMQ_NL_OBJ_A16_NC.fits / FLAT_NL_OBJ NL_4
-q_chgaxis 3 NL_4 NL_OBJ_NC_FC_A16.fits
+q_arith COMQ_NL_OBJ_A01_NC.fits / FLAT_NL_OBJ NL_OBJ_NC_FC_A01.fits
+q_arith COMQ_NL_OBJ_A02_NC.fits / FLAT_NL_OBJ NL_OBJ_NC_FC_A02.fits
+q_arith COMQ_NL_OBJ_A03_NC.fits / FLAT_NL_OBJ NL_OBJ_NC_FC_A03.fits
+q_arith COMQ_NL_OBJ_A04_NC.fits / FLAT_NL_OBJ NL_OBJ_NC_FC_A04.fits
+q_arith COMQ_NL_OBJ_A05_NC.fits / FLAT_NL_OBJ NL_OBJ_NC_FC_A05.fits
+q_arith COMQ_NL_OBJ_A06_NC.fits / FLAT_NL_OBJ NL_OBJ_NC_FC_A06.fits
+q_arith COMQ_NL_OBJ_A07_NC.fits / FLAT_NL_OBJ NL_OBJ_NC_FC_A07.fits
+q_arith COMQ_NL_OBJ_A08_NC.fits / FLAT_NL_OBJ NL_OBJ_NC_FC_A08.fits
+q_arith COMQ_NL_OBJ_A09_NC.fits / FLAT_NL_OBJ NL_OBJ_NC_FC_A09.fits
+q_arith COMQ_NL_OBJ_A10_NC.fits / FLAT_NL_OBJ NL_OBJ_NC_FC_A10.fits
+q_arith COMQ_NL_OBJ_A11_NC.fits / FLAT_NL_OBJ NL_OBJ_NC_FC_A11.fits
+q_arith COMQ_NL_OBJ_A12_NC.fits / FLAT_NL_OBJ NL_OBJ_NC_FC_A12.fits
+q_arith COMQ_NL_OBJ_A13_NC.fits / FLAT_NL_OBJ NL_OBJ_NC_FC_A13.fits
+q_arith COMQ_NL_OBJ_A14_NC.fits / FLAT_NL_OBJ NL_OBJ_NC_FC_A14.fits
+q_arith COMQ_NL_OBJ_A15_NC.fits / FLAT_NL_OBJ NL_OBJ_NC_FC_A15.fits
+q_arith COMQ_NL_OBJ_A16_NC.fits / FLAT_NL_OBJ NL_OBJ_NC_FC_A16.fits
 
 ##Observation Flat Correction: Positon B
-q_arith COMQ_NL_OBJ_B01_NC.fits / FLAT_NL_OBJ NL_4
-q_chgaxis 3 NL_4 NL_OBJ_NC_FC_B01.fits
-q_arith COMQ_NL_OBJ_B02_NC.fits / FLAT_NL_OBJ NL_4
-q_chgaxis 3 NL_4 NL_OBJ_NC_FC_B02.fits
-q_arith COMQ_NL_OBJ_B03_NC.fits / FLAT_NL_OBJ NL_4
-q_chgaxis 3 NL_4 NL_OBJ_NC_FC_B03.fits
-q_arith COMQ_NL_OBJ_B04_NC.fits / FLAT_NL_OBJ NL_4
-q_chgaxis 3 NL_4 NL_OBJ_NC_FC_B04.fits
-q_arith COMQ_NL_OBJ_B05_NC.fits / FLAT_NL_OBJ NL_4
-q_chgaxis 3 NL_4 NL_OBJ_NC_FC_B05.fits
-q_arith COMQ_NL_OBJ_B06_NC.fits / FLAT_NL_OBJ NL_4
-q_chgaxis 3 NL_4 NL_OBJ_NC_FC_B06.fits
-q_arith COMQ_NL_OBJ_B07_NC.fits / FLAT_NL_OBJ NL_4
-q_chgaxis 3 NL_4 NL_OBJ_NC_FC_B07.fits
-q_arith COMQ_NL_OBJ_B08_NC.fits / FLAT_NL_OBJ NL_4
-q_chgaxis 3 NL_4 NL_OBJ_NC_FC_B08.fits
-q_arith COMQ_NL_OBJ_B09_NC.fits / FLAT_NL_OBJ NL_4
-q_chgaxis 3 NL_4 NL_OBJ_NC_FC_B09.fits
-q_arith COMQ_NL_OBJ_B10_NC.fits / FLAT_NL_OBJ NL_4
-q_chgaxis 3 NL_4 NL_OBJ_NC_FC_B10.fits
-q_arith COMQ_NL_OBJ_B11_NC.fits / FLAT_NL_OBJ NL_4
-q_chgaxis 3 NL_4 NL_OBJ_NC_FC_B11.fits
-q_arith COMQ_NL_OBJ_B12_NC.fits / FLAT_NL_OBJ NL_4
-q_chgaxis 3 NL_4 NL_OBJ_NC_FC_B12.fits
-q_arith COMQ_NL_OBJ_B13_NC.fits / FLAT_NL_OBJ NL_4
-q_chgaxis 3 NL_4 NL_OBJ_NC_FC_B13.fits
-q_arith COMQ_NL_OBJ_B14_NC.fits / FLAT_NL_OBJ NL_4
-q_chgaxis 3 NL_4 NL_OBJ_NC_FC_B14.fits
-q_arith COMQ_NL_OBJ_B15_NC.fits / FLAT_NL_OBJ NL_4
-q_chgaxis 3 NL_4 NL_OBJ_NC_FC_B15.fits
-q_arith COMQ_NL_OBJ_B16_NC.fits / FLAT_NL_OBJ NL_4
-q_chgaxis 3 NL_4 NL_OBJ_NC_FC_B16.fits
+q_arith COMQ_NL_OBJ_B01_NC.fits / FLAT_NL_OBJ NL_OBJ_NC_FC_B01.fits
+q_arith COMQ_NL_OBJ_B02_NC.fits / FLAT_NL_OBJ NL_OBJ_NC_FC_B02.fits
+q_arith COMQ_NL_OBJ_B03_NC.fits / FLAT_NL_OBJ NL_OBJ_NC_FC_B03.fits
+q_arith COMQ_NL_OBJ_B04_NC.fits / FLAT_NL_OBJ NL_OBJ_NC_FC_B04.fits
+q_arith COMQ_NL_OBJ_B05_NC.fits / FLAT_NL_OBJ NL_OBJ_NC_FC_B05.fits
+q_arith COMQ_NL_OBJ_B06_NC.fits / FLAT_NL_OBJ NL_OBJ_NC_FC_B06.fits
+q_arith COMQ_NL_OBJ_B07_NC.fits / FLAT_NL_OBJ NL_OBJ_NC_FC_B07.fits
+q_arith COMQ_NL_OBJ_B08_NC.fits / FLAT_NL_OBJ NL_OBJ_NC_FC_B08.fits
+q_arith COMQ_NL_OBJ_B09_NC.fits / FLAT_NL_OBJ NL_OBJ_NC_FC_B09.fits
+q_arith COMQ_NL_OBJ_B10_NC.fits / FLAT_NL_OBJ NL_OBJ_NC_FC_B10.fits
+q_arith COMQ_NL_OBJ_B11_NC.fits / FLAT_NL_OBJ NL_OBJ_NC_FC_B11.fits
+q_arith COMQ_NL_OBJ_B12_NC.fits / FLAT_NL_OBJ NL_OBJ_NC_FC_B12.fits
+q_arith COMQ_NL_OBJ_B13_NC.fits / FLAT_NL_OBJ NL_OBJ_NC_FC_B13.fits
+q_arith COMQ_NL_OBJ_B14_NC.fits / FLAT_NL_OBJ NL_OBJ_NC_FC_B14.fits
+q_arith COMQ_NL_OBJ_B15_NC.fits / FLAT_NL_OBJ NL_OBJ_NC_FC_B15.fits
+q_arith COMQ_NL_OBJ_B16_NC.fits / FLAT_NL_OBJ NL_OBJ_NC_FC_B16.fits
 
 
 
@@ -490,7 +457,7 @@ q_arith COMA_SKY_FOR_A - FDARK1  SKY_NL_OBJ_B16.fits
 q_arith COMQ_NL_STD_A01_NC.fits / 100.0 SCALE1
 #q_startrace doesn't do the 2D function fitting...
 # it just finds the peak position
-q_startrace SCALE1 1 1-320 50:80 1 | awk '{print $2,$10}' > SPATIAL_CONST_STD_A01.DAT
+q_startrace SCALE1 1 1-320 45:90 1 | awk '{print $2,$10}' > SPATIAL_CONST_STD_A01.DAT
 
 ###################################################################################
 ######################RUN SPATIAL_FIT_2DFUNC.f#####################################
