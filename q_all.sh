@@ -490,7 +490,7 @@ q_arith COMA_SKY_FOR_A - FDARK1  SKY_NL_OBJ_B16.fits
 q_arith COMQ_NL_STD_A01_NC.fits / 100.0 SCALE1
 #q_startrace doesn't do the 2D function fitting...
 # it just finds the peak position
-q_startrace SCALE1 1 1-320 80:135 1 | awk '{print $2,$10}' > SPATIAL_CONST_STD_A01.DAT
+q_startrace SCALE1 1 1-320 50:80 1 | awk '{print $2,$10}' > SPATIAL_CONST_STD_A01.DAT
 
 ###################################################################################
 ######################RUN SPATIAL_FIT_2DFUNC.f#####################################
