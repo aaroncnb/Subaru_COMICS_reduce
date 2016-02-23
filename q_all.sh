@@ -100,7 +100,7 @@ q_arith FLAT_NL_TEST_STD / 1.554999e+05 FLAT_NL_STD
 ### One is for the standard star observation
 ### The other is for our target observation
 ### So we need to repeat the flat steps above for the target
-### See 5.1.4 in the COMICS Cookbook: 
+### See 5.1.4 in sthe COMICS Cookbook: 
 
 
 
@@ -490,7 +490,10 @@ q_arith COMA_SKY_FOR_A - FDARK1  SKY_NL_OBJ_B16.fits
 q_arith COMQ_NL_STD_A01_NC.fits / 100.0 SCALE1
 #q_startrace doesn't do the 2D function fitting...
 # it just finds the peak position
-q_startrace SCALE1 1 1-320 50:80 1 | awk '{print $2,$10}' > SPATIAL_CONST_STD_A01.DAT
+q_startrace SCALE1 1 1-320 61:76 1 | awk '{print $2,$10}' > SPATIAL_CONST_STD_A01.DAT
+gnuplot plot "SPATIAL_CONST_STD_A01.DAT" u 1:2 &
+
+
 
 ###################################################################################
 ######################RUN SPATIAL_FIT_2DFUNC.f#####################################
