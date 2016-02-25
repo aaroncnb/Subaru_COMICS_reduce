@@ -54,12 +54,12 @@ cat STD_NL_FILTER_FN.TXT
 #  OUTPUT FILE; STD_NL_FILTER_FL.TXT
 #  IN UNITS OF "W cm-2 um-1 / SLIT WIDTH (pixel)"
 q_mkimg STD_NL_FILTER_FL.TXT STD_NL_FILTER_FL.fits 320 240
-# q_mkimg STD_NL_FILTER_320x80_FL.TXT STD_NL_FILTER_320x80_FL.fits 320 80
+q_mkimg STD_NL_FILTER_320x80_FL.TXT STD_NL_FILTER_320x80_FL.fits 320 80
 
 #  OUTPUT FILE; STD_NL_FILTER_FN.TXT
 #  IN UNITS OF "Jy / SLIT WIDTH (pixel)"
  q_mkimg STD_NL_FILTER_FN.TXT STD_NL_FILTER_FN.fits 320 240
- #q_mkimg STD_NL_FILTER_320x80_FN.TXT STD_NL_FILTER_320x80_FN.fits 
+ q_mkimg STD_NL_FILTER_320x80_FN.TXT STD_NL_FILTER_320x80_FN.fits 320 80
 
 #[SLIT POSITION #A]
 ### I guess that the point here is to make analyze the data from each exposure,
@@ -92,13 +92,12 @@ q_list_stat NL_OBJ_A01N.fits 1 - 150-229 1 NEG
 q_arith POS - NEG TEST
 q_arith TEST x 0.5 NL_SLIT_A.fits
 
-q_list_stat NL_SLIT_A.fits 1 - - 1 | awk '{print $2,$3,$5}' > 
-(C³) NL_SLIT_A_BPC.TXT
+q_list_stat NL_SLIT_A.fits 1 - - 1 | awk '{print $2,$3,$5}' > NL_SLIT_A_BPC.TXT
 paste NL_SLIT_A_BPC.TXT | awk '{print $3}' > NL_SLIT_A_BPC.ADU
 q_mkimg NL_SLIT_A_BPC.ADU NL_SLIT_A_BPC.fits 320 80
 
-#q_arith NL_SLIT_A_BPC.fits x STD_NL_FILTER_320x80_FL.fits NL_SLIT_A_Wcm-2um-1.fits 
-#q_arith NL_SLIT_A_BPC.fits x STD_NL_FILTER_320x80_FN.fits NL_SLIT_A_JY.fits 
+q_arith NL_SLIT_A_BPC.fits x STD_NL_FILTER_320x80_FL.fits NL_SLIT_A_Wcm-2um-1.fits 
+q_arith NL_SLIT_A_BPC.fits x STD_NL_FILTER_320x80_FN.fits NL_SLIT_A_JY.fits 
 
 q_list_stat NL_SLIT_A_Wcm-2um-1.fits 1 - 35:48 1 | awk '{print $2*0.0198899992+6.94999981,$5*14}' > SLIT_A_Y35-48_Wcm-2um-1.SPC
 q_list_stat NL_SLIT_A_Wcm-2um-1.fits 1 - 16:30 1 | awk '{print $2*0.0198899992+6.94999981,$5*15}' > SLIT_A_Y16-30_Wcm-2um-1.SPC
@@ -124,10 +123,9 @@ q_list_stat SLIT_B16.fits 1 101:150 41-190 1 | awk '{print $3,$5}' > B16.ADU
 
 
 #Y OFFSET relative to B01 position
-B01: 0
-B02: 0
-
-plot "B01.DAT" u 1:($2-1700) w l, "B02.DAT" u 1:($2*0.8) w l , "B01.DAT" u ($1-116):(($2-1750)*(-1.16)) w l
+#B01: 0
+#B02: 0
+#plot "B01.DAT" u 1:($2-1700) w l, "B02.DAT" u 1:($2*0.8) w l , "B01.DAT" u ($1-116):(($2-1750)*(-1.16)) w l
 
 q_list_stat NL_OBJ_B01N.fits 1 - 41-120 1 POS1
 q_list_stat NL_OBJ_B01N.fits 1 - 157-236 1 NEG1
@@ -152,17 +150,17 @@ q_list_stat NL_SLIT_B1_Wcm-2um-1.fits 1 - 16:30 1 | awk '{print $2*0.0198899992+
 
 #6.95 13.314
 #Y OFFSET relative to B01 position
-B03: -4.5  0.0
-B04: -5.5 -1.0 #
-B05: -5.0  0.0
-B06: -5.0 -0.5
-B07: -4.5  0.0
-B08: -5.0 -1.0 # 
-B09: -4.5 -0.5
-B10: -4.0  0.0
-B11: -4.5 -1.0 # 
-B15: -4.0 +0.5
-B16: -5.0 +0.5
+#B03: -4.5  0.0
+#B04: -5.5 -1.0 #
+#B05: -5.0  0.0
+#B06: -5.0 -0.5
+##B07: -4.5  0.0
+#B08: -5.0 -1.0 # 
+#B09: -4.5 -0.5
+#B10: -4.0  0.0
+#B11: -4.5 -1.0 # 
+#B15: -4.0 +0.5
+#B16: -5.0 +0.5
 
 
 #plot "B03.DAT" u 1:2 w l, "B03.DAT" u ($1-116):($2*(-1.16)) w l, "B04.DAT" u ($1+1):($2*1.3) w l
@@ -192,32 +190,32 @@ q_list_stat NL_OBJ_B16N.fits 1 - 157-236 1 NEGJ
 
 
 
-#q_fcombine POS1 POS2 POS3 POS4 POS5 POS6 POS7 POS8 POS9 POSX POSJ POSQ POSK ave=POS_AVE
-#q_fcombine NEG1 NEG2 NEG3 NEG4 NEG5 NEG6 NEG7 NEG8 NEG9 NEGX NEGJ NEGQ NEGK ave=NEG_AVE
+q_fcombine POS1 POS2 POS3 POS4 POS5 POS6 POS7 POS8 POS9 POSX POSJ POSQ POSK ave=POS_AVE
+q_fcombine NEG1 NEG2 NEG3 NEG4 NEG5 NEG6 NEG7 NEG8 NEG9 NEGX NEGJ NEGQ NEGK ave=NEG_AVE
 
-#q_arith POS_AVE + NEG_AVE TEST
-#q_list_stat TEST 1 - - 1 | awk '{print $2,$3,$5}' > BP_SLIT_B2.TXT
-#g77 -o test BP.f
-#q_mkimg BP_SLIT_B2.ADU BP_SLIT_B2.fits 320 80
+q_arith POS_AVE + NEG_AVE TEST
+q_list_stat TEST 1 - - 1 | awk '{print $2,$3,$5}' > BP_SLIT_B2.TXT
+g77 -o test BP.f
+q_mkimg BP_SLIT_B2.ADU BP_SLIT_B2.fits 320 80
 
-#q_arith POS_AVE - NEG_AVE T
-#q_arith T + BP_SLIT_B2.fits TBPC
-#q_arith TBPC x 0.5 NL_SLIT_B2.fits
+q_arith POS_AVE - NEG_AVE T
+q_arith T + BP_SLIT_B2.fits TBPC
+q_arith TBPC x 0.5 NL_SLIT_B2.fits
 
 
-#q_arith NL_SLIT_B2.fits x STD_NL_FILTER_320x80_FL.fits NL_SLIT_B2_Wcm-2um-1.fits &
-#q_arith NL_SLIT_B2.fits x STD_NL_FILTER_320x80_FN.fits NL_SLIT_B2_JY.fits 
+q_arith NL_SLIT_B2.fits x STD_NL_FILTER_320x80_FL.fits NL_SLIT_B2_Wcm-2um-1.fits &
+q_arith NL_SLIT_B2.fits x STD_NL_FILTER_320x80_FN.fits NL_SLIT_B2_JY.fits 
 
-#q_list_stat NL_SLIT_B2_Wcm-2um-1.fits 1 - 16:30 1 | awk '{print $2*0.0198899992+6.94999981,$5*15}' > SLIT_B2_Y16-30_Wcm-2um-1.SPC
-#q_list_stat NL_SLIT_B2_Wcm-2um-1.fits 1 - 31:50 1 | awk '{print $2*0.0198899992+6.94999981,$5*20}' > SLIT_B2_Y31-50_Wcm-2um-1.SPC
-#q_list_stat NL_SLIT_B2_Wcm-2um-1.fits 1 - 53:59 1 | awk '{print $2*0.0198899992+6.94999981,$5*20}' > SLIT_B2_Y53-59_Wcm-2um-1.SPC
+q_list_stat NL_SLIT_B2_Wcm-2um-1.fits 1 - 16:30 1 | awk '{print $2*0.0198899992+6.94999981,$5*15}' > SLIT_B2_Y16-30_Wcm-2um-1.SPC
+q_list_stat NL_SLIT_B2_Wcm-2um-1.fits 1 - 31:50 1 | awk '{print $2*0.0198899992+6.94999981,$5*20}' > SLIT_B2_Y31-50_Wcm-2um-1.SPC
+q_list_stat NL_SLIT_B2_Wcm-2um-1.fits 1 - 53:59 1 | awk '{print $2*0.0198899992+6.94999981,$5*20}' > SLIT_B2_Y53-59_Wcm-2um-1.SPC
 
-#q_list_stat NL_SLIT_B2_Wcm-2um-1.fits 1 - 13:35 1 | awk '{print $2*0.0198899992+6.94999981,$5*23}' > SLIT_B2_Y13-35_Wcm-2um-1.SPC
-#q_list_stat NL_SLIT_B2_Wcm-2um-1.fits 1 - 36:47 1 | awk '{print $2*0.0198899992+6.94999981,$5*12}' > SLIT_B2_Y36-47_Wcm-2um-1.SPC
-#q_list_stat NL_SLIT_B2_Wcm-2um-1.fits 1 - 48:53 1 | awk '{print $2*0.0198899992+6.94999981,$5*6}' > SLIT_B2_Y48-52_Wcm-2um-1.SPC
-#q_list_stat NL_SLIT_B2_Wcm-2um-1.fits 1 - 54:59 1 | awk '{print $2*0.0198899992+6.94999981,$5*6}' > SLIT_B2_Y53-59_Wcm-2um-1.SPC
+q_list_stat NL_SLIT_B2_Wcm-2um-1.fits 1 - 13:35 1 | awk '{print $2*0.0198899992+6.94999981,$5*23}' > SLIT_B2_Y13-35_Wcm-2um-1.SPC
+q_list_stat NL_SLIT_B2_Wcm-2um-1.fits 1 - 36:47 1 | awk '{print $2*0.0198899992+6.94999981,$5*12}' > SLIT_B2_Y36-47_Wcm-2um-1.SPC
+q_list_stat NL_SLIT_B2_Wcm-2um-1.fits 1 - 48:53 1 | awk '{print $2*0.0198899992+6.94999981,$5*6}' > SLIT_B2_Y48-52_Wcm-2um-1.SPC
+q_list_stat NL_SLIT_B2_Wcm-2um-1.fits 1 - 54:59 1 | awk '{print $2*0.0198899992+6.94999981,$5*6}' > SLIT_B2_Y53-59_Wcm-2um-1.SPC
 
-#q_list_stat NL_SLIT_B2_Wcm-2um-1.fits 1 - 40:44 1 | awk '{print $2*0.0198899992+6.94999981,$5*5}' > SLIT_B2_Y40-44_Wcm-2um-1.SPC
+q_list_stat NL_SLIT_B2_Wcm-2um-1.fits 1 - 40:44 1 | awk '{print $2*0.0198899992+6.94999981,$5*5}' > SLIT_B2_Y40-44_Wcm-2um-1.SPC
 
 
 q_list_stat NL_OBJ_B01N.fits 1 101:105 41-240 1 | awk '{print $3,$5}' > B01.DAT
