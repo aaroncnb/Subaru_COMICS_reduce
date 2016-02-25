@@ -3,8 +3,6 @@
 #### and proceeds with the FLUX calibration.
 #### These steps partly require the rbin C codes, and partly depend
 #### on the fortran codes provided by Sakon-san
-
-
 ####################FLUX CALIBRATION START!!!#########################
 
 ## First we have to combine thsoe two sets of 16 images we've been dragging around until now..
@@ -21,46 +19,46 @@ q_fcombine NL_OBJ_A01N.fits NL_OBJ_A02N.fits NL_OBJ_A03N.fits NL_OBJ_A04N.fits N
 
 q_fcombine NL_OBJ_B01N.fits NL_OBJ_B02N.fits NL_OBJ_B03N.fits NL_OBJ_B04N.fits NL_OBJ_B05N.fits NL_OBJ_B06N.fits NL_OBJ_B08N.fits NL_OBJ_B09N.fits NL_OBJ_B10N.fits NL_OBJ_B11N.fits NL_OBJ_B12N.fits NL_OBJ_B13N.fits NL_OBJ_B14N.fits NL_OBJ_B15N.fits NL_OBJ_B16N.fits ave=NL_SLIT2.fits
 
-ds9 NL_SLIT1.fits -scale mode zscale  NL_SLIT2.fits &
-
+#ds9 NL_SLIT1.fits -scale mode zscale  NL_SLIT2.fits &
 #If the output is ok, we can now start the actual flux calibration...
+
+
 ###########ACTUAL FLUX CALIBRATION##################################
 echo "Preparing the Standard Star data for the flux calibration..."
 q_list_stat NL_STD_A01N.fits 1 - 53-77 1 STD1P.fits
 q_list_stat NL_STD_A01N.fits 1 - 166-190 1 STD1N.fits
 q_arith STD1P.fits - STD1N.fits S1
 q_arith S1 x 0.5 STD_NL.fits
-ds9 -scale mode zscale NL_STD_A01N.fits STD1P.fits STD1N.fits STD_NL.fits &
+#ds9 -scale mode zscale NL_STD_A01N.fits STD1P.fits STD1N.fits STD_NL.fits &
 
 echo "Creating the ADU table for the Standard Star.."
 q_list_stat STD_NL.fits 1 - : : | awk '{print $2,$5*25.0}' > STD_NL.ADU
-cat STD_NL.ADU
+#cat STD_NL.ADU
 
 #####Now we run the FOTRAN code 'FC_STD.f', by Sakon-san#####
 # Compile the code - to make sure we're using the latest version
-
-g77 -o test FC_STD.f
-
 # Run the code
+g77 -o test_fc FC_STD.f
+./test_fc
+# Run the code for dimensions 320 by 80
+g77 -o test_fc FC_STD_320x80.f
+./test_fc_320x80
 
-./test
-
- #
 echo "Finished flux calibration comparison (FC_STD.f)"
-echo "FILTER FL RESULT"
-cat STD_NL_FILTER_FL.TXT
-echo "FILTER FL RESULT"
-cat STD_NL_FILTER_FN.TXT
+#echo "FILTER FL RESULT"
+#cat STD_NL_FILTER_FL.TXT
+#echo "FILTER FL RESULT"
+#cat STD_NL_FILTER_FN.TXT
 
 #  OUTPUT FILE; STD_NL_FILTER_FL.TXT
 #  IN UNITS OF "W cm-2 um-1 / SLIT WIDTH (pixel)"
 q_mkimg STD_NL_FILTER_FL.TXT STD_NL_FILTER_FL.fits 320 240
-# q_mkimg STD_NL_FILTER_320x80_FL.TXT STD_NL_FILTER_320x80_FL.fits 320 80
+q_mkimg STD_NL_FILTER_320x80_FL.TXT STD_NL_FILTER_320x80_FL.fits 320 80
 
 #  OUTPUT FILE; STD_NL_FILTER_FN.TXT
 #  IN UNITS OF "Jy / SLIT WIDTH (pixel)"
- q_mkimg STD_NL_FILTER_FN.TXT STD_NL_FILTER_FN.fits 320 240
- #q_mkimg STD_NL_FILTER_320x80_FN.TXT STD_NL_FILTER_320x80_FN.fits 
+q_mkimg STD_NL_FILTER_FN.TXT STD_NL_FILTER_FN.fits 320 240
+q_mkimg STD_NL_FILTER_320x80_FN.TXT STD_NL_FILTER_320x80_FN.fits 
 
 #[SLIT POSITION #A]
 ### I guess that the point here is to make analyze the data from each exposure,
@@ -84,8 +82,7 @@ q_list_stat NL_OBJ_A16N.fits 1 101:105 41-240 1 | awk '{print $3,$5}' > A16.DAT
 
 
 
-### this "plot" commands seems to be run from the terminal but, what program is it calling?
-##### Perhaps it's a macro used in Sakon-san's environment, calling gnuplot or something like that.
+
 # plot "A01.DAT" u 1:2 w l, "A02.DAT" u ($1+1):($2*1.2) w l, "A01.DAT" u ($1-117):($2*(-1.1)) w l
 
 q_list_stat NL_OBJ_A01N.fits 1 - 33-112 1 POS
@@ -93,13 +90,12 @@ q_list_stat NL_OBJ_A01N.fits 1 - 150-229 1 NEG
 q_arith POS - NEG TEST
 q_arith TEST x 0.5 NL_SLIT_A.fits
 
-q_list_stat NL_SLIT_A.fits 1 - - 1 | awk '{print $2,$3,$5}' > 
-(C³) NL_SLIT_A_BPC.TXT
+q_list_stat NL_SLIT_A.fits 1 - - 1 | awk '{print $2,$3,$5}' >  NL_SLIT_A_BPC.TXT
 paste NL_SLIT_A_BPC.TXT | awk '{print $3}' > NL_SLIT_A_BPC.ADU
 q_mkimg NL_SLIT_A_BPC.ADU NL_SLIT_A_BPC.fits 320 80
 
-#q_arith NL_SLIT_A_BPC.fits x STD_NL_FILTER_320x80_FL.fits NL_SLIT_A_Wcm-2um-1.fits 
-#q_arith NL_SLIT_A_BPC.fits x STD_NL_FILTER_320x80_FN.fits NL_SLIT_A_JY.fits 
+q_arith NL_SLIT_A_BPC.fits x STD_NL_FILTER_320x80_FL.fits NL_SLIT_A_Wcm-2um-1.fits 
+q_arith NL_SLIT_A_BPC.fits x STD_NL_FILTER_320x80_FN.fits NL_SLIT_A_JY.fits 
 
 q_list_stat NL_SLIT_A_Wcm-2um-1.fits 1 - 35:48 1 | awk '{print $2*0.0198899992+6.94999981,$5*14}' > SLIT_A_Y35-48_Wcm-2um-1.SPC
 q_list_stat NL_SLIT_A_Wcm-2um-1.fits 1 - 16:30 1 | awk '{print $2*0.0198899992+6.94999981,$5*15}' > SLIT_A_Y16-30_Wcm-2um-1.SPC
@@ -221,6 +217,9 @@ q_list_stat NL_OBJ_B16N.fits 1 - 157-236 1 NEGJ
 #q_list_stat NL_SLIT_B2_Wcm-2um-1.fits 1 - 40:44 1 | awk '{print $2*0.0198899992+6.94999981,$5*5}' > SLIT_B2_Y40-44_Wcm-2um-1.SPC
 
 
+### As part of another "house-keeping" step, these next 16 lines just save the individual
+### exposures' spectral data as .DAT files - in case we need to inspect them later.
+
 q_list_stat NL_OBJ_B01N.fits 1 101:105 41-240 1 | awk '{print $3,$5}' > B01.DAT
 q_list_stat NL_OBJ_B02N.fits 1 101:105 41-240 1 | awk '{print $3,$5}' > B02.DAT
 q_list_stat NL_OBJ_B03N.fits 1 101:105 41-240 1 | awk '{print $3,$5}' > B03.DAT
@@ -241,9 +240,10 @@ q_list_stat NL_OBJ_B16N.fits 1 101:105 41-240 1 | awk '{print $3,$5}' > B16.DAT
 
 q_list_stat SLIT_B03.fits 1 71-170 86-185 1 SLIT_B2.fits
 
+#### This step extracts the spectral data from the FITS file, and puts it neatly into a .SPC file
+#### The .SPC file can be easily plotted in something like GNUPLUT,
+#### For example, in gnuplot type :  
 
-
-#\subsection{XyNgÌØèoµ}
 q_list_stat NL_SLIT2_Wcm-2um-1.fits 1 - 84:91 1 | awk '{print $2*0.0198899992+7.25,$5}' > S2_R1_Wcm-2um-1.SPC
 paste S2_R1_Wcm-2um-1.SPC SKY_Wcm-2um-1.SPC | awk '{print $1,($2-$4)*8}' > S2_R1_Wcm-2um-1_SS.SPC
 q_list_stat NL_SLIT2_Wcm-2um-1.fits 1 - 95:104 1 | awk '{print $2*0.0198899992+7.25,$5}' > S2_R2_Wcm-2um-1.SPC
@@ -258,4 +258,4 @@ q_list_stat NL_SLIT2_JY.fits 1 - 95:104 1 | awk '{print $2*0.0198899992+7.25,$5}
 paste S2_R2_JY.SPC SKY_JY.SPC | awk '{print $1,($2-$4)*10}' > S2_R2_JY_SS.SPC
 q_list_stat NL_SLIT2_JY.fits 1 - 116:130 1 | awk '{print $2*0.0198899992+7.25,$5}' > S2_R3_JY.SPC
 paste S2_R3_JY.SPC SKY_JY.SPC | awk '{print $1,($2-$4)*10}' > S2_R3_JY_SS.SPC
-# spec = numpy.loadtxt('S2_R1_Wcm-2um-1.SPC',delimiter=' ')
+
