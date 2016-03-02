@@ -25,6 +25,7 @@ q_fcombine NL_OBJ_B01N.fits NL_OBJ_B02N.fits NL_OBJ_B03N.fits NL_OBJ_B04N.fits N
 #If the output is ok, we can now start the actual flux calibration...
 ###########ACTUAL FLUX CALIBRATION##################################
 echo "Preparing the Standard Star data for the flux calibration..."
+###This part may not be necessary, since the chopping distance if sufficently large
 q_list_stat NL_STD_A01N.fits 1 - 53-77 1 STD1P.fits
 q_list_stat NL_STD_A01N.fits 1 - 166-190 1 STD1N.fits
 q_arith STD1P.fits - STD1N.fits S1
