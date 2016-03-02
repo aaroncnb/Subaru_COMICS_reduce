@@ -1,55 +1,86 @@
-1034  ds9 -scale mode zscale NL_OBJ_A16N.fits NL_OBJ_A01N.fits &
- 1035  q_list_stat NL_OBJ_A16N.fits 1 87:88 - - | awk '{print $3,$5}' > A16_TEST.TXT
- 1036  q_list_stat NL_OBJ_A01N.fits 1 87:88 - - | awk '{print $3,$5}' > A01_TEST.TXT
- 1037  gnuplot
- 1038  nano A16_TEST.TXT 
- 1039  q_list_stat NL_OBJ_A01N.fits 87:88 - - | awk '{print $3,$5}' > A01_TEST.TXT
- 1040  nano A01_TEST.TXT 
- 1041  q_list_stat NL_OBJ_A01N.fits 1 87:88 - | awk '{print $3,$5}' > A01_TEST.TXT
- 1042  nano A01_TEST.TXT 
- 1043  q_chgaxis
- 1044  q_chgaxis 4 NL_OBJ_A01N.fits A01N_chgaxis.fits
- 1045  q_list_stat A01N_chgaxis.fits 1 87:88 - - | awk '{print $3,$5}' > A01_TEST.TXT
- 1046  nano A01_TEST.TXT 
- 1047  ds9 A01N_chgaxis.fits &
- 1048  q_list_stat A01N_chgaxis.fits 1 87:88 1-240 1 | awk '{print $3,$5}' > A01_TEST.TXT
- 1049  nano A01_TEST.TXT 
- 1050  q_list_stat NL_OBJ_A01N.fits 1 87:88 1-240 1 | awk '{print $3,$5}' > A01_TEST.TXT
- 1051  nano A01_TEST.TXT 
- 1052  q_list_stat NL_OBJ_A16N.fits 1 87:88 1-240 1 | awk '{print $3,$5}' > A16_TEST.TXT
- 1053  gnuplot
- 1054  q_list_stat NL_OBJ_A08N.fits 1 87:88 1-240 1 | awk '{print $3,$5}' > A08_TEST.TXT
- 1055  gnuplot
- 1056  q_fcombine NL_OBJ_A01N.fits NL_OBJ_A02N.fits NL_OBJ_A03N.fits NL_OBJ_A04N.fits NL_OBJ_A05N.fits NL_OBJ_A06N.fits NL_OBJ_A07N.fits NL_OBJ_A08N.fits NL_OBJ_A09N.fits NL_OBJ_A10N.fits NL_OBJ_A11N.fits NL_OBJ_A12N.fits NL_OBJ_A13N.fits NL_OBJ_A14N.fits NL_OBJ_A15N.fits NL_OBJ_A16N.fits ave=NL_SLIT1.fits
- 1057  ds9 NL_SLIT1.fits &
- 1058  q_list_stat NL_OBJ_B16N.fits 1 87:88 1-240 1 | awk '{print $3,$5}' > B16_TEST.TXT
- 1059  q_list_stat NL_OBJ_B01N.fits 1 87:88 1-240 1 | awk '{print $3,$5}' > B01_TEST.TXT
- 1060  gnuplot
- 1061  q_fcombine NL_OBJ_B01N.fits NL_OBJ_B02N.fits NL_OBJ_B03N.fits NL_OBJ_B04N.fits NL_OBJ_B05N.fits NL_OBJ_B06N.fits NL_OBJ_B08N.fits NL_OBJ_B09N.fits NL_OBJ_B10N.fits NL_OBJ_B11N.fits NL_OBJ_B12N.fits NL_OBJ_B13N.fits NL_OBJ_B14N.fits NL_OBJ_B15N.fits NL_OBJ_B16N.fits ave=NL_SLIT2.fits
- 1062  ds9 -scale mode zscale NL_SLIT2.fits &
- 1063  ds9 -scale mode zscale NL_STD_A01N.fits &
- 1064  ds9 -scale mode zscale NL_STD_A01N.fits NL_SLIT1.fits NL_SLIT2.fits &
- 1065  q_list_stat NL_SLIT1.fits 1 1-320 186-190 1 TEST1.fits
- 1066  q_list_stat NL_SLIT1.fits 1 1-320 191-195 1 TEST2.fits
- 1067  q_list_stat NL_SLIT1.fits 1 1-320 196-200 1 TEST3.fits
- 1068  q_list_stat NL_SLIT1.fits 1 1-320 201-205 1 TEST4.fits
- 1069  q_list_stat NL_SLIT1.fits 1 1-320 206-210 1 TEST5.fits
- 1070  q_list_stat NL_SLIT1.fits 1 1-320 211-215 1 TEST6.fits
- 1071  q_list_stat NL_SLIT1.fits 1 1-320 216-220 1 TEST7.fits
- 1072  q_list_stat NL_SLIT1.fits 1 1-320 221-225 1 TEST8.fits
- 1073  q_list_stat NL_SLIT1.fits 1 1-320 226-230 1 TEST9.fits
- 1074  q_fcombine TEST1.fits TEST2.fits TEST3.fits TEST4.fits TEST5.fits TEST6.fits TEST7.fits TEST8.fits TEST9.fits med=TEST_MED.fits
- 1075  ds9 TEST_MED.fits &
- 1076  q_list_stat TEST_MED.fits 1 1-320 1:5 1 | awk'{print $2,$5}' > SKY_RES.TXT
- 1077  q_list_stat TEST_MED.fits 1 1-320 1:5 1 | awk '{print $2,$5}' > SKY_RES.TXT
- 1078  nano SKY_RES.TXT 
- 1079  gnuplot
- 1080  nano SKY_RES.f
- 1081  g77 -o test SKY_RES.f
- 1082  ./test
- 1083  ls SKY*
- 1084  q_mkimg SKY_RES_MAP.TXT SKY_RES_MAP.fits 320 240
- 1085  ds9 SKY_RES_MAP.fits &
- 1086  q_arith NL_SLIT1.fits - SKY_RES_MAP.fits NL_SLIT1_skysub.fits
- 1087  ds9 NL_SLIT1_skysub.fits &
- 1088  q_list_stat NL_SLIT1_skysub.fits 1 1-320 1-240 1 | awk '{print $2,$3,$5}' > NL_SLIT1_skysub.TXT
+### These commands were just a check to see if the Y-positions were offset, between the 1st and 16th exposures
+### If they were, we'd need additional corrections- but it would also make the bad-pixel correction process easier
+### however, for IRAS18434- we found no significant offset betweent the exposures (both for pos A and pos B)
+#q_list_stat NL_OBJ_A16N.fits 1 87:88 - - | awk '{print $3,$5}' > A16_TEST.TXT
+#q_list_stat NL_OBJ_A01N.fits 1 87:88 - - | awk '{print $3,$5}' > A01_TEST.TXT
+#q_list_stat NL_OBJ_B16N.fits 1 87:88 1-240 1 | awk '{print $3,$5}' > B16_TEST.TXT
+#q_list_stat NL_OBJ_B01N.fits 1 87:88 1-240 1 | awk '{print $3,$5}' > B01_TEST.TXT
+
+#Combine the individual exposures to maximize the signal to noise ratio (Slit Position A)
+q_fcombine NL_OBJ_A01N.fits NL_OBJ_A02N.fits NL_OBJ_A03N.fits NL_OBJ_A04N.fits NL_OBJ_A05N.fits NL_OBJ_A06N.fits NL_OBJ_A07N.fits NL_OBJ_A08N.fits NL_OBJ_A09N.fits NL_OBJ_A10N.fits NL_OBJ_A11N.fits NL_OBJ_A12N.fits NL_OBJ_A13N.fits NL_OBJ_A14N.fits NL_OBJ_A15N.fits NL_OBJ_A16N.fits ave=NL_SLIT1.fits
+
+#Combine the individual exposures to maximize the signal to noise ratio (Slit Position B)
+q_fcombine NL_OBJ_B01N.fits NL_OBJ_B02N.fits NL_OBJ_B03N.fits NL_OBJ_B04N.fits NL_OBJ_B05N.fits NL_OBJ_B06N.fits NL_OBJ_B08N.fits NL_OBJ_B09N.fits NL_OBJ_B10N.fits NL_OBJ_B11N.fits NL_OBJ_B12N.fits NL_OBJ_B13N.fits NL_OBJ_B14N.fits NL_OBJ_B15N.fits NL_OBJ_B16N.fits ave=NL_SLIT2.fits
+
+
+## We need to isolate and subtract the telluric (sky) line emission
+##    Have a look at the "top" of the image (~y=200). This region shouldn't contain much of our target's emission data
+##    BUT it must contain emission from the sky- so based on the pixels in this pixel-region, we'll estimate the telluric profile
+##       First we break the area up into "slices" about 5 pixels high and then take their median, to deal with bad pixels,
+#Position A
+q_list_stat NL_SLIT1.fits 1 1-320 186-190 1 TEST1_S1tell.fits
+q_list_stat NL_SLIT1.fits 1 1-320 191-195 1 TEST2_S1tell.fits
+q_list_stat NL_SLIT1.fits 1 1-320 196-200 1 TEST3_S1tell.fits
+q_list_stat NL_SLIT1.fits 1 1-320 201-205 1 TEST4_S1tell.fits
+q_list_stat NL_SLIT1.fits 1 1-320 206-210 1 TEST5_S1tell.fits
+q_list_stat NL_SLIT1.fits 1 1-320 211-215 1 TEST6_S1tell.fits
+q_list_stat NL_SLIT1.fits 1 1-320 216-220 1 TEST7_S1tell.fits
+q_list_stat NL_SLIT1.fits 1 1-320 221-225 1 TEST8_S1tell.fits
+q_list_stat NL_SLIT1.fits 1 1-320 226-230 1 TEST9_S1tell.fits
+
+#Position B
+q_list_stat NL_SLIT2.fits 1 1-320 186-190 1 TEST1_S2tell.fits
+q_list_stat NL_SLIT2.fits 1 1-320 191-195 1 TEST2_S2tell.fits
+q_list_stat NL_SLIT2.fits 1 1-320 196-200 1 TEST3_S2tell.fits
+q_list_stat NL_SLIT2.fits 1 1-320 201-205 1 TEST4_S2tell.fits
+q_list_stat NL_SLIT2.fits 1 1-320 206-210 1 TEST5_S2tell.fits
+q_list_stat NL_SLIT2.fits 1 1-320 211-215 1 TEST6_S2tell.fits
+q_list_stat NL_SLIT2.fits 1 1-320 216-220 1 TEST7_S2tell.fits
+q_list_stat NL_SLIT2.fits 1 1-320 221-225 1 TEST8_S2tell.fits
+q_list_stat NL_SLIT2.fits 1 1-320 226-230 1 TEST9_S2tell.fits
+
+ 
+## By taking the median-combination of all of those individual slices from above, we get a pretty good isolation of the telluric lines
+#Position A
+q_fcombine TEST1_S1tell.fits TEST2_S1tell.fits TEST3_S1tell.fits TEST4_S1tell.fits TEST5_S1tell.fits TEST6_S1tell.fits TEST7_S1tell.fits TEST8_S1tell.fits TEST9_S1tell.fits med=TEST__S1tell_MED.fits
+#Position B
+q_fcombine TEST1_S2tell.fits TEST2_S2tell.fits TEST3_S2tell.fits TEST4_S2tell.fits TEST5_S2tell.fits TEST6_S2tell.fits TEST7_S2tell.fits TEST8_S2tell.fits TEST9_S2tell.fits med=TEST__S2tell_MED.fits
+
+## From the narrow TEST_MED.fits image, we put the telluric line pattern into a 1-D spectrum
+#Position A
+q_list_stat TEST_S1tell_MED.fits 1 1-320 1:5 1 | awk '{print $2,$5}' > SKY_RES.TXT
+##This simple fortran code (Perhaps I can make it in Python later..?) 
+## makes an ASCII table from the 1-D SKY spectrum above.
+## It eseentially copies the 1-D SKY profile accross all of the Y-rows.
+## Each Y-position should be affected -generally- to the same extend by the telluric lines
+g77 -o test SKY_RES.f
+./test
+## After running the fortran code and getting the table, we convert it into a FITS image file
+q_mkimg SKY_RES_MAP.TXT SKY_RES_MAP_S1.fits 320 240
+
+#Position B
+q_list_stat TEST_S2tell_MED.fits 1 1-320 1:5 1 | awk '{print $2,$5}' > SKY_RES.TXT
+#g77 -o test SKY_RES.f
+./test
+## After running the fortran code and getting the table, we convert it into a FITS image file
+q_mkimg SKY_RES_MAP.TXT SKY_RES_MAP_S2.fits 320 240
+
+##   This file has the same dimensions of the science image, so we just subtract it qith q_arith
+#Pos A
+q_arith NL_SLIT1.fits - SKY_RES_MAP_S1.fits NL_SLIT1_skysub.fits #Now we have  a sky-subtracted image!
+#Pos B
+q_arith NL_SLIT2.fits - SKY_RES_MAP_S2.fits NL_SLIT2_skysub.fits 
+
+## to search through the bad-pixels, we can compare the image made above with its ASCII counterpart...
+#Pos A
+q_list_stat NL_SLIT1_skysub.fits 1 1-320 1-240 1 | awk '{print $2,$3,$5}' > NL_SLIT1_skysub.TXT 
+#Pos B
+q_list_stat NL_SLIT2_skysub.fits 1 1-320 1-240 1 | awk '{print $2,$3,$5}' > NL_SLIT2_skysub.TXT 
+####In the TXT file generated above, we can search for bad pixels (having negative values)
+####   and "hot" pixels (having much higher values than their neighbors)
+
+## From here, we can either manually identify the bad pixels and correct them by rough interpolation
+##  or we can try to write a program that finds the bad values, and then uses the nearest "non-bad" 
+##  pixels to interpolate. (the bad pixels typically appear in 2x2 pixel blocks)
+
+
