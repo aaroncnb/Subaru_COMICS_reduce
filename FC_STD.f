@@ -11,8 +11,8 @@ C    Change this file name according to the target being observed...
 C    HD161096 is Beta Ophichus. The tem file is from the Cohen 1999 catalog
       OPEN(2,FILE="HD161096.tem",STATUS="OLD")
       
-      OPEN(11,FILE="STD_NL_FILTER_FL.TXT",STATUS="NEW")
-      OPEN(12,FILE="STD_NL_FILTER_FN.TXT",STATUS="NEW")
+      OPEN(11,FILE="STD_NL_FILTER_320x80_FL.TXT",STATUS="NEW")
+      OPEN(12,FILE="STD_NL_FILTER_320x80_FN.TXT",STATUS="NEW")
       
       AWL=0.0198899992
       BWL=7.25
@@ -21,7 +21,7 @@ C    HD161096 is Beta Ophichus. The tem file is from the Cohen 1999 catalog
          READ(2,*)WLT(K),FL(K),EL,E1,E2
       END DO   
 
-      DO I=1,320
+      DO I=1,80
          READ(1,*)IX,SADU(I)
          WL(I)=IX*AWL+BWL
          DO K=1,651
@@ -32,7 +32,7 @@ C    HD161096 is Beta Ophichus. The tem file is from the Cohen 1999 catalog
          END DO
       END DO
       
-      DO J=1,240
+      DO J=1,80
          DO I=1,320
 C           IN UNITS OF "W cm-2 um-1 / SLIT WIDTH (pixel)"            
             WRITE(11,*)FLC(I)/SADU(I)
